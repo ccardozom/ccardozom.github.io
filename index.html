@@ -217,12 +217,12 @@ entre el lenguaje y la arquitectura del dispositivo.</p>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="assets/js/template.js"></script>
 <script>
-  fetch('counter.txt')
+  fetch('assets/documents/counter.txt')
     .then(response => response.text())
     .then(count => {
       count = parseInt(count);
       count++;
-      fetch('counter.txt', {
+      fetch('assets/documents/counter.txt', {
         method: 'PUT',
         body: count
       });
