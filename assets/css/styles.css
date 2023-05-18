@@ -752,7 +752,8 @@ footer.entry-meta .meta-in {
   background: #232323;
   padding: 30px 0 0 0;
   font-size: 12px;
-  color: #999;
+  color: #999;  
+  
 }
 #footer a {
   color: #ccc;
@@ -772,6 +773,7 @@ footer.entry-meta .meta-in {
   padding: 15px 0;
   color: #777;
   font-size: 12px;
+  
 }
 #underfooter a {
   color: #aaa;
@@ -794,5 +796,6 @@ footer.entry-meta .meta-in {
 @media (min-width: 1200px) {
   .container {
     max-width: 1080px;
+    
   }
 }
