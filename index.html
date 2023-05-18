@@ -215,5 +215,20 @@ entre el lenguaje y la arquitectura del dispositivo.</p>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="assets/js/template.js"></script>
+<script>
+  fetch('counter.txt')
+    .then(response => response.text())
+    .then(count => {
+      count = parseInt(count);
+      count++;
+      fetch('counter.txt', {
+        method: 'PUT',
+        body: count
+      });
+      document.getElementById('counter').textContent = count;
+    });
+</script>
+<p>Visitas: <span id="counter">Cargando...</span></p>
+
 </body>
 </html>
