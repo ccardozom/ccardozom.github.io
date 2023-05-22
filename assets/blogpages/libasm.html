@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="Carlos Cardozo">
+	
+	<title>Blog de Carlos Cardozo</title>
+
+	<link rel="shortcut icon" href="../images/icone_c.png">
+	
+	<!-- Bootstrap -->
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+	<!-- Icon font -->
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<!-- Fonts -->
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="../css/styles.css">
+
+	<!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
+</head>
+<body>
+
+<header id="header">
+	<div id="head" class="parallax" parallax-speed="1">
+		<h1 id="logo" class="text-center">
+			<img class="img-circle" src="../images/photo_h.png" alt="">
+			<span class="title">Blog de Carlos Cardozo</span>
+			<span class="tagline">Con esfuerzo, responsabilidad y dedicación siempre puedes lograr tus objetivos.</span>
+		</h1>
+	</div>
+
+	<nav class="navbar navbar-default navbar-sticky">
+		<div class="container-fluid">
+			
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+			</div>
+			
+			<div class="navbar-collapse collapse">
+				
+				<ul class="nav navbar-nav">
+					<li><a href="../../index.html">Home</a></li>
+					<li><a href="../../about.html">About</a></li>
+					<!--<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="sidebar-left.html">Left Sidebar</a></li>
+							<li><a href="sidebar-right.html">Right Sidebar</a></li> 
+							<li><a href="single.html">Blog</a></li>
+						</ul>
+					</li> -->
+					<li class="active"><a href="../../blog.html">Blog</a></li>
+				</ul>
+			
+			</div><!--/.nav-collapse -->			
+		</div>	
+	</nav>
+</header>
+
+<main id="main">
+
+	<div class="container">
+		
+		<div class="row topspace">
+			<div class="col-sm-8 col-sm-offset-2">
+															
+ 				<article class="post">
+					<header class="entry-header">
+ 						<h1 class="entry-title"><a href="libasm.html" rel="bookmark">Ensamblador - LibASM</a></h1>
+					</header> 
+					<div class="entry-content"> 
+						<p><img style="border: 1px solid; color: black;"  alt="" src="../images/blogimages/ensamblador/codigo_de_maquina.png"></p>
+						<p>
+							El código escrito en lenguaje ensamblador posee una cierta dificultad de ser entendido ya que su estructura se acerca al lenguaje máquina, es decir, es un lenguaje de bajo nivel.
+						</p>
+						<p>
+							Este proyecto consiste en codificar funciones básicas (ver más abajo) en Linux x86-64 Assembly
+							(sintaxis de Intel) y que luego se compilan en una biblioteca para su uso en código de lenguaje C. 
+						</p>
+						<p><img alt="" src="../images/blogimages/ensamblador/prototipos.png"></p>
+						
+						<blockquote>
+							Los programas hechos en lenguaje ensamblador pueden ser más rápidos y consumir menos recursos del sistema	 que el programa equivalente compilado desde un lenguaje de alto nivel. Al programar cuidadosamente en lenguaje ensamblador se pueden crear programas que se ejecutan más rápidamente y ocupan menos espacio que con lenguajes de alto nivel.
+						</blockquote>
+						<p>
+							Debe compilar su código ensamblador con nasm. NASM está basado en líneas. La mayoría de los programas constan de directivas seguidas de una o más secciones . Las líneas pueden tener una etiqueta opcional . La mayoría de las líneas tienen una instrucción seguida de cero o más operandos</p>
+						
+						<h3>Registros</h3>
+						<p><img alt="" src="../images/blogimages/ensamblador/registros.png"></p>
+
+						<p>
+							Los registros son una parte del procesador que contiene temporalmente la memoria. En la arquitectura x86_64, los registros contienen 64 bits.
+							Las versiones de 64 bits de los registros x86 'originales' se nombran:
+							<ul>
+								<li>rax- registrar una extensión; almacena ID de llamada al sistema y valores de retorno.</li>
+								<li>rbx- registro b ampliado.</li>
+								<li>rcx- registro c ampliado; algunas instrucciones lo usan como contador.</li>
+								<li>rdx- registro d ampliado.</li>
+								<li>rbp- puntero base de registro; inicio de la pila (base de la pila).</li>
+								<li>rsp- puntero de pila de registro; ubicación actual en la pila (la parte superior de la pila), creciendo hacia abajo.</li>
+								<li>rsi- índice de fuente de registro; fuente de copias de datos; usado para pasar el argumento de función #2.</li>
+								<li>rdi- registrar el índice de destino; destino de las copias de datos; se usa para pasar el argumento de función #1.</li>
+								<li>Los registros agregados para el modo de 64 bits se nombran en secuencia numerada: r8, r9, r10, r11, r12, r13, r14,r15</li>
+							</ul>
+						</p>
+						<h4>Instrucciones</h4>
+						<p>La mayoría de las instrucciones básicas tienen la siguiente forma:
+							<ul>
+								<li>add REG, REG</li>
+								<li>add REG, MEM</li>
+								<li>add REG, IMM</li>
+								<li>add MEM, REG</li>
+								<li>add MEM, IMM</li>
+							</ul>
+						</p>
+						<p>Las instrucciones con dos operandos de memoria son extremadamente raras.</p>
+						<h4>Instrucciones más usadas</h4>
+						<p>
+							<ul>
+								<li>mov &emsp;&emsp;DEST,&nbsp; SRC &nbsp; - mover datos entre registros, mover datos entre registros y memoria.</li>
+								<li>mov &emsp;&emsp;DEST,&nbsp; VAL &nbsp; - cargar datos inmediatos en registros.</li>
+								<li>movsx &emsp;DEST,&nbsp; SRC &nbsp; - escribe en todo el registro.</li>
+								<li>push&emsp;&emsp;SRC &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - insertar en la pila; útil para pasar argumentos, guardar registros, etc.</li>
+								<li>pop&emsp;&emsp;&ensp;DEST&emsp;&emsp;&emsp;&nbsp;- eliminar el valor superior de la pila en el registro dado. equivalente a mov DEST, [rsp]; add 8, rsp.</li>
+								<li>inc&emsp;&emsp;&emsp;REG&emsp;&emsp;&emsp;&ensp;&nbsp;- incrementa el valor en el registro ( i++).</li>
+								<li>dec&emsp;&emsp;&ensp;&nbsp;REG&emsp;&emsp;&emsp;&ensp;&nbsp;- disminuir el valor en el registro ( i--).</li>
+								<li>add &emsp;&emsp;&nbsp;DEST,&nbsp; SRC &nbsp; - suma: DEST = DEST + SRC</li>
+								<li>sub &emsp;&emsp;&nbsp;DEST,&nbsp; SRC &nbsp; - resta: DEST = DEST - SRC</li>
+								<li>mul&emsp;&emsp;&ensp;SRC&emsp;&emsp;&emsp;&emsp;- multiplicación (enteros sin signo): rax= rax* src . Altos 64 bits de producto (generalmente cero) entran en rdx.</li>
+								<li>div&emsp;&emsp;&ensp;&ensp;SRC&emsp;&emsp;&emsp;&emsp;- división: rax = rax / src (proporción en rax, y el resto en rdx). Extrañamente, en la entrada rdx debe ser cero, o obtienes un SIGFPE.</li>
+								<li>and &emsp;&emsp;&nbsp;DEST,&nbsp; SRC &nbsp;&ensp;- Operador AND bit a bit: DEST = DEST & SRC</li>
+								<li>xor &emsp;&emsp;&ensp;DEST,&nbsp; SRC &nbsp;&nbsp;&nbsp;- Operador XOR bit a bit: DEST = DEST ^ SRC</li>
+								<li>xor &emsp;&emsp;&ensp;REG,&nbsp; REG &emsp;&nbsp;- utilizado para inicializar el registro con 0. Igual que mov REG, 0(pero más rápido).</li>
+								<li>cmp &emsp;&emsp;&nbsp;A, B- comparar dos valores, estableciendo banderas que son utilizadas por los saltos condicionales (abajo)</li>
+								<li>j* &emsp;&emsp;&nbsp;&emsp;LABEL &emsp;&emsp;&nbsp;&ensp;&nbsp;- ir a la etiqueta según el resultado de la comparación anterior. Condicionales disponibles: je(==), jne(!=), jl(<), jle(<=), jge(>=), jg(>), jz(= 0), jnz(!= 0), y muchos otros. También disponible en comparaciones sin signo: jb(<), jbe(<=), ja(>), jae(>=).</li>
+								<li>jmp &emsp;&emsp;&nbsp;LABEL &emsp;&emsp;&nbsp;&ensp;&nbsp;- Ir a la etiqueta de instrucciones . Salta cualquier otra cosa en el camino.</li>
+								<li>ret &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;- devolver. Haga estallar el contador del programa de retorno y salte allí. Finaliza una subrutina.</li>
+								<li>mov &emsp;&emsp;&nbsp;#99, %r10 &emsp;&nbsp;- cargar el valor constante 99 en r10</li>
+								<li>mov &emsp;&emsp;&nbsp;%r10, %r11 &nbsp;&nbsp;&nbsp;- mover datos de r10 a r11</li>
+								<li>mov &emsp;&emsp;&nbsp;%r10, (%r11) &nbsp;- mover datos de r10 a la dirección a la que apunta r11</li>
+								<li>mov &emsp;&emsp;&nbsp;(%r10), %r11 &nbsp;- mover datos de la dirección a la que apunta r10 a r10</li>
+								<li>call &emsp;&emsp;&ensp;&nbsp;label &emsp;&emsp;&emsp;&ensp;&nbsp;&nbsp;- llamar a una subrutina / función / procedimiento</li>
+								<li>syscall &emsp;&emsp;&ensp;&nbsp;&emsp;&emsp;&ensp;&nbsp;&emsp;&emsp;&nbsp;- invocar una llamada al sistema</li>
+							</ul>
+							La persona que llama usa registros para pasar los primeros 6 argumentos a la persona que llama. Dados los argumentos en orden de izquierda a derecha, el orden de los registros utilizados es: %rdi, %rsi, %rdx, %rcx, %r8y %r9. Los argumentos restantes se pasan a la pila en orden inverso para que puedan sacarse de la pila en orden.
+						</p>
+						
+						<p>A, quo quibusdam iusto repellendus blanditiis. Repellendus, doloribus, veritatis blanditiis dolores cumque in pariatur magni velit quibusdam doloremque amet harum dicta neque voluptas possimus dignissimos corporis voluptatibus nemo nostrum quae fuga enim beatae voluptate ex maxime sequi iusto. Voluptate, neque, quisquam, ipsum reprehenderit pariatur magnam excepturi libero quis nam inventore recusandae molestiae temporibus explicabo vel eius facere sit quae deleniti laboriosam voluptatibus necessitatibus sequi distinctio!</p>
+					</div> 
+				</article><!-- #post-## -->
+
+			</div> 
+		</div> <!-- /row post  -->
+
+	<!--	<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="comments">	
+					<h3 class="comments-title">3 Comments</h3>
+					<a href="#comment-form" class="leave-comment">Leave a Comment</a>
+					
+					<ol class="comments-list">
+						<li class="comment">
+							<div>
+								<img src="assets/images/avatar_man.png" alt="Avatar" class="avatar">
+												
+								<div class="comment-meta">
+									<span class="author"><a href="#">John Doe</a></span>
+									<span class="date"><a href="#">January 22, 2011 at 4:55 pm</a></span>
+									<span class="reply"><a href="#">Reply</a></span>
+								</div>
+
+								<div class="comment-body">
+									Morbi velit eros, sagittis in facilisis non.
+								</div>
+							</div>
+
+							<ul class="children">
+								<li class="comment">
+									<div>
+										<img src="assets/images/avatar_man.png" alt="Avatar" class="avatar">
+																
+										<div class="comment-meta">
+											<span class="author"><a href="#">John Doe</a></span>
+											<span class="date"><a href="#">January 22, 2011 at 4:55 pm</a></span>
+											<span class="reply"><a href="#">Reply</a></span>
+										</div> .comment-meta 
+
+										<div class="comment-body">
+											Morbi velit eros, sagittis in facilisis non, rhoncus et erat. Nam posuere tristique sem, eu ultricies tortor imperdiet vitae. Curabitur lacinia neque non metus.
+										</div>
+									</div>
+								</li>
+							</ul>
+						</li>
+
+						<li class="comment">
+							<div>
+								<img src="assets/images/avatar_woman.png" alt="Avatar" class="avatar">
+								
+								<div class="comment-meta">
+									<span class="author"><a href="#">Jonnes</a></span>
+									<span class="date"><a href="#">January 22, 2011 at 4:55 pm</a></span>
+									<span class="reply"><a href="#">Reply</a></span>
+								</div>
+
+								<div class="comment-body">
+									Morbi velit eros, sagittis in facilisis non, rhoncus et erat. Nam posuere tristique sem, eu ultricies tortor imperdiet vitae. Curabitur lacinia neque non metus.												</div>
+							</div>
+						</li>
+					</ol>
+					
+					<div class="clearfix"></div>
+
+					<nav id="comment-nav-below" class="comment-navigation clearfix" role="navigation"><div class="nav-content">
+							<div class="nav-previous">&larr; Older Comments</div>
+							<div class="nav-next">Newer Comments &rarr;</div>
+					</div></nav>
+
+
+					<div id="respond">
+						<h3 id="reply-title">Leave a Reply</h3>
+						<form action="" method="post" id="commentform" class="">
+							<div class="form-group">
+								<label for="inputName">Name</label>
+								<input type="text" class="form-control" id="inputName" placeholder="Enter your name">
+							</div>
+							<div class="form-group">
+								<label for="inputEmail">Email address <i class="text-danger">*</i></label>
+								<input type="email" class="form-control" id="inputEmail" placeholder="Enter your email">
+							</div>
+							<div class="form-group">
+								<label for="inputWeb">Website</label>
+								<input type="nane" class="form-control" id="inputWeb" placeholder="http://">
+							</div>
+							<div class="form-group">
+								<label for="inputComment">Comment</label>
+								<textarea class="form-control" rows="6"></textarea>
+							</div>
+							<div class="row">
+								<div class="col-md-8">
+									<div class="checkbox">
+										<label> <input type="checkbox"> Subscribe to updates</label>
+									</div>
+								</div>
+								<div class="col-md-4 text-right">
+  									<button type="submit" class="btn btn-action">Submit</button>
+								</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>  -->
+		<div class="clearfix"></div>
+
+	</div>	<!-- /container -->
+
+</main>
+<footer id="footer">
+	<div class="container">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contacto</h3>
+				<div class="widget-body">
+					<p>+34 622889282<br>
+						<a href="mailto:#">carloscardozom@gmail.com</a><br>
+					</p>	
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title" >Conóceme</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+						<a href="https://twitter.com/carloscardozom" target="_blanck"><i class="fa fa-twitter fa-2"></i></a>
+						<a href="https://github.com/ccardozom" target="_blanck"><i class="fa fa-github fa-2"></i></a>
+						<a href="https://www.linkedin.com/in/carloscardozomedina/" target="_blanck"><i class="fa fa-linkedin-square fa-2"></i></a>
+					</p>
+				</div>
+			</div>
+
+			
+
+	</div>
+</footer>
+
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-md-6 widget">
+				
+			</div>
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2023, Carlos Cardozo<br> 
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+
+
+
+
+
+<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="assets/js/template.js"></script>
+</body>
+</html>
