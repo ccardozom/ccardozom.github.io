@@ -80,6 +80,28 @@
             font-size: 14px;
         }
 
+        .default-load-btn {
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .default-load-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .default-load-btn:active {
+            transform: translateY(0);
+        }
+
         .difficulty-selector {
             display: grid;
             grid-template-columns: 1fr;
@@ -662,7 +684,8 @@
             <div class="file-upload">
                 <h3 style="margin-bottom: 15px; color: #333;">Cargar archivo de preguntas</h3>
                 <input type="file" id="jsonFile" accept=".json">
-                <p>Selecciona el archivo <strong>preguntas_y_respuestas.json</strong></p>
+                <p>Selecciona el archivo json con el formato correcto</p>
+                <button class="default-load-btn" onclick="loadDefaultQuestions()">📁 Cargar preguntas por defecto</button>
             </div>
             <div id="loading" class="loading" style="display: none;">Cargando preguntas...</div>
             <div id="error" class="error" style="display: none;"></div>
@@ -817,6 +840,35 @@
                 screen.classList.remove('active');
             });
             document.getElementById(screenId).classList.add('active');
+        }
+
+        // NUEVA FUNCIÓN: Cargar preguntas por defecto desde ruta
+        function loadDefaultQuestions() {
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('error').style.display = 'none';
+
+            fetch('assets/documents/preguntas_y_respuestas_xsiam.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('No se pudo cargar el archivo por defecto');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    allQuestions = data;
+                    
+                    if (!Array.isArray(allQuestions) || allQuestions.length === 0) {
+                        throw new Error('El archivo JSON debe contener un array de preguntas');
+                    }
+                    
+                    document.getElementById('loading').style.display = 'none';
+                    showScreen('screen-difficulty');
+                })
+                .catch(error => {
+                    document.getElementById('loading').style.display = 'none';
+                    document.getElementById('error').textContent = '❌ Error al cargar el archivo por defecto: ' + error.message;
+                    document.getElementById('error').style.display = 'block';
+                });
         }
 
         function startMode(mode) {
