@@ -465,7 +465,7 @@
     "image_question": "",
     "image_solution": "",
     "image_statement": "",
-    "answer": ["C"]
+    "answer": ["B"]
   },
   {
   "question": "A Cortex XSIAM engineer plans to add Kafka and Syslog Collectors to a Broker VM cluster. What are two expected behaviors of the applets when they are added to the cluster? (Choose two.)",
@@ -517,7 +517,7 @@
     "image_question": "",
     "image_solution": "",
     "image_statement": "",
-    "answer": ["B"]
+    "answer": ["A"]
   },
   {
     "question": "A Behavioral Threat Protection (BTP) alert is triggered with an action of \"Prevented (Blocked)\" on application servers. The involved processes are legitimate OS binaries and the activity should be allowed only for endpoints in the \"AppServers\" group. How should the exception be created to minimize the security gap?",
