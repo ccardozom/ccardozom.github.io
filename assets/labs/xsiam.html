@@ -1,265 +1,1214 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author"      content="Carlos Cardozo">
-	
-	<title>Blog de Carlos Cardozo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen de Preparación</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-	<link rel="shortcut icon" href="../images/icone_c.png">
-	
-	<!-- Bootstrap -->
-	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
-	<!-- Icon font -->
-	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-	<!-- Fonts -->
-	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
-	<!-- Custom styles -->
-	<link rel="stylesheet" href="../css/styles.css">
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px 10px;
+        }
 
-	<!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                padding: 40px 20px;
+            }
+
+            .container {
+                padding: 40px;
+            }
+
+            h1 {
+                font-size: 28px;
+                margin-bottom: 40px;
+                padding-bottom: 20px;
+            }
+        }
+
+        .screen {
+            display: none;
+        }
+
+        .screen.active {
+            display: block;
+        }
+
+        .file-upload {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+        }
+
+        .file-upload input[type="file"] {
+            padding: 10px;
+            border: 2px solid #667eea;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .file-upload p {
+            margin-top: 15px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .difficulty-selector {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 600px) {
+            .difficulty-selector {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                margin-top: 30px;
+            }
+        }
+
+        .difficulty-option {
+            background: #f8f9fa;
+            border: 3px solid #667eea;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        @media (min-width: 768px) {
+            .difficulty-option {
+                padding: 30px;
+            }
+        }
+
+        .difficulty-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+            background: #667eea;
+            color: white;
+        }
+
+        .difficulty-option.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background: #e0e0e0;
+            border-color: #999;
+        }
+
+        .difficulty-option.disabled:hover {
+            transform: none;
+            box-shadow: none;
+            background: #e0e0e0;
+            color: #333;
+        }
+
+        .difficulty-option h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .difficulty-option p {
+            font-size: 12px;
+            color: #666;
+        }
+
+        @media (min-width: 768px) {
+            .difficulty-option h3 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            .difficulty-option p {
+                font-size: 14px;
+            }
+        }
+
+        .difficulty-option:hover p {
+            color: white;
+        }
+
+        .random-option {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .random-option {
+                margin-top: 30px;
+                padding: 20px;
+            }
+        }
+
+        .random-checkbox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .random-checkbox input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: #667eea;
+        }
+
+        @media (min-width: 768px) {
+            .random-checkbox input[type="checkbox"] {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .random-checkbox label {
+            font-size: 14px;
+            color: #333;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        @media (min-width: 768px) {
+            .random-checkbox label {
+                font-size: 16px;
+            }
+        }
+
+        .exam-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (min-width: 600px) {
+            .exam-info {
+                flex-direction: row;
+                justify-content: space-around;
+                margin-bottom: 25px;
+                padding: 20px;
+            }
+        }
+
+        .info-box {
+            text-align: center;
+            flex: 1;
+        }
+
+        .info-label {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            font-size: 20px;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        @media (min-width: 768px) {
+            .info-label {
+                font-size: 14px;
+            }
+
+            .info-value {
+                font-size: 28px;
+            }
+        }
+
+        .info-value.warning {
+            color: #ff9800;
+        }
+
+        .info-value.danger {
+            color: #dc3545;
+        }
+
+        .question-block {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid #667eea;
+        }
+
+        @media (min-width: 768px) {
+            .question-block {
+                padding: 30px;
+            }
+        }
+
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .question-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .question-counter {
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media (min-width: 768px) {
+            .question-header {
+                margin-bottom: 20px;
+            }
+
+            .question-number {
+                font-size: 24px;
+            }
+
+            .question-counter {
+                font-size: 16px;
+            }
+        }
+
+        .question-text {
+            color: #333;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+        }
+
+        @media (min-width: 768px) {
+            .question-text {
+                font-size: 18px;
+                margin-bottom: 20px;
+                line-height: 1.6;
+            }
+        }
+
+        .options {
+            margin-bottom: 15px;
+        }
+
+        .option {
+            display: flex;
+            align-items: flex-start;
+            padding: 12px;
+            margin-bottom: 10px;
+            background: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid #e0e0e0;
+        }
+
+        @media (min-width: 768px) {
+            .options {
+                margin-bottom: 20px;
+            }
+
+            .option {
+                padding: 15px;
+                margin-bottom: 12px;
+            }
+        }
+
+        .option:hover {
+            background: #f0f0f0;
+            border-color: #667eea;
+        }
+
+        .option.wrong {
+            background: #f8d7da;
+            border-color: #dc3545;
+        }
+
+        .option.correct {
+            background: #d4edda;
+            border-color: #28a745;
+        }
+
+        .option input[type="radio"],
+        .option input[type="checkbox"] {
+            width: 22px;
+            height: 22px;
+            margin-right: 15px;
+            margin-top: 2px;
+            cursor: pointer;
+            flex-shrink: 0;
+            appearance: none;
+            -webkit-appearance: none;
+            border: 2px solid #667eea;
+            border-radius: 50%;
+            position: relative;
+            background: white;
+        }
+
+        .option input[type="radio"]:checked,
+        .option input[type="checkbox"]:checked {
+            background: #667eea;
+            border-color: #667eea;
+        }
+
+        .option input[type="radio"]:checked::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: white;
+        }
+
+        .option input[type="checkbox"]:checked::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .option label {
+            cursor: pointer;
+            font-size: 14px;
+            color: #333;
+            flex: 1;
+            line-height: 1.4;
+        }
+
+        @media (min-width: 768px) {
+            .option label {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 600px) {
+            .buttons {
+                flex-direction: row;
+                gap: 15px;
+                margin-top: 30px;
+            }
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            width: 100%;
+        }
+
+        @media (min-width: 600px) {
+            .btn {
+                padding: 12px 30px;
+                font-size: 16px;
+                width: auto;
+            }
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .result {
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            display: none;
+        }
+
+        .result.correct {
+            background: #d4edda;
+            color: #155724;
+            border: 2px solid #c3e6cb;
+        }
+
+        .result.incorrect {
+            background: #f8d7da;
+            color: #721c24;
+            border: 2px solid #f5c6cb;
+        }
+
+        .results-screen {
+            text-align: center;
+        }
+
+        .results-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .percentage-box {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border: 5px solid #667eea;
+        }
+
+        .percentage-box.passed {
+            border-color: #28a745;
+            background: #d4edda;
+        }
+
+        .percentage-box.failed {
+            border-color: #dc3545;
+            background: #f8d7da;
+        }
+
+        .percentage-value {
+            font-size: 48px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        @media (min-width: 768px) {
+            .percentage-value {
+                font-size: 72px;
+                margin-bottom: 15px;
+            }
+        }
+
+        .percentage-box.passed .percentage-value {
+            color: #28a745;
+        }
+
+        .percentage-box.failed .percentage-value {
+            color: #dc3545;
+        }
+
+        .percentage-message {
+            font-size: 18px;
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        @media (min-width: 768px) {
+            .percentage-message {
+                font-size: 24px;
+            }
+        }
+
+        .percentage-box.passed .percentage-message {
+            color: #28a745;
+        }
+
+        .percentage-box.failed .percentage-message {
+            color: #dc3545;
+        }
+
+        .stat-box {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+        }
+
+        .stat-box.correct {
+            border-left-color: #28a745;
+        }
+
+        .stat-box.incorrect {
+            border-left-color: #dc3545;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+
+        @media (min-width: 768px) {
+            .stat-number {
+                font-size: 48px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .stat-box.correct .stat-number {
+            color: #28a745;
+        }
+
+        .stat-box.incorrect .stat-number {
+            color: #dc3545;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+        }
+
+        @media (min-width: 768px) {
+            .stat-label {
+                font-size: 18px;
+            }
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            font-size: 18px;
+            color: #667eea;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid #f5c6cb;
+        }
+
+        .message {
+            background: #d1ecf1;
+            color: #0c5460;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid #bee5eb;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Examen de Preparación de Selección Múltiple</h1>
 
-<header id="header">
-	<div id="head" class="parallax" parallax-speed="1">
-		<h1 id="logo" class="text-center">
-			<img class="img-circle" src="../images/photo_h.png" alt="">
-			<span class="title">Blog de Carlos Cardozo</span>
-			<span class="tagline">Con esfuerzo, responsabilidad y dedicación siempre puedes lograr tus objetivos.</span>
-		</h1>
-	</div>
+        <!-- Pantalla 1: Carga de archivo -->
+        <div id="screen-upload" class="screen active">
+            <div class="file-upload">
+                <h3 style="margin-bottom: 15px; color: #333;">Cargar archivo de preguntas</h3>
+                <input type="file" id="jsonFile" accept=".json">
+                <p>Selecciona el archivo <strong>preguntas_y_respuestas.json</strong></p>
+            </div>
+            <div id="loading" class="loading" style="display: none;">Cargando preguntas...</div>
+            <div id="error" class="error" style="display: none;"></div>
+        </div>
 
-	<nav class="navbar navbar-default navbar-sticky">
-		<div class="container-fluid">
-			
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-			</div>
-			
-			<div class="navbar-collapse collapse">
-				
-				<ul class="nav navbar-nav">
-					<li><a href="../../index.html">Home</a></li>
-					<li><a href="../../about.html">About</a></li>
-					<!--<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="sidebar-left.html">Left Sidebar</a></li>
-							<li><a href="sidebar-right.html">Right Sidebar</a></li> 
-							<li><a href="single.html">Blog</a></li>
-						</ul>
-					</li> -->
-                    <li><a href="../../about.html">Labs</a></li>
-					<li class="active"><a href="../../blog.html">Blog</a></li>
-				</ul>
-			
-			</div><!--/.nav-collapse -->			
-		</div>	
-	</nav>
-</header>
+        <!-- Pantalla 2: Selección de dificultad -->
+        <div id="screen-difficulty" class="screen">
+            <h2 style="text-align: center; margin-bottom: 30px; color: #333;">Selecciona el modo de práctica</h2>
+            <div class="difficulty-selector">
+                <div class="difficulty-option" onclick="startMode('facil')">
+                    <h3>📝 Fácil</h3>
+                    <p>Puedes ver si acertaste antes de continuar</p>
+                </div>
+                <div class="difficulty-option" onclick="startMode('dificil')">
+                    <h3>🔥 Difícil</h3>
+                    <p>Debes acertar para poder continuar</p>
+                </div>
+                <div class="difficulty-option" onclick="startMode('examen')">
+                    <h3>📋 Examen</h3>
+                    <p>Sin feedback hasta el final</p>
+                </div>
+                <div class="difficulty-option" id="repaso-option" onclick="startMode('repaso')">
+                    <h3>🔄 Repaso</h3>
+                    <p>Practica las preguntas falladas</p>
+                </div>
+            </div>
+            
+            <!-- Opción de orden aleatorio -->
+            <div class="random-option">
+                <div class="random-checkbox">
+                    <input type="checkbox" id="randomOrder" checked>
+                    <label for="randomOrder">🔀 Orden aleatorio de preguntas</label>
+                </div>
+            </div>
+        </div>
 
-<main id="main">
+        <!-- Pantalla 3: Pregunta -->
+        <div id="screen-question" class="screen">
+            <!-- Cronómetro y contador -->
+            <div class="exam-info" id="exam-info" style="display: none;">
+                <div class="info-box">
+                    <div class="info-label">⏱️ Tiempo restante</div>
+                    <div class="info-value" id="timer-display">120:00</div>
+                </div>
+                <div class="info-box">
+                    <div class="info-label">📝 Preguntas restantes</div>
+                    <div class="info-value" id="questions-remaining">85</div>
+                </div>
+            </div>
 
-	<div class="container">
-		
-		<div class="row topspace">
-			<div class="col-sm-8 col-sm-offset-2">
-															
- 				<article class="post">
-					<header class="entry-header">
- 						<h1 class="entry-title"><a href="xsiam.html" rel="bookmark">XSIAM Engineer</a></h1>
-					</header> 
-					<div class="entry-content"> 
-						<p><img alt="" src="../images/construccion.jpg"></p>
-					<!--	<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, rerum voluptates veniam. Esse, nihil, ea, eaque, quos cum id tempore voluptate nisi nemo debitis impedit officiis culpa repellat voluptatum in aperiam error quo minima ratione ex pariatur maxime eligendi dolore nesciunt molestiae enim alias atque commodi delectus perferendis. Blanditiis, iste placeat nostrum in! Eligendi, omnis, unde, quos ullam nesciunt molestias quis a saepe nisi distinctio molestiae voluptate obcaecati officiis consequuntur similique aspernatur rerum sequi placeat iure quaerat itaque libero officia recusandae ad corrupti aperiam cum beatae. Adipisci ad natus deleniti.
-						</p>
-						<p>
-							Dolores harum alias consequatur blanditiis. Inventore, quod, ullam veritatis eum ratione neque quis fugit quae optio facilis in ipsa! Maiores, quia, possimus repellendus iusto nostrum nisi doloribus qui excepturi ducimus veritatis molestiae autem consequatur quae ex nihil id sapiente minima adipisci. Quibusdam, aperiam, sapiente, nobis, possimus vero laudantium delectus esse minus quo nihil perspiciatis accusamus. Cupiditate sapiente illum accusantium animi pariatur sed minima nam. 
-						</p>
-						<p><img alt="" src="../images/mac.jpg"></p>
-						
-						<blockquote>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, itaque, porro, non sequi sunt vel quibusdam harum ea ratione ipsum eius eos maxime vitae hic ab dignissimos natus assumenda similique earum laboriosam possimus debitis molestiae. Commodi, facilis, et, officia hic quos quas ipsam harum amet illum quia reprehenderit sequi repellat. Asperiores, fugiat, optio reiciendis nam nisi assumenda alias non similique modi ducimus nostrum quasi consequatur ipsa animi soluta!
-						</blockquote>
-						<p>
-							Harum, consectetur, quia nisi fugiat quasi ea amet cum inventore aperiam optio qui perspiciatis debitis molestiae laborum minima doloremque ullam eum nesciunt repellendus dolor dicta cumque deserunt. Quaerat, saepe, maxime, quod, dolor nisi assumenda aut est quos optio animi aliquid quidem voluptates adipisci hic recusandae dicta quis eligendi illo ducimus asperiores reiciendis odit distinctio natus? In, reprehenderit, facere, ipsam, vel architecto autem temporibus a quidem voluptatum at nesciunt quas facilis. Soluta, excepturi, nihil, illum dicta hic ratione tenetur voluptate dolorum a tempore dignissimos reprehenderit voluptas expedita officiis enim minus adipisci?</p>
-						
-						<h3>Deserunt, ullam, quo voluptate rem sed alias numquam eum natus!</h3>
-						<p><img alt="" src="../images/mac.jpg"></p>
+            <div class="question-block">
+                <div class="question-header">
+                    <div class="question-number" id="current-question-num"></div>
+                    <div class="question-counter" id="question-counter"></div>
+                </div>
+                <div class="question-text" id="question-text"></div>
+                <div class="options" id="options-container"></div>
+                <div id="result-message" class="result"></div>
+            </div>
+            <div class="buttons">
+                <button class="btn btn-primary" id="btn-next" onclick="nextQuestion()">Siguiente</button>
+                <button class="btn btn-secondary" onclick="exitExam()">Salir</button>
+            </div>
+        </div>
 
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, aperiam, ab neque est cum iste reprehenderit quidem eligendi ad dicta ducimus quod nihil amet! Possimus, qui, dolorem, animi quas nesciunt corporis esse maiores iusto optio deserunt sequi aspernatur voluptatem velit suscipit nam temporibus eaque neque hic quaerat molestiae nisi dolor numquam similique quae voluptas quos ex! Pariatur, voluptas, voluptatibus corporis animi nihil beatae asperiores explicabo odio at aspernatur ea sapiente voluptatem placeat fugit quas magni tempore aliquid minima eos tempora in id eveniet et maxime iste a quaerat dolorum consequuntur?</p>
-						
-						<h4>Perferendis, odit, optio, exercitationem quas ipsa eius quod ut aperiam facilis iste ratione odio laborum?</h4>
-						<p>Dolore aliquid ipsum cum sint velit! Esse, perferendis illo hic temporibus reprehenderit nemo veritatis omnis velit quas impedit at facilis voluptatibus blanditiis qui maiores quod incidunt nobis maxime.</p>
-						<p>A, quo quibusdam iusto repellendus blanditiis. Repellendus, doloribus, veritatis blanditiis dolores cumque in pariatur magni velit quibusdam doloremque amet harum dicta neque voluptas possimus dignissimos corporis voluptatibus nemo nostrum quae fuga enim beatae voluptate ex maxime sequi iusto. Voluptate, neque, quisquam, ipsum reprehenderit pariatur magnam excepturi libero quis nam inventore recusandae molestiae temporibus explicabo vel eius facere sit quae deleniti laboriosam voluptatibus necessitatibus sequi distinctio!</p>
-					--></div> 
-				</article><!-- #post-## -->
+        <!-- Pantalla 4: Resultados -->
+        <div id="screen-results" class="screen">
+            <div class="results-screen">
+                <h2 style="color: #333; margin-bottom: 30px;">📊 Resultados Finales</h2>
+                
+                <!-- Porcentaje de acierto -->
+                <div class="percentage-box" id="percentage-box">
+                    <div class="percentage-value" id="percentage-value">0%</div>
+                    <div class="percentage-message" id="percentage-message">Calculando...</div>
+                </div>
 
-			</div> 
-		</div> <!-- /row post  -->
+                <div class="results-stats">
+                    <div class="stat-box correct">
+                        <div class="stat-number" id="correct-count">0</div>
+                        <div class="stat-label">Respuestas correctas (a la primera)</div>
+                    </div>
+                    <div class="stat-box incorrect">
+                        <div class="stat-number" id="incorrect-count">0</div>
+                        <div class="stat-label">Respuestas incorrectas (a la primera)</div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="btn btn-primary" onclick="restartSameMode()">Reiniciar mismo modo</button>
+                    <button class="btn btn-secondary" onclick="goToMenu()">Volver al menú</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<!--	<div class="row">
-			<div class="col-sm-8 col-sm-offset-2">
+    <script>
+        // Variables globales
+        let allQuestions = [];
+        let failedQuestions = [];
+        let currentMode = '';
+        let currentQuestions = [];
+        let currentQuestionIndex = 0;
+        let correctAnswersFirst = 0;
+        let incorrectAnswersFirst = 0;
+        let hasAnsweredCurrent = false;
+        let firstAttempt = true;
 
-				<div id="comments">	
-					<h3 class="comments-title">3 Comments</h3>
-					<a href="#comment-form" class="leave-comment">Leave a Comment</a>
-					
-					<ol class="comments-list">
-						<li class="comment">
-							<div>
-								<img src="assets/images/avatar_man.png" alt="Avatar" class="avatar">
-												
-								<div class="comment-meta">
-									<span class="author"><a href="#">John Doe</a></span>
-									<span class="date"><a href="#">January 22, 2011 at 4:55 pm</a></span>
-									<span class="reply"><a href="#">Reply</a></span>
-								</div>
+        // NUEVAS VARIABLES para cronómetro y contador
+        let timerInterval = null;
+        let timeRemaining = 120 * 60; // 120 minutos en segundos
+        let questionsLimit = 85;
+        let questionsAnswered = 0;
 
-								<div class="comment-body">
-									Morbi velit eros, sagittis in facilisis non.
-								</div>
-							</div>
+        // Cargar archivo JSON
+        document.getElementById('jsonFile').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
 
-							<ul class="children">
-								<li class="comment">
-									<div>
-										<img src="assets/images/avatar_man.png" alt="Avatar" class="avatar">
-																
-										<div class="comment-meta">
-											<span class="author"><a href="#">John Doe</a></span>
-											<span class="date"><a href="#">January 22, 2011 at 4:55 pm</a></span>
-											<span class="reply"><a href="#">Reply</a></span>
-										</div> .comment-meta 
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('error').style.display = 'none';
 
-										<div class="comment-body">
-											Morbi velit eros, sagittis in facilisis non, rhoncus et erat. Nam posuere tristique sem, eu ultricies tortor imperdiet vitae. Curabitur lacinia neque non metus.
-										</div>
-									</div>
-								</li>
-							</ul>
-						</li>
+            const reader = new FileReader();
+            
+            reader.onload = function(event) {
+                try {
+                    allQuestions = JSON.parse(event.target.result);
+                    
+                    if (!Array.isArray(allQuestions) || allQuestions.length === 0) {
+                        throw new Error('El archivo JSON debe contener un array de preguntas');
+                    }
+                    
+                    document.getElementById('loading').style.display = 'none';
+                    showScreen('screen-difficulty');
+                    
+                } catch (error) {
+                    document.getElementById('loading').style.display = 'none';
+                    document.getElementById('error').textContent = '❌ Error al cargar el archivo: ' + error.message;
+                    document.getElementById('error').style.display = 'block';
+                }
+            };
+            
+            reader.onerror = function() {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('error').textContent = '❌ Error al leer el archivo';
+                document.getElementById('error').style.display = 'block';
+            };
+            
+            reader.readAsText(file);
+        });
 
-						<li class="comment">
-							<div>
-								<img src="assets/images/avatar_woman.png" alt="Avatar" class="avatar">
-								
-								<div class="comment-meta">
-									<span class="author"><a href="#">Jonnes</a></span>
-									<span class="date"><a href="#">January 22, 2011 at 4:55 pm</a></span>
-									<span class="reply"><a href="#">Reply</a></span>
-								</div>
+        function showScreen(screenId) {
+            document.querySelectorAll('.screen').forEach(screen => {
+                screen.classList.remove('active');
+            });
+            document.getElementById(screenId).classList.add('active');
+        }
 
-								<div class="comment-body">
-									Morbi velit eros, sagittis in facilisis non, rhoncus et erat. Nam posuere tristique sem, eu ultricies tortor imperdiet vitae. Curabitur lacinia neque non metus.												</div>
-							</div>
-						</li>
-					</ol>
-					
-					<div class="clearfix"></div>
+        function startMode(mode) {
+            if (mode === 'repaso' && failedQuestions.length === 0) {
+                alert('No hay preguntas falladas disponibles para repasar. ¡Completa primero un examen!');
+                return;
+            }
 
-					<nav id="comment-nav-below" class="comment-navigation clearfix" role="navigation"><div class="nav-content">
-							<div class="nav-previous">&larr; Older Comments</div>
-							<div class="nav-next">Newer Comments &rarr;</div>
-					</div></nav>
+            currentMode = mode;
+            currentQuestionIndex = 0;
+            correctAnswersFirst = 0;
+            incorrectAnswersFirst = 0;
+            questionsAnswered = 0;
 
+            // Configurar preguntas según el modo
+            if (mode === 'repaso') {
+                currentQuestions = [...failedQuestions];
+            } else {
+                currentQuestions = [...allQuestions];
+            }
 
-					<div id="respond">
-						<h3 id="reply-title">Leave a Reply</h3>
-						<form action="" method="post" id="commentform" class="">
-							<div class="form-group">
-								<label for="inputName">Name</label>
-								<input type="text" class="form-control" id="inputName" placeholder="Enter your name">
-							</div>
-							<div class="form-group">
-								<label for="inputEmail">Email address <i class="text-danger">*</i></label>
-								<input type="email" class="form-control" id="inputEmail" placeholder="Enter your email">
-							</div>
-							<div class="form-group">
-								<label for="inputWeb">Website</label>
-								<input type="nane" class="form-control" id="inputWeb" placeholder="http://">
-							</div>
-							<div class="form-group">
-								<label for="inputComment">Comment</label>
-								<textarea class="form-control" rows="6"></textarea>
-							</div>
-							<div class="row">
-								<div class="col-md-8">
-									<div class="checkbox">
-										<label> <input type="checkbox"> Subscribe to updates</label>
-									</div>
-								</div>
-								<div class="col-md-4 text-right">
-  									<button type="submit" class="btn btn-action">Submit</button>
-								</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>  -->
-		<div class="clearfix"></div>
+            // NUEVO: Verificar si se debe aplicar orden aleatorio
+            const randomOrderCheckbox = document.getElementById('randomOrder');
+            if (randomOrderCheckbox && randomOrderCheckbox.checked) {
+                shuffleArray(currentQuestions);
+            }
 
-	</div>	<!-- /container -->
+            // NUEVO: Mostrar cronómetro y contador solo en facil, dificil y examen
+            const examInfo = document.getElementById('exam-info');
+            if (mode === 'facil' || mode === 'dificil' || mode === 'examen') {
+                examInfo.style.display = 'flex';
+                startTimer();
+                updateQuestionsRemaining();
+            } else {
+                examInfo.style.display = 'none';
+                stopTimer();
+            }
 
-</main>
-<footer id="footer">
-	<div class="container">
-			<div class="col-md-3 widget">
-				<h3 class="widget-title">Contacto</h3>
-				<div class="widget-body">
-					<p>+34 622889282<br>
-						<a href="mailto:#">carloscardozom@gmail.com</a><br>
-					</p>	
-				</div>
-			</div>
+            // Todos los modos usan solo botón "Siguiente"
+            const btnNext = document.getElementById('btn-next');
+            if (btnNext) {
+                btnNext.style.display = 'inline-block';
+            }
 
-			<div class="col-md-3 widget">
-				<h3 class="widget-title" >Conóceme</h3>
-				<div class="widget-body">
-					<p class="follow-me-icons">
-						<a href="https://twitter.com/carloscardozom" target="_blanck"><i class="fa fa-twitter fa-2"></i></a>
-						<a href="https://github.com/ccardozom" target="_blanck"><i class="fa fa-github fa-2"></i></a>
-						<a href="https://www.linkedin.com/in/carloscardozomedina/" target="_blanck"><i class="fa fa-linkedin-square fa-2"></i></a>
-					</p>
-				</div>
-			</div>
+            loadQuestion();
+            showScreen('screen-question');
+        }
 
-			
+        // NUEVA FUNCIÓN: Mezclar array aleatoriamente (Fisher-Yates shuffle)
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
 
-	</div>
-</footer>
+        // NUEVA FUNCIÓN: Iniciar cronómetro
+        function startTimer() {
+            timeRemaining = 120 * 60; // Reiniciar a 120 minutos
+            updateTimerDisplay();
+            
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                updateTimerDisplay();
+                
+                if (timeRemaining <= 0) {
+                    stopTimer();
+                    alert('⏰ ¡Tiempo agotado! El examen ha finalizado.');
+                    showResults();
+                }
+            }, 1000);
+        }
 
-<footer id="underfooter">
-	<div class="container">
-		<div class="row">
-			
-			<div class="col-md-6 widget">
-				
-			</div>
+        // NUEVA FUNCIÓN: Detener cronómetro
+        function stopTimer() {
+            if (timerInterval) {
+                clearInterval(timerInterval);
+                timerInterval = null;
+            }
+        }
 
-			<div class="col-md-6 widget">
-				<div class="widget-body">
-					<p class="text-right">
-						Copyright &copy; 2023, Carlos Cardozo<br> 
-				</div>
-			</div>
+        // NUEVA FUNCIÓN: Actualizar display del cronómetro
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeRemaining / 60);
+            const seconds = timeRemaining % 60;
+            const display = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            
+            const timerElement = document.getElementById('timer-display');
+            timerElement.textContent = display;
+            
+            // Cambiar color según el tiempo restante
+            if (timeRemaining <= 300) { // 5 minutos
+                timerElement.className = 'info-value danger';
+            } else if (timeRemaining <= 600) { // 10 minutos
+                timerElement.className = 'info-value warning';
+            } else {
+                timerElement.className = 'info-value';
+            }
+        }
 
-		</div> <!-- /row of widgets -->
-	</div>
-</footer>
+        // NUEVA FUNCIÓN: Actualizar contador de preguntas
+        function updateQuestionsRemaining() {
+            const remaining = questionsLimit - questionsAnswered;
+            const element = document.getElementById('questions-remaining');
+            element.textContent = remaining;
+            
+            // Cambiar color según preguntas restantes
+            if (remaining <= 10) {
+                element.className = 'info-value danger';
+            } else if (remaining <= 20) {
+                element.className = 'info-value warning';
+            } else {
+                element.className = 'info-value';
+            }
+            
+            // Verificar si se alcanzó el límite
+            if (remaining <= 0) {
+                stopTimer();
+                alert('📝 Has alcanzado el límite de 85 preguntas. El examen ha finalizado.');
+                showResults();
+            }
+        }
 
+        function loadQuestion() {
+            if (currentQuestionIndex >= currentQuestions.length) {
+                showResults();
+                return;
+            }
 
+            hasAnsweredCurrent = false;
+            firstAttempt = true;
+            document.getElementById('result-message').style.display = 'none';
 
+            const question = currentQuestions[currentQuestionIndex];
+            const isMultipleChoice = question.answer.length > 1;
+            const inputType = isMultipleChoice ? 'checkbox' : 'radio';
 
+            document.getElementById('current-question-num').textContent = currentQuestionIndex + 1;
+            document.getElementById('question-counter').textContent = `de ${currentQuestions.length}`;
+            document.getElementById('question-text').textContent = question.question;
 
-<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="assets/js/template.js"></script>
+            // Limpiar opciones anteriores
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+
+            // Crear opciones
+            for (let [letter, text] of Object.entries(question.choices)) {
+                const optionDiv = document.createElement('div');
+                optionDiv.className = 'option';
+                optionDiv.innerHTML = `
+                    <input type="${inputType}" id="opt${letter}" name="current-question" value="${letter}">
+                    <label for="opt${letter}">${text}</label>
+                `;
+                optionsContainer.appendChild(optionDiv);
+            }
+
+            // Resetear estilos
+            document.querySelectorAll('.option').forEach(opt => {
+                opt.classList.remove('wrong', 'correct');
+            });
+        }
+
+        function checkCurrentAnswer() {
+            // Esta función ya no se usa, todo se maneja en nextQuestion
+        }
+
+        function nextQuestion() {
+            const question = currentQuestions[currentQuestionIndex];
+            const isMultipleChoice = question.answer.length > 1;
+            let selectedValues = [];
+
+            // Obtener respuestas seleccionadas
+            if (isMultipleChoice) {
+                const selected = document.querySelectorAll('input[name="current-question"]:checked');
+                selectedValues = Array.from(selected).map(el => el.value).sort();
+            } else {
+                const selected = document.querySelector('input[name="current-question"]:checked');
+                if (selected) selectedValues = [selected.value];
+            }
+
+            // Validar que haya seleccionado algo
+            if (selectedValues.length === 0) {
+                alert('⚠️ Por favor selecciona una respuesta');
+                return;
+            }
+
+            const correctSorted = question.answer.slice().sort();
+            const isCorrect = JSON.stringify(selectedValues) === JSON.stringify(correctSorted);
+
+            // MODO FÁCIL o REPASO
+            if (currentMode === 'facil' || currentMode === 'repaso') {
+                if (!hasAnsweredCurrent) {
+                    // Primera vez que intenta responder
+                    const resultDiv = document.getElementById('result-message');
+                    
+                    if (isCorrect) {
+                        resultDiv.textContent = '✅ ¡Correcto! Excelente respuesta';
+                        resultDiv.className = 'result correct';
+                        resultDiv.style.display = 'block';
+                        
+                        if (firstAttempt) {
+                            correctAnswersFirst++;
+                            // NUEVO: Incrementar contador solo en modo fácil
+                            if (currentMode === 'facil') {
+                                questionsAnswered++;
+                                updateQuestionsRemaining();
+                                if (questionsAnswered >= questionsLimit) {
+                                    return;
+                                }
+                            }
+                        }
+                        
+                        // Permitir avanzar
+                        hasAnsweredCurrent = true;
+                        firstAttempt = false;
+                        
+                        // Avanzar automáticamente
+                        currentQuestionIndex++;
+                        loadQuestion();
+                    } else {
+                        resultDiv.textContent = `❌ Incorrecto. La respuesta correcta es: ${question.answer.join(', ')}`;
+                        resultDiv.className = 'result incorrect';
+                        resultDiv.style.display = 'block';
+
+                        if (firstAttempt) {
+                            incorrectAnswersFirst++;
+                            // NUEVO: Incrementar contador solo en modo fácil
+                            if (currentMode === 'facil') {
+                                questionsAnswered++;
+                                updateQuestionsRemaining();
+                                if (questionsAnswered >= questionsLimit) {
+                                    return;
+                                }
+                            }
+                            if (!failedQuestions.find(q => q.question === question.question)) {
+                                failedQuestions.push(question);
+                            }
+                        }
+
+                        // Marcar respuestas incorrectas en rojo
+                        selectedValues.forEach(val => {
+                            const input = document.querySelector(`input[value="${val}"]`);
+                            if (input) {
+                                input.closest('.option').classList.add('wrong');
+                            }
+                        });
+
+                        firstAttempt = false;
+                        hasAnsweredCurrent = false; // No permitir avanzar hasta acertar
+                        
+                        // NO AVANZAR - el usuario debe intentar de nuevo
+                        return;
+                    }
+                } else {
+                    // Ya ha visto el feedback, verificar si acertó esta vez
+                    if (!isCorrect) {
+                        alert('❌ Debes acertar la respuesta para continuar');
+                        return;
+                    }
+                    // Si acertó, avanzar
+                    currentQuestionIndex++;
+                    loadQuestion();
+                }
+                return;
+            }
+
+            // MODO DIFÍCIL
+            if (currentMode === 'dificil') {
+                if (!hasAnsweredCurrent) {
+                    const resultDiv = document.getElementById('result-message');
+                    
+                    if (isCorrect) {
+                        if (firstAttempt) {
+                            correctAnswersFirst++;
+                            // NUEVO: Incrementar contador
+                            questionsAnswered++;
+                            updateQuestionsRemaining();
+                            if (questionsAnswered >= questionsLimit) {
+                                return;
+                            }
+                        }
+                        hasAnsweredCurrent = true;
+                        firstAttempt = false;
+                        currentQuestionIndex++;
+                        loadQuestion();
+                    } else {
+                        resultDiv.textContent = '❌ Incorrecto. Inténtalo de nuevo.';
+                        resultDiv.className = 'result incorrect';
+                        resultDiv.style.display = 'block';
+
+                        if (firstAttempt) {
+                            incorrectAnswersFirst++;
+                            // NUEVO: Incrementar contador
+                            questionsAnswered++;
+                            updateQuestionsRemaining();
+                            if (questionsAnswered >= questionsLimit) {
+                                return;
+                            }
+                            if (!failedQuestions.find(q => q.question === question.question)) {
+                                failedQuestions.push(question);
+                            }
+                        }
+
+                        selectedValues.forEach(val => {
+                            const input = document.querySelector(`input[value="${val}"]`);
+                            if (input) {
+                                input.closest('.option').classList.add('wrong');
+                            }
+                        });
+
+                        firstAttempt = false;
+                        hasAnsweredCurrent = false;
+                        return;
+                    }
+                } else {
+                    if (!isCorrect) {
+                        alert('❌ Debes acertar la respuesta para continuar');
+                        return;
+                    }
+                    currentQuestionIndex++;
+                    loadQuestion();
+                }
+                return;
+            }
+
+            // MODO EXAMEN
+            if (currentMode === 'examen') {
+                if (isCorrect) {
+                    correctAnswersFirst++;
+                } else {
+                    incorrectAnswersFirst++;
+                    if (!failedQuestions.find(q => q.question === question.question)) {
+                        failedQuestions.push(question);
+                    }
+                }
+
+                // NUEVO: Incrementar contador
+                questionsAnswered++;
+                updateQuestionsRemaining();
+                if (questionsAnswered >= questionsLimit) {
+                    return;
+                }
+
+                currentQuestionIndex++;
+                loadQuestion();
+            }
+        }
+
+        function exitExam() {
+            if (confirm('¿Estás seguro de que quieres salir? Se perderá tu progreso.')) {
+                goToMenu();
+            }
+        }
+
+        function showResults() {
+            stopTimer(); // NUEVO: Detener cronómetro
+            
+            // Calcular porcentaje de acierto
+            const totalAnswered = correctAnswersFirst + incorrectAnswersFirst;
+            const percentage = totalAnswered > 0 ? Math.round((correctAnswersFirst / totalAnswered) * 100) : 0;
+            
+            // Mostrar estadísticas
+            document.getElementById('correct-count').textContent = correctAnswersFirst;
+            document.getElementById('incorrect-count').textContent = incorrectAnswersFirst;
+            document.getElementById('percentage-value').textContent = percentage + '%';
+            
+            // Determinar si aprobó o no
+            const percentageBox = document.getElementById('percentage-box');
+            const percentageMessage = document.getElementById('percentage-message');
+            
+            if (percentage >= 75) {
+                percentageBox.className = 'percentage-box passed';
+                percentageMessage.textContent = '🎉 ¡Enhorabuena! Has aprobado';
+            } else {
+                percentageBox.className = 'percentage-box failed';
+                percentageMessage.textContent = '❌ No has aprobado';
+            }
+            
+            showScreen('screen-results');
+        }
+
+        function restartSameMode() {
+            startMode(currentMode);
+        }
+
+        function goToMenu() {
+            currentQuestionIndex = 0;
+            correctAnswersFirst = 0;
+            incorrectAnswersFirst = 0;
+            stopTimer(); // NUEVO: Detener cronómetro
+            showScreen('screen-difficulty');
+        }
+    </script>
 </body>
 </html>
