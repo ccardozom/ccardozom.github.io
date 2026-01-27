@@ -799,3 +799,41 @@ footer.entry-meta .meta-in {
     
   }
 }
+
+
+/* ===== FIX NAVBAR MOBILE (Bootstrap 3) ===== */
+@media (max-width: 767px) {
+
+  /* Contenedor del menú desplegado */
+  .navbar-collapse {
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+  }
+
+  /* Lista vertical */
+  .navbar-collapse .navbar-nav {
+    text-align: left;
+    margin: 0;
+  }
+
+  /* Cada opción en bloque */
+  .navbar-collapse .navbar-nav > li {
+    display: block;
+    float: none;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+  }
+
+  /* Enlaces */
+  .navbar-collapse .navbar-nav > li > a {
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+
+  /* Botón hamburguesa a la derecha (default Bootstrap) */
+  .navbar-toggle {
+    float: right;
+    margin-right: 15px;
+  }
+}
+
