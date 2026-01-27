@@ -229,6 +229,47 @@
             }
         }
 
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 8px;
+        }
+
+        .footer-link:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        @media (min-width: 768px) {
+            .footer {
+                margin-top: 50px;
+                padding-top: 25px;
+            }
+
+            .footer-link {
+                font-size: 18px;
+            }
+        }
+
         .exam-info {
             display: flex;
             flex-direction: column;
@@ -684,7 +725,7 @@
             <div class="file-upload">
                 <h3 style="margin-bottom: 15px; color: #333;">Cargar archivo de preguntas</h3>
                 <input type="file" id="jsonFile" accept=".json">
-                <p>Selecciona el archivo json con el formato correcto</p>
+                <p>Selecciona el archivo <strong>preguntas_y_respuestas.json</strong></p>
                 <button class="default-load-btn" onclick="loadDefaultQuestions()">📁 Cargar preguntas por defecto</button>
             </div>
             <div id="loading" class="loading" style="display: none;">Cargando preguntas...</div>
@@ -778,6 +819,14 @@
                 </div>
             </div>
         </div>
+
+        <!-- Pie de página -->
+        <div class="footer">
+            <div class="footer-links">
+                <a href="#" class="footer-link" onclick="goToHome(event)">🏠 Home</a>
+                <a href="#" class="footer-link" onclick="goToLabs(event)">🧪 Labs</a>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -847,7 +896,7 @@
             document.getElementById('loading').style.display = 'block';
             document.getElementById('error').style.display = 'none';
 
-            fetch('assets/documents/preguntas_y_respuestas_xsiam.json')
+            fetch('/assets/documents/preguntas_y_respuestas_xsiam.json')
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('No se pudo cargar el archivo por defecto');
@@ -1260,6 +1309,19 @@
             incorrectAnswersFirst = 0;
             stopTimer(); // NUEVO: Detener cronómetro
             showScreen('screen-difficulty');
+        }
+
+        // NUEVAS FUNCIONES: Enlaces del pie de página
+        function goToHome(event) {
+            event.preventDefault();
+            // Aquí puedes redirigir a tu página principal
+            window.location.href = 'index.html'; // Cambia esta URL según necesites
+        }
+
+        function goToLabs(event) {
+            event.preventDefault();
+            // Aquí puedes redirigir a tu página de Labs
+            window.location.href = 'labs.html'; // Cambia esta URL según necesites
         }
     </script>
 </body>
