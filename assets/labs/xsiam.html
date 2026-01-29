@@ -387,6 +387,73 @@
             }
         }
 
+        .question-images {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .question-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .question-image:hover {
+            transform: scale(1.02);
+        }
+
+        @media (min-width: 768px) {
+            .question-images {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .question-image {
+                max-width: 48%;
+            }
+        }
+
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            cursor: pointer;
+        }
+
+        .image-modal.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-modal img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        .image-modal-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
         .options {
             margin-bottom: 15px;
         }
@@ -783,6 +850,7 @@
                     <div class="question-counter" id="question-counter"></div>
                 </div>
                 <div class="question-text" id="question-text"></div>
+                <div class="question-images" id="question-images"></div>
                 <div class="options" id="options-container"></div>
                 <div id="result-message" class="result"></div>
             </div>
@@ -826,6 +894,12 @@
                 <a href="#" class="footer-link" onclick="goToHome(event)">🏠 Home</a>
                 <a href="#" class="footer-link" onclick="goToLabs(event)">🧪 Labs</a>
             </div>
+        </div>
+
+        <!-- Modal para ampliar imágenes -->
+        <div id="imageModal" class="image-modal" onclick="closeImageModal()">
+            <span class="image-modal-close">&times;</span>
+            <img id="modalImage" src="" alt="Imagen ampliada">
         </div>
     </div>
 
@@ -896,10 +970,32 @@
             document.getElementById('loading').style.display = 'block';
             document.getElementById('error').style.display = 'none';
 
-            fetch('/assets/documents/preguntas_y_respuestas_xsiam.json')
+            // Intentar múltiples rutas posibles
+            const possiblePaths = [
+                'assets/documents/preguntas_y_respuestas_xsiam.json',
+                './assets/documents/preguntas_y_respuestas_xsiam.json',
+                '../assets/documents/preguntas_y_respuestas_xsiam.json',
+                'preguntas_y_respuestas_xsiam.json'
+            ];
+
+            tryLoadFromPath(possiblePaths, 0);
+        }
+
+        function tryLoadFromPath(paths, index) {
+            if (index >= paths.length) {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('error').textContent = '❌ No se encontró el archivo en ninguna de las rutas. Por favor, usa el selector de archivos manual.';
+                document.getElementById('error').style.display = 'block';
+                return;
+            }
+
+            const currentPath = paths[index];
+            console.log('Intentando cargar desde:', currentPath);
+
+            fetch(currentPath)
                 .then(response => {
                     if (!response.ok) {
-                        throw new Error('No se pudo cargar el archivo por defecto');
+                        throw new Error(`HTTP ${response.status}`);
                     }
                     return response.json();
                 })
@@ -910,13 +1006,14 @@
                         throw new Error('El archivo JSON debe contener un array de preguntas');
                     }
                     
+                    console.log('✅ Preguntas cargadas exitosamente:', allQuestions.length);
                     document.getElementById('loading').style.display = 'none';
                     showScreen('screen-difficulty');
                 })
                 .catch(error => {
-                    document.getElementById('loading').style.display = 'none';
-                    document.getElementById('error').textContent = '❌ Error al cargar el archivo por defecto: ' + error.message;
-                    document.getElementById('error').style.display = 'block';
+                    console.log(`❌ Error en ${currentPath}:`, error.message);
+                    // Intentar la siguiente ruta
+                    tryLoadFromPath(paths, index + 1);
                 });
         }
 
@@ -1059,6 +1156,31 @@
             document.getElementById('question-counter').textContent = `de ${currentQuestions.length}`;
             document.getElementById('question-text').textContent = question.question;
 
+            // NUEVO: Cargar imágenes si existen
+            const imagesContainer = document.getElementById('question-images');
+            imagesContainer.innerHTML = '';
+            
+            if (question.image_question) {
+                let imageUrls = [];
+                
+                // Verificar si es un array o una cadena
+                if (Array.isArray(question.image_question)) {
+                    imageUrls = question.image_question.filter(url => url && url.trim() !== '');
+                } else if (typeof question.image_question === 'string' && question.image_question.trim() !== '') {
+                    imageUrls = question.image_question.split(',').map(url => url.trim()).filter(url => url !== '');
+                }
+                
+                // Crear elementos de imagen
+                imageUrls.forEach(imageUrl => {
+                    const imgElement = document.createElement('img');
+                    imgElement.src = imageUrl;
+                    imgElement.className = 'question-image';
+                    imgElement.alt = 'Imagen de la pregunta';
+                    imgElement.onclick = () => openImageModal(imageUrl);
+                    imagesContainer.appendChild(imgElement);
+                });
+            }
+
             // Limpiar opciones anteriores
             const optionsContainer = document.getElementById('options-container');
             optionsContainer.innerHTML = '';
@@ -1078,6 +1200,19 @@
             document.querySelectorAll('.option').forEach(opt => {
                 opt.classList.remove('wrong', 'correct');
             });
+        }
+
+        // NUEVAS FUNCIONES: Modal de imágenes
+        function openImageModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.classList.add('active');
+            modalImg.src = imageSrc;
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
         }
 
         function checkCurrentAnswer() {
@@ -1315,13 +1450,13 @@
         function goToHome(event) {
             event.preventDefault();
             // Aquí puedes redirigir a tu página principal
-            window.location.href = '/index.html'; // Cambia esta URL según necesites
+            window.location.href = '/'; // Cambia esta URL según necesites
         }
 
         function goToLabs(event) {
             event.preventDefault();
             // Aquí puedes redirigir a tu página de Labs
-            window.location.href = '/labs.html'; // Cambia esta URL según necesites
+            window.location.href = '/labs'; // Cambia esta URL según necesites
         }
     </script>
 </body>
