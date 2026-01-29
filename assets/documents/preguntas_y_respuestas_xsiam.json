@@ -23,7 +23,7 @@
     "image_question": "",
     "image_solution": "",
     "image_statement": "",
-    "answer": ["B", "C"]
+    "answer": ["B", "D"]
   },
   {
     "question": "Which option should be used when customizing a dashboard in Cortex XSIAM to include a widget that will display data filtered by more than one dynamic value?",
