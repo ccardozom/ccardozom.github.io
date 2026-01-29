@@ -75,7 +75,7 @@
     "image_question": "",
     "image_solution": "",
     "image_statement": "",
-    "answer": ["A", "C"]
+    "answer": ["A", "D"]
   },
   {
     "question": "When a Cortex XSIAM playbook execution reaches a breakpoint on a non-manual task, which two actions will allow the playbook to continue? (Choose two.)",
@@ -111,7 +111,7 @@
       "C": "Only \"War Room\" and \"Work Plan\" tabs can be removed.",
       "D": "Only \"Work Plan\" tab can be removed."
     },
-    "image_question": "/asset/images/questions/image1.png",
+    "image_question": ["/assets/images/questions/image1.png"],
     "image_solution": "",
     "image_statement": "",
     "answer": ["A"]
@@ -153,7 +153,7 @@
     "image_question": "",
     "image_solution": "",
     "image_statement": "",
-    "answer": ["B", "C"]
+    "answer": ["B", "D"]
   },
   {
     "question": "During a new Cortex XSIAM deployment, a user consistently experiences timeout sessions while trying to connect to the agent through Live Terminal, even though the firewall engineer has confirmed that all source IP addresses, port 443, and destinations are allowed. What could be causing these persistent timeout issues?",
@@ -179,7 +179,7 @@
     "image_question": "",
     "image_solution": "",
     "image_statement": "",
-    "answer": ["B"]
+    "answer": ["C"]
   },
   {
     "question": "How does Cortex XSIAM manage licensing for Kubernetes environments?",
@@ -218,7 +218,7 @@
     "image_question": "",
     "image_solution": "",
     "image_statement": "",
-    "answer": ["A"]
+    "answer": ["B"]
   },
   {
     "question": "Based on the images below, which command will allow the context data to be displayed as a table when troubleshooting a playbook task?",
@@ -228,7 +228,7 @@
       "C": "!ToTable data=${parentIncidentFields.custom_fields.incidentassignment}",
       "D": "!ExtractHTMLTables html=${parentIncidentFields.custom_fields.incidentassignment}"
     },
-    "image_question": "",
+    "image_question": ["/assets/images/questions/image2.png"],
     "image_solution": "",
     "image_statement": "",
     "answer": ["C"]
