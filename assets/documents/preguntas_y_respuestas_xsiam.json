@@ -533,19 +533,6 @@
     "answer": ["B"]
   },
   {
-    "question": "Which action will prevent the automatic extraction of indicators such as IP addresses and URLs from a script's output?",
-    "choices": {
-      "A": "Add 'ExtractIndicators': False to the script.",
-      "B": "Add 'IgnoreAutoExtract': True to the script.",
-      "C": "Use 'AutoExtract': False in the script.",
-      "D": "Set 'IndicatorExtraction': None in the script."
-    },
-    "image_question": "",
-    "image_solution": "",
-    "image_statement": "",
-    "answer": ["C"]
-  },
-  {
     "question": "An application that ingests custom application logs is hosted on an on-premises Ubuntu server and logs locally to a CSV file. Which set of actions will allow the ingestion of the CSV logs into Cortex XSIAM directly from the server?",
     "choices": {
       "A": "Install a Broker VM in the environment and configure the CSV Collector to collect the files of interest.",
@@ -578,6 +565,201 @@
       "B": "Bound to all vendors and allows grouping.",
       "C": "Bound to a specific vendor and product, parses once per log, and does not allow grouping.",
       "D": "Allows grouping with no-match policy and retains all fields."
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["C"]
+  },
+  {
+    "question": "Which two actions can be performed from the Dashboard Manager in Cortex XSIAM? (Choose two.)",
+    "choices": {
+      "A": "Edit, disable, duplicate, or delete dashboards",
+      "B": "Directly schedule report execution without a report template",
+      "C": "Set an existing dashboard as the default",
+      "D": "Create correlation rules from dashboards"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["A", "C"]
+  },
+  {
+    "question": "Which two methods are supported for creating a report template in Cortex XSIAM? (Choose two.)",
+    "choices": {
+      "A": "Saving an existing dashboard as a report template from Dashboard Manager",
+      "B": "Exporting a dashboard as a PDF and re-importing it as a template",
+      "C": "Creating a report template from scratch from the Report Templates section",
+      "D": "Generating a report directly from the Reports page without a template"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["A", "C"]
+  },
+  {
+    "question": "Which two steps are required to create a custom widget from an XQL query in Cortex XSIAM? (Choose two.)",
+    "choices": {
+      "A": "Click the plus (+) icon to start creating a custom XQL widget",
+      "B": "Select a report template before defining the XQL query",
+      "C": "Enter a widget name and optionally a description before building the XQL query",
+      "D": "Generate a report from the Reports page before saving the widget"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["A", "C"]
+  },
+  {
+    "question": "Which component is part of the Dashboards & Reports section in Cortex XSIAM?",
+    "choices": {
+      "A": "Report Library",
+      "B": "Custom Library",
+      "C": "Widget Library",
+      "D": "Dashboard Library"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["C"]
+  },
+  {
+    "question": "After creating and saving a custom XQL widget, where can the widget be located for future use?",
+    "choices": {
+      "A": "Dashboards & Reports > Dashboard Manager",
+      "B": "Dashboards & Reports > Widget Library",
+      "C": "Dashboards & Reports > Reports",
+      "D": "Dashboards & Reports > Report Templates"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["B"]
+  },
+  {
+    "question": "What can be used to create new widgets in Cortex XSIAM?",
+    "choices": {
+      "A": "Snort queries",
+      "B": "XQL queries",
+      "C": "CEF files",
+      "D": "LEEF files"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["B"]
+  },
+  {
+    "question": "Which component contains widgets that summarize information about endpoints in graphical or table format?",
+    "choices": {
+      "A": "Reports",
+      "B": "Widget Library",
+      "C": "Dashboards",
+      "D": "Report Templates"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["C"]
+  },
+  {
+    "question": "Which component is used to edit report templates in Cortex XSIAM?",
+    "choices": {
+      "A": "Widget Library",
+      "B": "Dashboard Manager",
+      "C": "Reports",
+      "D": "Report Templates"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["D"]
+  },
+  {
+    "question": "Which component is used to set the default dashboard in Cortex XSIAM?",
+    "choices": {
+      "A": "Reports Template",
+      "B": "Dashboards",
+      "C": "Widget Library",
+      "D": "Dashboard Manager"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["D"]
+  },
+  {
+    "question": "Which component is used to edit custom widgets in Cortex XSIAM?",
+    "choices": {
+      "A": "Dashboard Manager",
+      "B": "Reports",
+      "C": "Widget Library",
+      "D": "Report Templates"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["C"]
+  },
+  {
+    "question": "Which component can be used to view existing reports that have already been generated in Cortex XSIAM?",
+    "choices": {
+      "A": "Dashboard Manager",
+      "B": "Reports",
+      "C": "Widget Library",
+      "D": "Report Templates"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["B"]
+  },
+  {
+    "question": "What is the primary purpose of the Unified Asset Inventory in Cortex XSIAM?",
+    "choices": {
+      "A": "To display only cloud-based assets grouped by provider",
+      "B": "To combine and normalize asset data from multiple sources into a single aggregated view",
+      "C": "To manage endpoint agent installation policies",
+      "D": "To generate dashboards summarizing asset risk scores"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["B"]
+  },
+  {
+    "question": "Which two asset groupings can be viewed from the All Assets section in Cortex XSIAM? (Choose two.)",
+    "choices": {
+      "A": "All Cloud Assets",
+      "B": "Network",
+      "C": "Threat Intelligence",
+      "D": "External Surface"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["A", "D"]
+  },
+  {
+    "question": "In the All Cloud Assets view, which dimensions can be used to group and review cloud assets?",
+    "choices": {
+      "A": "Region, Service, Cloud Account, and Provider",
+      "B": "Operating System, Agent Version, and Endpoint Status",
+      "C": "Severity, Risk Score, and Incident Type",
+      "D": "User, Role, and Identity Provider"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["A"]
+  },
+  {
+    "question": "Which view allows an engineer to both track endpoint information and perform actions such as creating or downloading agent installers?",
+    "choices": {
+      "A": "All Endpoints",
+      "B": "Host Inventory",
+      "C": "Agent Installations",
+      "D": "Asset Roles Configuration"
     },
     "image_question": "",
     "image_solution": "",
