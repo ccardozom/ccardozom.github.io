@@ -330,7 +330,7 @@
       "A": "Remove the hash from the restrictions profile.",
       "B": "Add an indicator exclusion.",
       "C": "Add a prevention rule.",
-      "D": "Change the profile from alert to prevent."
+      "D": "Change the profile from alert to prevent for the BTP module."
     },
     "image_question": "",
     "image_solution": "",
@@ -494,20 +494,20 @@
     "answer": ["B"]
   },
   {
-    "question": "The following string is a value of a key named \"Data2\" in the context. Based on the image below, what will be displayed in the \"Test result\" field when the \"Test\" button is pressed?",
+    "question": "The following string is a value of a key named \"Data2\" in the context (image below). Based on the image below, what will be displayed in the \"Test result\" field when the \"Test\" button is pressed?",
     "choices": {
       "A": "1",
       "B": "\"1",
       "C": "2",
       "D": "\"2"
     },
-    "image_question": "",
+    "image_question": ["/assets/images/questions/image3.jpg"],
     "image_solution": "",
     "image_statement": "",
     "answer": ["B"]
   },
   {
-    "question": "A Cortex XDR agent is installed on an endpoint, but the agent is unable to download content updates and has not registered with the Cortex XSIAM server. The endpoint does not have direct internet access, but a Broker VM with Agent Proxy configured is reachable. How should the engineer configure the Cortex XDR agent to use the existing Broker VM as a proxy for the agent network traffic?",
+    "question": "A Cortex XDR agent is installed on an endpoint, but the agent is unable to download content updates and has not registered with the Cortex XSIAM server. The endpoint does not have direct internet access, but a Broker VM with Agent Proxy configured is reachable. A Broker VM that has the local agent settings applet enabled with Agent Proxy configured is reachable by the endpoint.The Broker VM details are as follows:\nFQDN: crtxbroker01.company.net\nProxy listening port: 8888\n How should the engineer configure the Cortex XDR agent to use the existing Broker VM as a proxy for the agent network traffic?",
     "choices": {
       "A": "cytool proxy set \"crtxbroker01.company.net:8888\"",
       "B": "cytool config proxy --host crtxbroker01.company.net --port 8888",
@@ -517,7 +517,7 @@
     "image_question": "",
     "image_solution": "",
     "image_statement": "",
-    "answer": ["A"]
+    "answer": ["B"]
   },
   {
     "question": "A Behavioral Threat Protection (BTP) alert is triggered with an action of \"Prevented (Blocked)\" on application servers. The involved processes are legitimate OS binaries and the activity should be allowed only for endpoints in the \"AppServers\" group. How should the exception be created to minimize the security gap?",
@@ -1233,6 +1233,58 @@
     "image_solution": "",
     "image_statement": "",
     "answer": ["B"]
+  },
+  {
+    "question": "A Cortex XSIAM engineer plans to add Kafka and Syslog Collectors to a Broker VM cluster. What are two expected behaviors of the applets when they are added to the cluster?",
+    "choices": {
+      "A": "Kafka Collector applet is active on all cluster nodes, including primary and standby",
+      "B": "Syslog Collector applet is active on all cluster nodes, including primary and standby",
+      "C": "Syslog Collector applet is automatically initiated, enters an active state on the primary node, and is on standby on the standby nodes",
+      "D": "Kafka Collector applet is automatically initiated, enters an active state on the primary node, and is on standby on the standby nodes"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["A", "C"]
+  },
+  {
+    "question": "When Cortex XDR agents are on servers in a zone with no internet access, which configuration will keep them communicating with the platform?",
+    "choices": {
+      "A": "Engine",
+      "B": "Integration using Filebeat",
+      "C": "Broker VM",
+      "D": "Logging service in the isolated zone"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["C"]
+  },
+  {
+    "question": "Administrators from Building 3 have been granted limited permissions in Cortex XSIAM and should only be able to manage endpoints within the \"Building3\" endpoint group, while still retaining visibility of those endpoints. Which technical control enforces this restriction according to the principle of least privilege?",
+    "choices": {
+      "A": "SBAC enabled globally with the \"EG:Building3\" tag assigned to each administrator's scope",
+      "B": "SBAC enabled in Restrictive Mode with the \"EG:Building3\" tag assigned to each administrator's scope",
+      "C": "SBAC enabled in Building 3's IP range with the \"EG:Building3\" tag assigned to each administrator's scope",
+      "D": "SBAC enabled in Permissive Mode with the \"EG:Building3\" tag assigned to each administrator's scope"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["B"]
+  },
+  {
+    "question": "What is the primary benefit of setting the \"--memory-swap\" option to \"-1\" during Cortex XSIAM engine deployment?",
+    "choices": {
+      "A": "It increases the total disk space available to the engine",
+      "B": "It automatically doubles the available RAM to the engine",
+      "C": "It allows the engine to operate without requiring swap capabilities",
+      "D": "It enhances the network throughput by optimizing memory usage"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["C"]
   }
 ]
 
