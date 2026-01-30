@@ -765,6 +765,474 @@
     "image_solution": "",
     "image_statement": "",
     "answer": ["C"]
+  },
+  {
+    "question": "Which statement best describes a network asset in Cortex XSIAM?",
+    "choices": {
+      "A": "Any application running on an endpoint with an installed agent",
+      "B": "Any IP-addressable node in a computer network",
+      "C": "Only endpoints with a Cortex XDR agent installed",
+      "D": "Only routers and firewalls managed by Cortex XSIAM"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["B"]
+  },
+  {
+    "question": "What is the key difference between managed and unmanaged network assets in Cortex XSIAM?",
+    "choices": {
+      "A": "Managed assets belong to cloud environments only",
+      "B": "Unmanaged assets cannot be IP-addressable",
+      "C": "Managed assets have the Cortex XDR agent installed",
+      "D": "Unmanaged assets are not visible in the asset inventory"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["C"]
+  },
+  {
+    "question": "Which two examples can be considered unmanaged network assets? (Choose two.)",
+    "choices": {
+      "A": "A router without a Cortex XDR agent",
+      "B": "An endpoint with a Cortex XDR agent installed",
+      "C": "A cloud compute instance without the Cortex XDR agent",
+      "D": "A managed endpoint running Windows Server"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["A", "C"]
+  },
+  {
+    "question": "How does Cortex XSIAM discover network assets in an internal network?",
+    "choices": {
+      "A": "By relying only on manual asset registration by administrators",
+      "B": "By combining user-defined network configuration with automated analysis of collected network logs",
+      "C": "By scanning endpoints exclusively using the Cortex XDR agent",
+      "D": "By importing asset lists from external CMDB systems"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["B"]
+  },
+  {
+    "question": "Which two tasks are complementary methods used by Cortex XSIAM for network asset discovery? (Choose two.)",
+    "choices": {
+      "A": "Manual user-defined network configurations",
+      "B": "Automated node discovery based on collected logs",
+      "C": "Threat intelligence enrichment",
+      "D": "Incident correlation and alert grouping"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["A", "B"]
+  },
+  {
+    "question": "Which log source must be configured and enabled to support automated node discovery for network assets in Cortex XSIAM?",
+    "choices": {
+      "A": "Windows Event Logs",
+      "B": "Broker VM Network Mapper",
+      "C": "Cloud audit logs",
+      "D": "Identity provider authentication logs"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["B"]
+  },
+  {
+    "question": "What is a key capability of the IP Address Ranges page in Cortex XSIAM?",
+    "choices": {
+      "A": "To define IPv4 address ranges for internal or external networks",
+      "B": "To configure IPv6 address ranges for cloud-only environments",
+      "C": "To manually assign assets to specific IP addresses",
+      "D": "To perform active network scanning of IP ranges"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["A"]
+  },
+  {
+    "question": "Which two IP address ranges are automatically included in the IP Address Ranges table in Cortex XSIAM? (Choose two.)",
+    "choices": {
+      "A": "Well-known private IPv4 ranges",
+      "B": "Public IPv6 address ranges",
+      "C": "Automatic Private IP Addressing (APIPA) range",
+      "D": "User-defined public cloud IP ranges"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["A", "C"]
+  },
+  {
+    "question": "Which two attributes are automatically populated when a new IP address range is added in Cortex XSIAM? (Choose two.)",
+    "choices": {
+      "A": "Total discovered assets in the IP range",
+      "B": "Number of active managed assets in the IP range",
+      "C": "Asset risk scores for the IP range",
+      "D": "Associated incidents for the IP range"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["A", "B"]
+  },
+  {
+    "question": "Which navigation path is used to create a new internal IP address range in Cortex XSIAM?",
+    "choices": {
+      "A": "Inventory > Assets > IP Address Ranges",
+      "B": "Network Configuration > IP Address Ranges > Internal IP Address Ranges",
+      "C": "Dashboards & Reports > Network Configuration",
+      "D": "Endpoints > Network Configuration > IP Ranges"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["B"]
+  },
+  {
+    "question": "Which two formats are supported when defining a new IP address range in Cortex XSIAM? (Choose two.)",
+    "choices": {
+      "A": "IPv6 CIDR notation",
+      "B": "Explicit IPv4 address range",
+      "C": "IPv4 CIDR notation",
+      "D": "Wildcard-based IP patterns"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["B", "C"]
+  },
+  {
+    "question": "Which action must be performed immediately before entering the IP address range details when creating a new IP range?",
+    "choices": {
+      "A": "Click Create New",
+      "B": "Select Add New Range",
+      "C": "Upload a CSV file",
+      "D": "Enable automatic asset discovery"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["B"]
+  },
+  {
+    "question": "What is the first required step before configuring the Broker VM Network Mapper in Cortex XSIAM?",
+    "choices": {
+      "A": "Enable automated node discovery from firewall logs",
+      "B": "Define IP Address Ranges and select one or more during Network Mapper configuration",
+      "C": "Install a Cortex XDR agent on all endpoints",
+      "D": "Configure DHCP and ARP collectors"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["B"]
+  },
+  {
+    "question": "What is the primary purpose of the Broker VM Network Mapper at runtime?",
+    "choices": {
+      "A": "To scan selected IP address ranges and detect unmanaged hosts",
+      "B": "To deploy Cortex XDR agents on unmanaged endpoints",
+      "C": "To correlate incidents related to network traffic",
+      "D": "To normalize network logs into XDM format"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["A"]
+  },
+  {
+    "question": "Where are unmanaged assets detected by the Broker VM Network Mapper displayed in Cortex XSIAM?",
+    "choices": {
+      "A": "Only in the Network Configuration section",
+      "B": "In the Endpoints Inventory view",
+      "C": "In the All Assets table",
+      "D": "In the Incident Management console"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["C"]
+  },
+  {
+    "question": "Which statement best describes the Vulnerability Assessment feature in Cortex XSIAM?",
+    "choices": {
+      "A": "It identifies CVEs only from external threat intelligence feeds",
+      "B": "It detects CVEs affecting installed applications and operating system kernels",
+      "C": "It performs active network scans to identify vulnerable hosts",
+      "D": "It focuses exclusively on container and cloud workload vulnerabilities"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["B"]
+  },
+  {
+    "question": "What is a limitation of the standard Vulnerability Assessment for Windows systems in Cortex XSIAM?",
+    "choices": {
+      "A": "It does not support CVE detection for Linux kernels",
+      "B": "It scans Windows applications but not the operating system kernel",
+      "C": "It scans only the operating system kernel and not Windows applications",
+      "D": "It requires the Enhanced Vulnerability add-on to scan any CVEs"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["C"]
+  },
+  {
+    "question": "How frequently does Cortex Vulnerability Assessment correlate application and kernel patch lists with CVE databases?",
+    "choices": {
+      "A": "Once per day",
+      "B": "Every four hours",
+      "C": "Once per week",
+      "D": "Only when a new agent is installed"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["B"]
+  },
+  {
+    "question": "Which metric is used by Cortex Vulnerability Assessment to report the potential impact of a detected CVE?",
+    "choices": {
+      "A": "MITRE ATT&CK technique score",
+      "B": "Common Vulnerability Scoring System (CVSS)",
+      "C": "Risk Priority Number (RPN)",
+      "D": "Exploit Prediction Scoring System (EPSS)"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["B"]
+  },
+  {
+    "question": "Where is the Vulnerability Assessment page located in the Cortex XSIAM management console?",
+    "choices": {
+      "A": "Dashboards & Reports > Vulnerability Management",
+      "B": "Assets > Vulnerability Assessment",
+      "C": "Posture Management > Vulnerability Management",
+      "D": "Rules & Policies > Vulnerability Assessment"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["C"]
+  },
+  {
+    "question": "Which two views are available on the Vulnerability Assessment page to display assessment results?",
+    "choices": {
+      "A": "CVEs",
+      "B": "Endpoints",
+      "C": "Assets",
+      "D": "Dashboards"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["A", "B"]
+  },
+  {
+    "question": "Which operating systems support the Enhanced Vulnerability Assessment feature in Cortex XSIAM?",
+    "choices": {
+      "A": "Linux only",
+      "B": "Windows and macOS",
+      "C": "Windows, macOS, and Linux",
+      "D": "Cloud workloads only"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["B"]
+  },
+  {
+    "question": "What is a key capability introduced by the Enhanced Vulnerability Assessment compared to the standard assessment?",
+    "choices": {
+      "A": "Detection of CVEs in installed applications",
+      "B": "Active scanning of external networks",
+      "C": "Automatic patch deployment",
+      "D": "Container vulnerability scanning"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["A"]
+  },
+  {
+    "question": "Which agent versions are required to support Enhanced Vulnerability Assessment?",
+    "choices": {
+      "A": "Cortex XDR agent version 7.0 and later",
+      "B": "Cortex XDR agent version 8.0 and later",
+      "C": "Cortex XDR agent version 8.3 and later",
+      "D": "Any Cortex XDR agent version"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["C"]
+  },
+  {
+    "question": "Where must an administrator navigate to enable the Enhanced Vulnerability Assessment feature in Cortex XSIAM?",
+    "choices": {
+      "A": "Posture Management > Vulnerability Management > Enhanced VA",
+      "B": "Settings > Configuration > Vulnerability Assessment > Enhanced VA Engine",
+      "C": "Assets > Vulnerability Assessment > Engine Settings",
+      "D": "Rules & Policies > Host Insights > Vulnerability Assessment"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["B"]
+  },
+  {
+    "question": "Which prerequisite is required in order to use Enhanced Vulnerability Assessment in Cortex XSIAM?",
+    "choices": {
+      "A": "Cortex XSIAM Host Insights add-on license",
+      "B": "External vulnerability scanner integration",
+      "C": "Linux-only endpoints with XDR agents",
+      "D": "Custom CVE database uploaded manually"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["A"]
+  },
+  {
+    "question": "Which agent capabilities must be enabled on endpoints for Enhanced Vulnerability Assessment to function correctly?",
+    "choices": {
+      "A": "Network Traffic Analysis and WildFire",
+      "B": "Endpoint Prevention and Behavioral Protection",
+      "C": "XDR Pro Endpoints Capabilities and Host Insights Capabilities",
+      "D": "Firewall and Device Control Capabilities"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["C"]
+  },
+  {
+    "question": "Which operating systems can display installed application vulnerability data using Enhanced Vulnerability Assessment?",
+    "choices": {
+      "A": "Linux only",
+      "B": "Windows and macOS",
+      "C": "Windows, macOS, and Linux",
+      "D": "Cloud workloads only"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["B"]
+  },
+  {
+    "question": "What does the value \"N/A\" indicate for an application when viewing results in Enhanced Vulnerability Assessment?",
+    "choices": {
+      "A": "The application is not supported by Cortex XSIAM",
+      "B": "The application has critical vulnerabilities",
+      "C": "The application was not scanned due to missing licenses",
+      "D": "No CVE was found for the application"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["D"]
+  },
+  {
+    "question": "Which application or device can use the IP Address Ranges defined in the Cortex XSIAM management console?",
+    "choices": {
+      "A": "Cortex XDR Agent",
+      "B": "Broker VM Network Mapper",
+      "C": "Next Generation Firewall",
+      "D": "XDR Collector"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["B"]
+  },
+  {
+    "question": "Which component is required for Cortex Vulnerability Assessment to be enabled?",
+    "choices": {
+      "A": "Third-party threat intelligence integration",
+      "B": "Broker VM integration",
+      "C": "Host Insights add-on",
+      "D": "Forensic add-on"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["C"]
+  },
+  {
+    "question": "What is the consolidated view in Cortex that integrates all on-premises and cloud assets called?",
+    "choices": {
+      "A": "Unified Asset Inventory",
+      "B": "Comprehensive Asset List",
+      "C": "Aggregated Asset Overview",
+      "D": "Consolidated Asset Inventory"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["A"]
+  },
+  {
+    "question": "What specific action does the Network Mapper perform to detect devices within selected IP address ranges?",
+    "choices": {
+      "A": "Scans the network to detect unmanaged hosts",
+      "B": "Collects DHCP logs for IP address assignments",
+      "C": "Monitors network traffic for suspicious patterns",
+      "D": "Automatically configures new network devices"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["A"]
+  },
+  {
+    "question": "How often does the Cortex Vulnerability Assessment component correlate CVE databases with application and kernel patch lists to detect new vulnerabilities?",
+    "choices": {
+      "A": "Every 12 hours",
+      "B": "Every four hours",
+      "C": "Every 24 hours",
+      "D": "Every 8 hours"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["B"]
+  },
+  {
+    "question": "In addition to the distributed network scan in the XDR Agent Settings profile, what discovery method is also used by Cortex?",
+    "choices": {
+      "A": "DNS reverse lookups",
+      "B": "Broker VM Network Mapper",
+      "C": "SNMP calls",
+      "D": "Public internet scanning tools"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["B"]
+  },
+  {
+    "question": "How is an unmanaged asset specifically characterized within Cortex?",
+    "choices": {
+      "A": "A server operating outside a defined network segment",
+      "B": "An endpoint without the Cortex XDR agent installed",
+      "C": "A network device that is not actively transmitting data",
+      "D": "Any cloud compute instance that lacks proper tagging"
+    },
+    "image_question": "",
+    "image_solution": "",
+    "image_statement": "",
+    "answer": ["B"]
   }
 ]
 
