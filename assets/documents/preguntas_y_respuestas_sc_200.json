@@ -7,8 +7,8 @@
     "C": "Type: Microsoft.Security/automations → Callback: Microsoft.Security",
     "D": "Type: Microsoft.Security/automations → Callback: Microsoft.Logic"
   },
-  "image_question": "sc200/0006600001.png",
-  "image_solution": "sc200/0006700001.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/0006600001.png"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/0006700001.png"],
   "image_statement": "",
   "answer": [
     "D"
@@ -22,9 +22,9 @@
 "C": "1: Yes, 2: No, 3: Yes",
 "D": "1: No, 2: No, 3: Yes"
 },
-"image_question": "sc200/0007200001.png",
-"image_solution": "sc200/0007200002.png",
-"image_statement": "sc200/0007000001.jpg",
+"image_question": ["/assets/images/questions-sc200/sc200/0007200001.png"],
+"image_solution": ["/assets/images/questions-sc200/sc200/0007200002.png"],
+"image_statement": ["/assets/images/questions-sc200/sc200/0007000001.jpg"],
 "answer": [
 "C"
 ]
@@ -38,8 +38,8 @@
     "C": "From Advanced hunting, search for the CveId in the DeviceTvmSoftwareInventoryVulnerabilities table → Select Security recommendations → Create the remediation request.",
     "D": "From Threat & Vulnerability Management, select Weaknesses and search for the CVE → Select Security recommendations → Create the remediation request."
   },
-  "image_question": "sc200/0007300001.png",
-  "image_solution": "sc200/0007400001.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/0007300001.png"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/0007400001.png"],
   "image_statement": "",
   "answer": [
     "D"
@@ -53,8 +53,8 @@
     "C": "Entity type: User account | Field: Name",
     "D": "Entity type: Azure Resource | Field: Resource Id"
   },
-  "image_question": "sc200/0007600001.jpg",
-  "image_solution": "sc200/0007700001.jpg",
+  "image_question": ["/assets/images/questions-sc200/sc200/0007600001.jpg"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/0007700001.jpg"],
   "image_statement": "",
   "answer": [
     "D"
@@ -68,8 +68,8 @@
     "C": "Select Security policy → Select Pricing & settings → Select Suppression rules and create suppression rule.",
     "D": "Select Azure Resource Manager → Configure workflow automation → Create suppression templates."
   },
-  "image_question": "sc200/0008000001.jpg",
-  "image_solution": "sc200/0008100001.jpg",
+  "image_question": ["/assets/images/questions-sc200/sc200/0008000001.jpg"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/0008100001.jpg"],
   "image_statement": "",
   "answer": [
     "A"
@@ -83,8 +83,8 @@
     "C": "Enable and disable Azure Defender → Subscription Owner | Apply security recommendations → Subscription Contributor",
     "D": "Enable and disable Azure Defender → Security Admin | Apply security recommendations → Resource Group Owner"
   },
-  "image_question": "sc200/0008200001.jpg",
-  "image_solution": "sc200/image416.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/0008200001.jpg"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/image416.png"],
   "image_statement": "",
   "answer": [
     "D"
@@ -98,8 +98,8 @@
     "C": "DeployIfNotExists → An Azure Logic Apps app that has the trigger set to When an Azure Security Center Alert is created or triggered",
     "D": "Append → An Azure Logic Apps app that has the trigger set to When an Azure Security Center Alert is created or triggered"
   },
-  "image_question": "sc200/0008300001.jpg",
-  "image_solution": "sc200/0008400001.jpg",
+  "image_question": ["/assets/images/questions-sc200/sc200/0008300001.jpg"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/0008400001.jpg"],
   "image_statement": "",
   "answer": [
     "C"
@@ -113,9 +113,9 @@
     "C": "From Logic App Designer, run a trigger → From Workflow automation in Defender for Cloud, add a workflow automation → From Security alerts in Defender for Cloud, create a sample alert.",
     "D": "From Logic App Designer, create a logic app → From Logic App Designer, run a trigger → From Workflow automation in Defender for Cloud, add a workflow automation."
   },
-  "image_question": "sc200/0008700001.jpg",
-  "image_solution": "sc200/0008700002.jpg",
-  "image_statement": "sc200/0008800001.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/0008700001.jpg"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/0008700002.jpg"],
+  "image_statement": ["/assets/images/questions-sc200/sc200/0008800001.png"],
   "answer": [
     "D"
   ]
@@ -128,9 +128,9 @@
     "C": "Configure the Suppress similar alerts settings → Filter by alert title → Configure the Trigger automated response settings.",
     "D": "Filter by alert title → Select Take action → Configure the Trigger automated response settings."
   },
-  "image_question": "sc200/image129.png",
-  "image_solution": "sc200/image417.png",
-  "image_statement": "sc200/image128.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/image129.png"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/image417.png"],
+  "image_statement": ["/assets/images/questions-sc200/sc200/image128.png"],
   "answer": [
     "D"
   ]
@@ -143,8 +143,8 @@
 "C": "On the on-premises servers, install the Log Analytics agent → From the Add servers with Azure Arc settings in the Azure portal, generate an installation script → On the on-premises servers, install the Azure Monitor agent.",
 "D": "From the Add servers with Azure Arc settings in the Azure portal, generate an installation script → On the on-premises servers, install the Azure Connected Machine agent → On the on-premises servers, install the Azure Monitor agent."
 },
-"image_question": "sc200/image131.png",
-"image_solution": "sc200/image418.png",
+"image_question": ["/assets/images/questions-sc200/sc200/image131.png"],
+"image_solution": ["/assets/images/questions-sc200/sc200/image418.png"],
 "image_statement": "",
 "answer": [
 "D"
@@ -158,8 +158,8 @@
     "C": "Use resource type Microsoft.Automation/automationAccounts and action 'triggers'.",
     "D": "Use resource type Microsoft.Security/automations and action 'triggers'."
   },
-  "image_question": "sc200/image133.png",
-  "image_solution": "sc200/image134.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/image133.png"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/image134.png"],
   "image_statement": "",
   "answer": [
     "D"
@@ -173,8 +173,8 @@
     "C": "Set the LA1 trigger to: When a Defender for Cloud Recommendation is created or triggered → Trigger execution of LA1 from: Security alerts.",
     "D": "Set the LA1 trigger to: When a Defender for Cloud Recommendation is created or triggered → Trigger execution of LA1 from: Regulatory compliance standards."
   },
-  "image_question": "sc200/image159.png",
-  "image_solution": "sc200/image419.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/image159.png"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/image419.png"],
   "image_statement": "",
   "answer": [
     "C"
@@ -183,13 +183,13 @@
   {
   "question": "You create a new Azure subscription and start collecting logs for Azure Monitor.\n\nYou need to validate that Microsoft Defender for Cloud will trigger an alert when a malicious file is present on an Azure virtual machine running Windows Server.\n\nWhich three actions should you perform in a sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.",
   "choices": {
-    "A": "Rename the executable file as AlertTest.exe → Change the alert severity threshold for emails to Medium → Run the executable file and specify the appropriate arguments.",
-    "B": "Change the alert severity threshold for emails to Low → Run the executable file and specify the appropriate arguments → Enable Microsoft Defender for Cloud’s enhanced security features for the subscription.",
-    "C": "Change the alert severity threshold for emails to Medium → Rename the executable file as AlertTest.exe → Copy an executable file on a virtual machine and rename the file as ASC_AlertTest_662jfi039N.exe.",
-    "D": "Enable Microsoft Defender for Cloud’s enhanced security features for the subscription → Copy an executable file on a virtual machine and rename the file as ASC_AlertTest_662jfi039N.exe → Run the executable file and specify the appropriate arguments."
+    "A": "1- Rename the executable file as AlertTest.exe\n2- Change the alert severity threshold for emails to Medium\n3- Run the executable file and specify the appropriate arguments.",
+    "B": "1- Change the alert severity threshold for emails to Low\n2- Run the executable file and specify the appropriate arguments\n3- Enable Microsoft Defender for Cloud’s enhanced security features for the subscription.",
+    "C": "1- Change the alert severity threshold for emails to Medium\n2-  Rename the executable file as AlertTest.exe\n3- Copy an executable file on a virtual machine and rename the file as ASC_AlertTest_662jfi039N.exe.",
+    "D": "1- Enable Microsoft Defender for Cloud’s enhanced security features for the subscription\n2- Copy an executable file on a virtual machine and rename the file as ASC_AlertTest_662jfi039N.exe\n3- Run the executable file and specify the appropriate arguments."
   },
-  "image_question": "sc200/image161.png",
-  "image_solution": "sc200/image420.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/image161.png"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/image420.png"],
   "image_statement": "",
   "answer": [
     "D"
@@ -203,8 +203,8 @@
     "C": "A management project and a custom role → Deploying a Bicep template",
     "D": "A management project and a custom role → Running a script in GCP Cloud Shell"
   },
-  "image_question": "sc200/image170.png",
-  "image_solution": "sc200/image171.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/image170.png"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/image171.png"],
   "image_statement": "",
   "answer": [
     "D"
@@ -218,9 +218,9 @@
 "C": "Group1: Owner, Group2: Security Admin",
 "D": "Group1: Contributor, Group2: Security Assessment Contributor"
 },
-"image_question": "sc200/image175.png",
-"image_solution": "sc200/image421.png",
-"image_statement": "sc200/image172.png",
+"image_question": ["/assets/images/questions-sc200/sc200/image175.png"],
+"image_solution": ["/assets/images/questions-sc200/sc200/image421.png"],
+"image_statement": ["/assets/images/questions-sc200/sc200/image172.png"],
 "answer": [
 "C"
 ]
@@ -233,8 +233,8 @@
     "C": "In Defender for Cloud: Add an environment.\nIn AzDO1: Install an extension.",
     "D": "In Defender for Cloud: Configure workflow automation.\nIn AzDO1: Install an extension."
   },
-  "image_question": "sc200/image195.png",
-  "image_solution": "sc200/image196.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/image195.png"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/image196.png"],
   "image_statement": "",
   "answer": [
     "C"
@@ -248,8 +248,8 @@
     "C": "Create an Azure logic app that includes the Defender for Cloud regulatory compliance assessment trigger → Configure a trigger condition → Configure workflow automation.",
     "D": "Configure a trigger condition → Create an Azure logic app that includes the Defender for Cloud alert trigger → Configure workflow automation."
   },
-  "image_question": "sc200/image223.png",
-  "image_solution": "sc200/image422.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/image223.png"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/image422.png"],
   "image_statement": "",
   "answer": [
     "B"
@@ -264,8 +264,8 @@
     "C": "Add categories for 'dependencies' instead of secrets.",
     "D": "Add a task that uploads build artifacts to Defender for Cloud."
   },
-  "image_question": "sc200/image225.png",
-  "image_solution": "sc200/image226.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/image225.png"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/image226.png"],
   "image_statement": "",
   "answer": [
     "A"
@@ -279,8 +279,8 @@
     "C": "For App1 require MFA: Conditional Access\nFor session policy: Microsoft Defender for Cloud Apps",
     "D": "For App1 require MFA: Access package policies\nFor session policy: Microsoft Purview Information Protection"
   },
-  "image_question": "sc200/image311.png",
-  "image_solution": "sc200/image312.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/image311.png"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/image312.png"],
   "image_statement": "",
   "answer": [
     "C"
@@ -294,8 +294,8 @@
     "C": "Download and install the Log Analytics agent → Set the Log Analytics agent to listen on port 25226 and forward the CEF messages to Azure Sentinel → Configure the syslog daemon and restart both the syslog daemon and the Log Analytics agent.",
     "D": "Configure the syslog daemon → Set the Log Analytics agent to listen on port 25226 → Deploy an OMS Gateway as a relay service."
   },
-  "image_question": "sc200/0010700001.png",
-  "image_solution": "sc200/0010800001.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/0010700001.png"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/0010800001.png"],
   "image_statement": "",
   "answer": [
     "C"
@@ -310,9 +310,9 @@
     "C": "the running processes // Entities",
     "D": "the open ports on the host // Insights"
   },
-  "image_question": "sc200/0011000001.jpg",
-  "image_solution": "sc200/image423.png",
-  "image_statement": "sc200/0010900001.jpg",
+  "image_question": ["/assets/images/questions-sc200/sc200/0011000001.jpg"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/image423.png"],
+  "image_statement": ["/assets/images/questions-sc200/sc200/0010900001.jpg"],
   "answer": [
     "C"
   ]
@@ -325,8 +325,8 @@
     "C": "From Azure Sentinel, select Hunting → Filter by tactics → Select Run All Queries.",
     "D": "Filter by tactics → Select New Query → From Azure Sentinel, select Hunting."
   },
-  "image_question": "sc200/0011100001.png",
-  "image_solution": "sc200/0011200001.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/0011100001.png"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/0011200001.png"],
   "image_statement": "",
   "answer": [
     "C"
@@ -340,8 +340,8 @@
     "C": "Playbooks: Logic App Contributor → Workbooks/Rules: Azure Sentinel Contributor",
     "D": "Playbooks: Azure Sentinel Responder → Workbooks/Rules: Logic App Contributor"
   },
-  "image_question": "sc200/0011800003.png",
-  "image_solution": "sc200/0011900001.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/0011800003.png"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/0011900001.png"],
   "image_statement": "",
   "answer": [
     "C"
@@ -355,8 +355,8 @@
     "C": "Filter using SenderFromAddress and join DeviceFileEvents on RecipientEmailAddress.",
     "D": "Filter using SHA256 as the non-empty field and join DeviceFileEvents on SHA256."
   },
-  "image_question": "sc200/0002700001.jpg",
-  "image_solution": "sc200/0002800001.jpg",
+  "image_question": ["/assets/images/questions-sc200/sc200/0002700001.jpg"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/0002800001.jpg"],
   "image_statement": "",
   "answer": [
     "D"
@@ -370,8 +370,8 @@
     "C": "Use an activity policy filtered by the IP address tag identifying botnet traffic.",
     "D": "Use an activity policy filtered by user agent string for automated clients."
   },
-  "image_question": "sc200/0003000001.jpg",
-  "image_solution": "sc200/image410.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/0003000001.jpg"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/image410.png"],
   "image_statement": "",
   "answer": [
     "C"
@@ -385,9 +385,9 @@
     "C": "User1: Security Administrator → User2: Owner",
     "D": "User1: Owner → User2: Security Reader"
   },
-  "image_question": "sc200/0003600001.png",
-  "image_solution": "sc200/0003700001.png",
-  "image_statement": "sc200/0003500001.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/0003600001.png"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/0003700001.png"],
+  "image_statement": ["/assets/images/questions-sc200/sc200/0003500001.png"],
   "answer": [
     "A"
   ]
@@ -400,8 +400,8 @@
     "C": "Enable Live Response and add devices to a network assessment job.",
     "D": "Turn on Live Response and create a device group that contains the devices and set Automation level to Full."
   },
-  "image_question": "sc200/0003800001.png",
-  "image_solution": "sc200/image411.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/0003800001.png"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/image411.png"],
   "image_statement": "",
   "answer": [
     "D"
@@ -415,8 +415,8 @@
     "C": "Use join to correlate DeviceInfo with AlertEvidence on DeviceId, then project the relevant alert fields.",
     "D": "Use summarize to group DeviceInfo records, then join AlertInfo to extract alert metadata."
   },
-  "image_question": "sc200/0004000001.jpg",
-  "image_solution": "sc200/0004100001.jpg",
+  "image_question": ["/assets/images/questions-sc200/sc200/0004000001.jpg"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/0004100001.jpg"],
   "image_statement": "",
   "answer": [
     "C"
@@ -430,9 +430,9 @@
     "C": "Task 1: User3 → Task 2: User1",
     "D": "Task 1: User1 → Task 2: User2"
   },
-  "image_question": "sc200/image155.png",
-  "image_solution": "sc200/image412.png",
-  "image_statement": "sc200/image154.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/image155.png"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/image412.png"],
+  "image_statement": ["/assets/images/questions-sc200/sc200/image154.png"],
   "answer": [
     "B"
   ]
@@ -445,8 +445,8 @@
     "C": "Filter DeviceFileEvents using Timestamp < ago(1h) and join using leftouter.",
     "D": "Filter both EmailAttachmentInfo and DeviceFileEvents using Timestamp > ago(1h) and perform a join kind=inner on SHA256."
   },
-  "image_question": "sc200/image157.png",
-  "image_solution": "sc200/image158.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/image157.png"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/image158.png"],
   "image_statement": "",
   "answer": [
     "D"
@@ -460,8 +460,8 @@
     "C": "Use IdentityDirectoryEvents as the second table and join kind = fullouter to merge logon activity.",
     "D": "Use IdentityQueryEvents as the second table and join kind = innerunique for event correlation."
   },
-  "image_question": "sc200/image183.png",
-  "image_solution": "sc200/image184.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/image183.png"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/image184.png"],
   "image_statement": "",
   "answer": [
     "A"
@@ -475,8 +475,8 @@
     "C": "Use IdentityQueryEvents and filter using isnotempty(AccountSid).",
     "D": "Use SigninLogs and filter using isnotempty(AccountSid)."
   },
-  "image_question": "sc200/image185.png",
-  "image_solution": "sc200/image186.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/image185.png"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/image186.png"],
   "image_statement": "",
   "answer": [
     "C"
@@ -490,9 +490,9 @@
     "C": "Yes for deleting emails, No for app execution, Yes for file deletion.",
     "D": "No for deleting emails based on RecipientEmailAddress → Yes for restricting app execution based on DeviceId → Yes for deleting a file based on SHA256."
   },
-  "image_question": "sc200/image188.png",
-  "image_solution": "sc200/image413.png",
-  "image_statement": "sc200/image187.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/image188.png"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/image413.png"],
+  "image_statement": ["/assets/images/questions-sc200/sc200/image187.png"],
   "answer": [
     "D"
   ]
@@ -505,8 +505,8 @@
     "C": "Use AuditLogs to retrieve all user actions and join BehaviorAnalytics to map department attributes.",
     "D": "Use IdentityQueryEvents to filter user profile attributes and join SigninLogs to analyze authentication events."
   },
-  "image_question": "sc200/image190.png",
-  "image_solution": "sc200/image191.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/image190.png"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/image191.png"],
   "image_statement": "",
   "answer": [
     "B"
@@ -520,8 +520,8 @@
     "C": "Activities: Share file, folder, or site → Record type: OneDrive → Workload: MicrosoftTeams",
     "D": "Activities: Shared Power BI report → Record type: OneDrive → Workload: PowerBi"
   },
-  "image_question": "sc200/image192.png",
-  "image_solution": "sc200/image414.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/image192.png"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/image414.png"],
   "image_statement": "",
   "answer": [
     "C"
@@ -535,9 +535,9 @@
     "C": "Provide global administrator credentials to the litware.com Azure AD tenant → Create an instance of Microsoft Defender for Identity → Install the sensor on DC1.",
     "D": "Install the sensor on DC1 → Create an instance of Microsoft Defender for Identity → Enable domain controller auditing."
   },
-  "image_question": "sc200/image217.png",
-  "image_solution": "sc200/image218.png",
-  "image_statement": "sc200/image215.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/image217.png"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/image218.png"],
+  "image_statement": ["/assets/images/questions-sc200/sc200/image215.png"],
   "answer": [
     "C"
   ]
@@ -550,8 +550,8 @@
     "C": "Use project-away CveId after filtering critical vulnerabilities and project-keep DeviceId after the timestamp join.",
     "D": "Use project-keep DeviceId after filtering critical vulnerabilities and summarize count() by DeviceId, ReportId after the timestamp join."
   },
-  "image_question": "sc200/image219.png",
-  "image_solution": "sc200/image220.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/image219.png"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/image220.png"],
   "image_statement": "",
   "answer": [
     "A"
@@ -565,8 +565,8 @@
     "C": "Search Exchange mailboxes and filter the results using ItemClass.",
     "D": "Search Exchange mailboxes and filter the results using Kind."
   },
-  "image_question": "sc200/image221.png",
-  "image_solution": "sc200/image222.png",
+  "image_question": ["/assets/images/questions-sc200/sc200/image221.png"],
+  "image_solution": ["/assets/images/questions-sc200/sc200/image222.png"],
   "image_statement": "",
   "answer": [
     "D"
@@ -580,8 +580,8 @@
       "C": "Set the trigger to: When a response to an Azure Security Center alert is triggered → Trigger execution from: Recommendations.",
       "D": "Set the trigger to: When an Azure Security Center Alert is created or triggered → Trigger execution from: Security alerts."
     },
-    "image_question": "sc200/0005600001.png",
-    "image_solution": "sc200/image415.png",
+    "image_question": ["/assets/images/questions-sc200/sc200/0005600001.png"],
+    "image_solution": ["/assets/images/questions-sc200/sc200/image415.png"],
     "image_statement": "",
     "answer": [
       "B"
@@ -590,13 +590,13 @@
   {
     "question": "You create a new Azure subscription and start collecting logs for Azure Monitor.\nYou need to configure Azure Security Center to detect possible threats related to sign-ins from suspicious IP addresses to Azure virtual machines. The solution must validate the configuration.\nWhich three actions should you perform in a sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.\nSelect and Place:",
     "choices": {
-      "A": "Change the alert severity threshold for emails to Medium → Enable Azure Defender for the subscription → Run the executable file and specify the appropriate arguments.",
-      "B": "Rename the executable file as AlertTest.exe → Copy an executable file on a virtual machine → Run the executable file and specify the appropriate arguments.",
-      "C": "Copy an executable file on a virtual machine → Change the alert severity threshold for emails to Low → Enable Azure Defender for the subscription.",
-      "D": "Enable Azure Defender for the subscription → Copy an executable file on a virtual machine and rename it as ASC_AlertTest_662jfi039N.exe → Run the executable file and specify the appropriate arguments."
+      "A": "1- Change the alert severity threshold for emails to Medium\n2- Enable Azure Defender for the subscription\n3- Run the executable file and specify the appropriate arguments.",
+      "B": "1-Rename the executable file as AlertTest.exe\n2- Copy an executable file on a virtual machine\n3- Run the executable file and specify the appropriate arguments.",
+      "C": "1-Copy an executable file on a virtual machine\n2- Change the alert severity threshold for emails to Low\n3- Enable Azure Defender for the subscription.",
+      "D": "1-Enable Azure Defender for the subscription\n2- Copy an executable file on a virtual machine and rename it as ASC_AlertTest_662jfi039N.exe\n3- Run the executable file and specify the appropriate arguments."
     },
-    "image_question": "sc200/0005900001.png",
-    "image_solution": "sc200/0006000001.png",
+    "image_question": ["/assets/images/questions-sc200/sc200/0005900001.png"],
+    "image_solution": ["/assets/images/questions-sc200/sc200/0006000001.png"],
     "image_statement": "",
     "answer": [
       "D"
@@ -605,13 +605,13 @@
   {
     "question": "You have resources in Azure and Google cloud.\nYou need to ingest Google Cloud Platform (GCP) data into Azure Defender.\nIn which order should you perform the actions? To answer, move all actions from the list of actions to the answer area and arrange them in the correct order.",
     "choices": {
-      "A": "Enable Security Health Analytics → Enable the GCP Security Command Center API → Configure the GCP Security Command Center → From Azure Security Center, add cloud connectors.",
-      "B": "From Azure Security Center, add cloud connectors → Create a dedicated service account and a private key → Enable the GCP Security Command Center API → Enable Security Health Analytics.",
-      "C": "Configure the GCP Security Command Center → Enable Security Health Analytics → Enable the GCP Security Command Center API → Create a dedicated service account and a private key → From Azure Security Center, add cloud connectors.",
-      "D": "Create a dedicated service account and a private key → Configure the GCP Security Command Center → From Azure Security Center, add cloud connectors → Enable Security Health Analytics."
+      "A": "1- Enable Security Health Analytics\n2- Enable the GCP Security Command Center API\n3- Configure the GCP Security Command Center\n4- From Azure Security Center, add cloud connectors.",
+      "B": "1- From Azure Security Center, add cloud connectors\n2- Create a dedicated service account and a private key\n3- Enable the GCP Security Command Center API\n4- Enable Security Health Analytics.",
+      "C": "1- Configure the GCP Security Command Center\n2- Enable Security Health Analytics\n3- Enable the GCP Security Command Center API\n4- Create a dedicated service account and a private key from Azure Security Center, add cloud connectors.",
+      "D": "1- Create a dedicated service account and a private key\n2- Configure the GCP Security Command Center\n3- From Azure Security Center, add cloud connectors\n4- Enable Security Health Analytics."
     },
-    "image_question": "sc200/0006100001.png",
-    "image_solution": "sc200/0006200001.png",
+    "image_question": ["/assets/images/questions-sc200/sc200/0006100001.png"],
+    "image_solution": ["/assets/images/questions-sc200/sc200/0006200001.png"],
     "image_statement": "",
     "answer": [
       "C"
@@ -625,8 +625,8 @@
       "C": "IdentityLogonEvents | EmailAttachmentInfo | select 20.",
       "D": "EmailEvents | DeviceEvents | select 20."
     },
-    "image_question": "sc200/0002400001.png",
-    "image_solution": "sc200/0002500001.png",
+    "image_question": ["/assets/images/questions-sc200/sc200/0002400001.png"],
+    "image_solution": ["/assets/images/questions-sc200/sc200/0002500001.png"],
     "image_statement": "",
     "answer": [
       "A"
@@ -635,14 +635,14 @@
   {
     "question": "You open the Cloud App Security portal as shown in the following exhibit.\nYour environment does NOT have Microsoft Defender for Endpoint enabled.\nYou need to remediate the risk for the Launchpad app.\nWhich four actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.\nSelect and Place:",
     "choices": {
-      "A": "Tag the app as Unsanctioned → Select the app → Run the script on the source appliance → Generate a block script.",
-      "B": "Select the app → Tag the app as Sanctioned → Run the script in Azure Cloud Shell → Generate a block script.",
-      "C": "Select the app → Tag the app as Unsanctioned → Generate a block script → Run the script on the source appliance.",
-      "D": "Generate a block script → Select the app → Tag the app as Unsanctioned → Run the script in Azure Cloud Shell."
+      "A": "1- Tag the app as Unsanctioned\n2- Select the app\n3- Run the script on the source appliance\n3- Generate a block script.",
+      "B": "1- Select the app\n2- Tag the app as Sanctioned\n3- Run the script in Azure Cloud Shell\n3- Generate a block script.",
+      "C": "1- Select the app\n2- Tag the app as Unsanctioned\n3- Generate a block script\n3- Run the script on the source appliance.",
+      "D": "1- Generate a block script\n2- Select the app\n3- Tag the app as Unsanctioned\n3- Run the script in Azure Cloud Shell."
     },
-    "image_question": "sc200/0001600001.png",
-    "image_solution": "sc200/0001700001.png",
-    "image_statement": "sc200/0001500001.jpg",
+    "image_question": ["/assets/images/questions-sc200/sc200/0001600001.png"],
+    "image_solution": ["/assets/images/questions-sc200/sc200/0001700001.png"],
+    "image_statement": ["/assets/images/questions-sc200/sc200/0001500001.jpg"],
     "answer": [
       "C"
     ]
@@ -655,8 +655,8 @@
       "C": "DeviceLogonEvents | where DeviceName in (\"CFOLaptop\", \"CEOLaptop\", \"COOLaptop\") | ActionType == FailureReason | summarize LogonFailures=count() by DeviceName, LogonType",
       "D": "DeviceEvents | where ActionType == FailureReason | summarize LogonFailures=count() by DeviceId"
     },
-    "image_question": "sc200/0001100001.png",
-    "image_solution": "sc200/0001200001.png",
+    "image_question": ["/assets/images/questions-sc200/sc200/0001100001.png"],
+    "image_solution": ["/assets/images/questions-sc200/sc200/0001200001.png"],
     "image_statement": "",
     "answer": [
       "C"
@@ -670,8 +670,8 @@
       "C": "Use project, then extend, then join to pre-filter attachment metadata before matching device events.",
       "D": "Use union, then project, then extend to combine mailbox and device events before correlation."
     },
-    "image_question": "sc200/0001800001.png",
-    "image_solution": "sc200/0001900001.png",
+    "image_question": ["/assets/images/questions-sc200/sc200/0001800001.png"],
+    "image_solution": ["/assets/images/questions-sc200/sc200/0001900001.png"],
     "image_statement": "",
     "answer": [
       "A"
@@ -796,7 +796,7 @@
     ]
   },
   {
-    "question": "Your company deploys the following services:✑ Microsoft Defender for Identity✑ Microsoft Defender for Endpoint✑ Microsoft Defender for Office 365You need to provide a security analyst with the ability to use the Microsoft 365 security center.\n The analyst must be able to approve and reject pending actions generated by Microsoft Defender for Endpoint.\n The solution must use the principle of least privilege.\nWhich two roles should assign to the analyst? Each correct answer presents part of the solution.\nNOTE: Each correct selection is worth one point.",
+    "question": "Your company deploys the following services:\n- Microsoft Defender for Identity\n- Microsoft Defender for Endpoint\n- Microsoft Defender for Office 365\n\nYou need to provide a security analyst with the ability to use the Microsoft 365 security center.\n The analyst must be able to approve and reject pending actions generated by Microsoft Defender for Endpoint.\n The solution must use the principle of least privilege.\nWhich two roles should assign to the analyst? Each correct answer presents part of the solution.\nNOTE: Each correct selection is worth one point.",
     "choices": {
       "A": "the Compliance Data Administrator in Azure Active Directory (Azure AD)",
       "B": "the Active remediation actions role in Microsoft Defender for Endpoint",
@@ -913,7 +913,7 @@
       "D": "180 days"
     },
     "answer": [
-      "B"
+      "D"
     ]
   },
   {
@@ -1507,7 +1507,7 @@
     "question": "You have an Azure subscription that has Microsoft Defender for Cloud enabled.\nYou have a virtual machine that runs Windows 10 and has the Log Analytics agent installed.\nYou need to simulate an attack on the virtual machine that will generate an alert.\nWhat should you do first?",
     "choices": {
       "A": "Run the Log Analytics Troubleshooting Tool.",
-      "B": "Copy and executable and rename the file as ASC_AlertTest_662jfi039N.\nexe.",
+      "B": "Copy and executable and rename the file as ASC_AlertTest_662jfi039N.exe.",
       "C": "Modify the settings of the Microsoft Monitoring Agent.",
       "D": "Run the MMASetup executable and specify the –foo argument."
     },
@@ -1633,7 +1633,7 @@
       "C": "Server1, Server2, and Server4 only",
       "D": "Server1, Server2, Server3, and Server4"
     },
-    "image_statement":"sc200/image194.png",
+    "image_statement":["/assets/images/questions-sc200/sc200/image194.png"],
     "answer": [
       "C"
     ]
