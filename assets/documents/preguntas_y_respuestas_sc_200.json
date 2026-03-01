@@ -710,9 +710,7 @@
       "D": "Create a suppression rule scoped to a device group.",
       "E": "Generate the alert."
     },
-    "answer": [
-      "B","D","E"
-    ]
+    "answer": ["B","D","E"]
   },
   {
     "question": "You have the following advanced hunting query in Microsoft 365 Defender.\nYou need to receive an alert when any process disables System Restore on a device managed by Microsoft Defender during the last 24 hours.\nWhich two actions should you perform? Each correct answer presents part of the solution.\nNOTE: Each correct selection is worth one point.",
@@ -723,9 +721,7 @@
       "D": "Replace DeviceProcessEvents with DeviceNetworkEvents.",
       "E": "Add DeviceId and ReportId to the output of the query."
     },
-    "answer": [
-      "A"
-    ]
+    "answer": ["A","E"]
   },
   {
     "question": "You are investigating a potential attack that deploys a new ransomware strain.\nYou have three custom device groups.\n The groups contain devices that store highly sensitive information.\nYou plan to perform automated actions on all devices.\nYou need to be able to temporarily group the machines to perform actions on the devices.\nWhich three actions should you perform? Each correct answer presents part of the solution.\nNOTE: Each correct selection is worth one point.",
@@ -738,7 +734,7 @@
       "F": "Create a new device group that has a rank of 4."
     },
     "answer": [
-      "A"
+      "A","C","D"
     ]
   },
   {
@@ -804,7 +800,7 @@
       "D": "the Security Reader role in Azure Active Directory (Azure AD)"
     },
     "answer": [
-      "B"
+      "B","D"
     ]
   },
   {
@@ -818,7 +814,7 @@
       "F": "Select Investigate files, and then filter File Type to Document."
     },
     "answer": [
-      "D"
+      "D","E"
     ]
   },
   {
@@ -843,7 +839,7 @@
       "E": "Create an activity policy that has an exclusion for the IP addresses."
     },
     "answer": [
-      "A"
+      "A","B"
     ]
   },
   {
@@ -1082,7 +1078,7 @@
       "F": "From Settings, select Information Protection, select Azure Information Protection, and then select Automatically scan new files for Azure Information Protection classification labels and content inspection warnings."
     },
     "answer": [
-      "B"
+      "B","F"
     ]
   },
   {
@@ -1156,7 +1152,7 @@
       "F": "From Settings, select Cloud App, select Microsoft Information Protection, and then select Automatically scan new files for Microsoft Information Protection sensitivity labels and content inspection warnings."
     },
     "answer": [
-      "C"
+      "C","F"
     ]
   },
   {
@@ -1181,7 +1177,7 @@
       "E": "assign"
     },
     "answer": [
-      "B"
+      "B","C"
     ]
   },
   {
@@ -1279,7 +1275,7 @@
       "D": "./asc_alerttest_662jfi039n testing eicar pipe"
     },
     "answer": [
-      "A"
+      "A","D"
     ]
   },
   {
@@ -1372,7 +1368,7 @@
       "E": "From Azure Active Directory (Azure AD), add an app registration."
     },
     "answer": [
-      "A"
+      "A","C"
     ]
   },
   {
@@ -1525,7 +1521,7 @@
       "E": "From Defender for Cloud in the Azure portal, enable automatic provisioning for the virtual machines."
     },
     "answer": [
-      "A"
+      "A","E"
     ]
   },
   {
@@ -1660,7 +1656,7 @@
       "E": "From Defender for Cloud in the Azure portal, enable Microsoft Defender for Servers."
     },
     "answer": [
-      "A"
+      "A","E"
     ]
   },
   {
@@ -1673,7 +1669,7 @@
       "E": "From Defender for Cloud, configure auto-provisioning."
     },
     "answer": [
-      "C"
+      "C","E"
     ]
   },
   {
@@ -1757,7 +1753,7 @@
       "D": "computer"
     },
     "answer": [
-      "A"
+      "A","D"
     ]
   },
   {
@@ -1770,7 +1766,7 @@
       "E": "Add the Azure Sentinel solution to each workspace."
     },
     "answer": [
-      "B"
+      "B","E"
     ]
   },
   {
@@ -1794,7 +1790,7 @@
       "D": "Permissions to one of the data sources of the rule query were modified."
     },
     "answer": [
-      "D"
+      "D","A"
     ]
   },
   {
@@ -1854,7 +1850,7 @@
       "D": "There are connectivity issues between the data sources and Log Analytics"
     },
     "answer": [
-      "A"
+      "A","D"
     ]
   },
   {
@@ -1909,7 +1905,7 @@
       "E": "Enable the Fusion rule."
     },
     "answer": [
-      "A"
+      "A","B"
     ]
   },
   {
@@ -1946,7 +1942,7 @@
       "E": "Create a bookmark."
     },
     "answer": [
-      "B"
+      "B","C"
     ]
   },
   {
@@ -1971,7 +1967,7 @@
       "E": "Create a workbook."
     },
     "answer": [
-      "B"
+      "B","D"
     ]
   },
   {
@@ -1983,7 +1979,7 @@
       "D": "Configure Windows Event Forwarding on the domain controllers."
     },
     "answer": [
-      "A"
+      "A","D"
     ]
   },
   {
@@ -2019,7 +2015,7 @@
       "D": "Create an Azure AD Identity Protection connector."
     },
     "answer": [
-      "C"
+      "C","D"
     ]
   },
   {
@@ -2042,7 +2038,7 @@
       "E": "Azure Functions apps"
     },
     "answer": [
-      "C"
+      "C","D"
     ]
   },
   {
@@ -2187,7 +2183,7 @@
       "E": "Create an analytics rule that includes the built-in parser."
     },
     "answer": [
-      "B"
+      "B","C"
     ]
   },
   {
@@ -2755,7 +2751,7 @@
       "E": "Microsoft Defender for DevOps"
     },
     "answer": [
-      "A"
+      "A","E"
     ]
   },
   {
@@ -2925,7 +2921,7 @@
       "E": "Microsoft Defender for DevOps"
     },
     "answer": [
-      "B"
+      "B","E"
     ]
   },
   {
@@ -2950,7 +2946,7 @@
       "E": "Azure Functions apps"
     },
     "answer": [
-      "C"
+      "C","D"
     ]
   },
   {
