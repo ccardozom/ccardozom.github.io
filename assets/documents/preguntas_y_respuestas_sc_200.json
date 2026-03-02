@@ -648,11 +648,11 @@
     ]
   },
   {
-    "question": "You are investigating an incident by using Microsoft 365 Defender.\nYou need to create an advanced hunting query to count failed sign-in authentications on three devices named CFOLaptop, CEOLaptop, and COOLaptop.\nHow should you complete the query? To answer, select the appropriate options in the answer area.",
+    "question": "*You are investigating an incident by using Microsoft 365 Defender.\nYou need to create an advanced hunting query to count failed sign-in authentications on three devices named CFOLaptop, CEOLaptop, and COOLaptop.\nHow should you complete the query? To answer, select the appropriate options in the answer area.",
     "choices": {
       "A": "DeviceEvents | where DeviceName has \"Laptop\" | where ActionType == \"LogonFailed\" | summarize LogonFailures=count()",
       "B": "DeviceLogonEvents | where ActionType == \"LogonFailed\" | summarize LogonFailures=count() by DeviceName",
-      "C": "DeviceLogonEvents | where DeviceName in (\"CFOLaptop\", \"CEOLaptop\", \"COOLaptop\") | ActionType == FailureReason | summarize LogonFailures=count() by DeviceName, LogonType",
+      "C": "DeviceLogonEvents | where DeviceName in (\"CFOLaptop\", \"CEOLaptop\", \"COOLaptop\") | ActionType == LogonFailed | summarize LogonFailures=count() by DeviceName, LogonType",
       "D": "DeviceEvents | where ActionType == FailureReason | summarize LogonFailures=count() by DeviceId"
     },
     "image_question": ["/assets/images/questions-sc200/sc200/0001100001.png"],
@@ -1267,7 +1267,7 @@
     ]
   },
   {
-    "question": "You provision a Linux virtual machine in a new Azure subscription.\nYou enable Azure Defender and onboard the virtual machine to Azure Defender.\nYou need to verify that an attack on the virtual machine triggers an alert in Azure Defender.\nWhich two Bash commands should you run on the virtual machine? Each correct answer presents part of the solution.\nNOTE: Each correct selection is worth one point.",
+    "question": "*You provision a Linux virtual machine in a new Azure subscription.\nYou enable Azure Defender and onboard the virtual machine to Azure Defender.\nYou need to verify that an attack on the virtual machine triggers an alert in Azure Defender.\nWhich two Bash commands should you run on the virtual machine? Each correct answer presents part of the solution.\nNOTE: Each correct selection is worth one point.",
     "choices": {
       "A": "cp /bin/echo ./asc_alerttest_662jfi039n",
       "B": "./alerttest testing eicar pipe",
@@ -1770,7 +1770,7 @@
     ]
   },
   {
-    "question": "You have an Azure Sentinel workspace.\nYou need to test a playbook manually in the Azure portal.\nFrom where can you run the test in Azure Sentinel?",
+    "question": "*You have an Azure Sentinel workspace.\nYou need to test a playbook manually in the Azure portal.\nFrom where can you run the test in Azure Sentinel?",
     "choices": {
       "A": "Playbooks",
       "B": "Analytics",
@@ -3408,7 +3408,7 @@
     ]
   },
   {
-    "question": "You need to restrict cloud apps running on CLIENT1 to meet the Microsoft Defender for Endpoint requirements.\nWhich two configurations should you modify? Each correct answer present part of the solution.\nNOTE: Each correct selection is worth one point.",
+    "question": "*You need to restrict cloud apps running on CLIENT1 to meet the Microsoft Defender for Endpoint requirements.\nWhich two configurations should you modify? Each correct answer present part of the solution.\nNOTE: Each correct selection is worth one point.",
     "choices": {
       "A": "the Onboarding settings from Device management in Microsoft Defender Security Center",
       "B": "Cloud App Security anomaly detection policies",
