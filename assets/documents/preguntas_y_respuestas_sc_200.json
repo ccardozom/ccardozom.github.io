@@ -1721,7 +1721,7 @@
     ]
   },
   {
-    "question": "Your company uses Azure Sentinel to manage alerts from more than 10,000 IoT devices.\nA security manager at the company reports that tracking security threats is increasingly difficult due to the large number of incidents.\nYou need to recommend a solution to provide a custom visualization to simplify the investigation of threats and to infer threats by using machine learning.\nWhat should you include in the recommendation?",
+    "question": "*Your company uses Azure Sentinel to manage alerts from more than 10,000 IoT devices.\nA security manager at the company reports that tracking security threats is increasingly difficult due to the large number of incidents.\nYou need to recommend a solution to provide a custom visualization to simplify the investigation of threats and to infer threats by using machine learning.\nWhat should you include in the recommendation?",
     "choices": {
       "A": "built-in queries",
       "B": "livestream",
@@ -2114,7 +2114,7 @@
     ]
   },
   {
-    "question": "You have an Azure subscription that uses Microsoft Sentinel and contains 100 Linux virtual machines.\nYou need to monitor the virtual machines by using Microsoft Sentinel.\n The solution must meet the following requirements:\n✑ Minimize administrative effort.\n✑ Minimize the parsing required to read log data.\nWhat should you configure?",
+    "question": "*You have an Azure subscription that uses Microsoft Sentinel and contains 100 Linux virtual machines.\nYou need to monitor the virtual machines by using Microsoft Sentinel.\n The solution must meet the following requirements:\n✑ Minimize administrative effort.\n✑ Minimize the parsing required to read log data.\nWhat should you configure?",
     "choices": {
       "A": "a Log Analytics Data Collector API",
       "B": "REST API integration",
@@ -2122,7 +2122,7 @@
       "D": "a Syslog connector"
     },
     "answer": [
-      "C"
+      "D"
     ]
   },
   {
@@ -3029,7 +3029,7 @@
     ]
   },
   {
-    "question": "You have a Microsoft 365 subscription that uses Microsoft Defender XDR and contains a Windows device named Device1.The timeline of Device1 includes three files named File1.ps1, File2.exe, and File3.dll.\nYou need to submit files for deep analysis in Microsoft Defender XDR.\nWhich files can you submit?",
+    "question": "*You have a Microsoft 365 subscription that uses Microsoft Defender XDR and contains a Windows device named Device1.The timeline of Device1 includes three files named File1.ps1, File2.exe, and File3.dll.\nYou need to submit files for deep analysis in Microsoft Defender XDR.\nWhich files can you submit?",
     "choices": {
       "A": "File1.ps1 only",
       "B": "File2.exe only",
