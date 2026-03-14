@@ -91,12 +91,12 @@
   ]
 },
   {
-  "question": "You have an Azure subscription that uses Azure Defender.\nYou plan to use Azure Security Center workflow automation to respond to Azure Defender threat alerts.\nYou need to create an Azure policy that will perform threat remediation automatically.\nWhat should you include in the solution? To answer, select the appropriate options in the answer area.\nNOTE: Each correct selection is worth one point.",
+  "question": "*You have an Azure subscription that uses Azure Defender.\nYou plan to use Azure Security Center workflow automation to respond to Azure Defender threat alerts.\nYou need to create an Azure policy that will perform threat remediation automatically.\nWhat should you include in the solution?",
   "choices": {
-    "A": "Append → An Azure Automation runbook that has a webhook",
-    "B": "EnforceRegoPolicy → An Azure Logic Apps app that has the trigger set to When a response to an Azure Security Center alert is triggered",
-    "C": "DeployIfNotExists → An Azure Logic Apps app that has the trigger set to When an Azure Security Center Alert is created or triggered",
-    "D": "Append → An Azure Logic Apps app that has the trigger set to When an Azure Security Center Alert is created or triggered"
+    "A": "- Append\n- An Azure Automation runbook that has a webhook",
+    "B": "- EnforceRegoPolicy\n- An Azure Logic Apps app that has the trigger set to When a response to an Azure Security Center alert is triggered",
+    "C": "- DeployIfNotExists\n- An Azure Logic Apps app that has the trigger set to When an Azure Security Center Alert is created or triggered",
+    "D": "- Append\n- An Azure Logic Apps app that has the trigger set to When an Azure Security Center Alert is created or triggered"
   },
   "image_question": ["/assets/images/questions-sc200/sc200/0008300001.jpg"],
   "image_solution": ["/assets/images/questions-sc200/sc200/0008400001.jpg"],
@@ -408,12 +408,12 @@
   ]
 },
   {
-  "question": "You have a Microsoft 365 subscription that uses Microsoft 365 Defender and contains a user named User1.\nYou are notified that the account of User1 is compromised.\nYou need to review the alerts triggered on the devices to which User1 signed in.\nHow should you complete the query? To answer, select the appropriate options in the answer area.",
+  "question": "*You have a Microsoft 365 subscription that uses Microsoft 365 Defender and contains a user named User1.\nYou are notified that the account of User1 is compromised.\nYou need to review the alerts triggered on the devices to which User1 signed in.\nHow should you complete the query? To answer, select the appropriate options in the answer area.",
   "choices": {
-    "A": "Use extend to join DeviceInfo with AlertEvidence, then summarize the alert details.",
-    "B": "Use join kind=outer to correlate DeviceInfo with AlertEvidence, then take the latest results.",
-    "C": "Use join to correlate DeviceInfo with AlertEvidence on DeviceId, then project the relevant alert fields.",
-    "D": "Use summarize to group DeviceInfo records, then join AlertInfo to extract alert metadata."
+    "A": "- join\n- summarize",
+    "B": "- join\n- take",
+    "C": "- join\n- project",
+    "D": "- extend\n- take"
   },
   "image_question": ["/assets/images/questions-sc200/sc200/0004000001.jpg"],
   "image_solution": ["/assets/images/questions-sc200/sc200/0004100001.jpg"],
@@ -738,7 +738,7 @@
     ]
   },
   {
-    "question": "Note: This question is part of a series of questions that present the same scenario.\n Each question in the series contains a unique solution that might meet the stated goals.\n Some question sets might have more than one correct solution, while others might not have a correct solution.\nAfter you answer a question in this section, you will NOT be able to return to it.\n As a result, these questions will not appear in the review screen.\nYou are configuring Microsoft Defender for Identity integration with Active Directory.\nFrom the Microsoft Defender for identity portal, you need to configure several accounts for attackers to exploit.\nSolution: From Entity tags, you add the accounts as Honeytoken accounts.\nDoes this meet the goal?",
+    "question": "*You are configuring Microsoft Defender for Identity integration with Active Directory.\nFrom the Microsoft Defender for identity portal, you need to configure several accounts for attackers to exploit.\nSolution: From Entity tags, you add the accounts as Honeytoken accounts.\nDoes this meet the goal?",
     "choices": {
       "A": "Yes",
       "B": "No"
@@ -1130,7 +1130,7 @@
     ]
   },
   {
-    "question": "You have a Microsoft 365 E5 subscription that contains 100 Linux devices.\n The devices are onboarded to Microsoft Defender 365.\nYou need to initiate the collection of investigation packages from the devices by using the Microsoft 365 Defender portal.\nWhich response action should you use?",
+    "question": "*You have a Microsoft 365 E5 subscription that contains 100 Linux devices.\nThe devices are onboarded to Microsoft Defender 365.\nYou need to initiate the collection of investigation packages from the devices by using the Microsoft 365 Defender portal.\nWhich response action should you use?",
     "choices": {
       "A": "Run antivirus scan",
       "B": "Initiate Automated Investigation",
@@ -1512,7 +1512,7 @@
     ]
   },
   {
-    "question": "You have an Azure subscription that uses Microsoft Defender for Cloud and contains 100 virtual machines that run Windows Server.\nYou need to configure Defender for Cloud to collect event data from the virtual machines.\n The solution must minimize administrative effort and costs.\nWhich two actions should you perform? Each correct answer presents part of the solution.\nNOTE: Each correct selection is worth one point.",
+    "question": "*You have an Azure subscription that uses Microsoft Defender for Cloud and contains 100 virtual machines that run Windows Server.\nYou need to configure Defender for Cloud to collect event data from the virtual machines.\nThe solution must minimize administrative effort and costs.\nWhich two actions should you perform?",
     "choices": {
       "A": "From the workspace created by Defender for Cloud, set the data collection level to Common.",
       "B": "From the Microsoft Endpoint Manager admin center, enable automatic enrollment.",
@@ -1806,7 +1806,7 @@
     ]
   },
   {
-    "question": "You recently deployed Azure Sentinel.\nYou discover that the default Fusion rule does not generate any alerts.\n You verify that the rule is enabled.\nYou need to ensure that the Fusion rule can generate alerts.\nWhat should you do?",
+    "question": "*You recently deployed Azure Sentinel.\nYou discover that the default Fusion rule does not generate any alerts.\nYou verify that the rule is enabled.\nYou need to ensure that the Fusion rule can generate alerts.\nWhat should you do?",
     "choices": {
       "A": "Disable, and then enable the rule.",
       "B": "Add data connectors",
@@ -1854,7 +1854,7 @@
     ]
   },
   {
-    "question": "Note: This question is part of a series of questions that present the same scenario.\n Each question in the series contains a unique solution that might meet the stated goals.\n Some question sets might have more than one correct solution, while others might not have a correct solution.\nAfter you answer a question in this section, you will NOT be able to return to it.\n As a result, these questions will not appear in the review screen.\nYou are configuring Azure Sentinel.\nYou need to create an incident in Azure Sentinel when a sign-in to an Azure virtual machine from a malicious IP address is detected.\nSolution: You create a scheduled query rule for a data connector.\nDoes this meet the goal?",
+    "question": "You are configuring Azure Sentinel.\nYou need to create an incident in Azure Sentinel when a sign-in to an Azure virtual machine from a malicious IP address is detected.\nSolution: You create a scheduled query rule for a data connector.\nDoes this meet the goal?",
     "choices": {
       "A": "Yes",
       "B": "No"
@@ -1864,7 +1864,7 @@
     ]
   },
   {
-    "question": "Note: This question is part of a series of questions that present the same scenario.\n Each question in the series contains a unique solution that might meet the stated goals.\n Some question sets might have more than one correct solution, while others might not have a correct solution.\nAfter you answer a question in this section, you will NOT be able to return to it.\n As a result, these questions will not appear in the review screen.\nYou are configuring Azure Sentinel.\nYou need to create an incident in Azure Sentinel when a sign-in to an Azure virtual machine from a malicious IP address is detected.\nSolution: You create a hunting bookmark.\nDoes this meet the goal?",
+    "question": "You are configuring Azure Sentinel.\nYou need to create an incident in Azure Sentinel when a sign-in to an Azure virtual machine from a malicious IP address is detected.\nSolution: You create a hunting bookmark.\nDoes this meet the goal?",
     "choices": {
       "A": "Yes",
       "B": "No"
@@ -1874,7 +1874,7 @@
     ]
   },
   {
-    "question": "Note: This question is part of a series of questions that present the same scenario.\n Each question in the series contains a unique solution that might meet the stated goals.\n Some question sets might have more than one correct solution, while others might not have a correct solution.\nAfter you answer a question in this section, you will NOT be able to return to it.\n As a result, these questions will not appear in the review screen.\nYou are configuring Azure Sentinel.\nYou need to create an incident in Azure Sentinel when a sign-in to an Azure virtual machine from a malicious IP address is detected.\nSolution: You create a Microsoft incident creation rule for a data connector.\nDoes this meet the goal?",
+    "question": "You are configuring Azure Sentinel.\nYou need to create an incident in Azure Sentinel when a sign-in to an Azure virtual machine from a malicious IP address is detected.\nSolution: You create a Microsoft incident creation rule for a data connector.\nDoes this meet the goal?",
     "choices": {
       "A": "Yes",
       "B": "No"
@@ -2019,7 +2019,7 @@
     ]
   },
   {
-    "question": "Note: This question is part of a series of questions that present the same scenario.\n Each question in the series contains a unique solution that might meet the stated goals.\n Some question sets might have more than one correct solution, while others might not have a correct solution.\nAfter you answer a question in this section, you will NOT be able to return to it.\n As a result, these questions will not appear in the review screen.\nYou are configuring Azure Sentinel.\nYou need to create an incident in Azure Sentinel when a sign-in to an Azure virtual machine from a malicious IP address is detected.\nSolution: You create a livestream from a query.\nDoes this meet the goal?",
+    "question": "*You are configuring Azure Sentinel.\nYou need to create an incident in Azure Sentinel when a sign-in to an Azure virtual machine from a malicious IP address is detected.\nSolution: You create a livestream from a query.\nDoes this meet the goal?",
     "choices": {
       "A": "Yes",
       "B": "No"
@@ -2199,7 +2199,7 @@
     ]
   },
   {
-    "question": "You have a Microsoft Sentinel workspace named Workspace1.You need to exclude a built-in, source-specific Advanced Security Information Model (ASIM) parser from a built-in unified ASIM parser.\nWhat should you create in Workspace1?",
+    "question": "*You have a Microsoft Sentinel workspace named Workspace1.\nYou need to exclude a built-in, source-specific Advanced Security Information Model (ASIM) parser from a built-in unified ASIM parser.\nWhat should you create in Workspace1?",
     "choices": {
       "A": "an analytic rule",
       "B": "a watchlist",
