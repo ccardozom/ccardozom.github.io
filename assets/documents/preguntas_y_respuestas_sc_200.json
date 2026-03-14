@@ -453,12 +453,12 @@
   ]
 },
   {
-  "question": "You have a Microsoft 365 E5 subscription that uses Microsoft Defender 365.\n\nYour network contains an on-premises Active Directory Domain Services (AD DS) domain that syncs with Azure AD.\n\nYou need to identify the 100 most recent sign-in attempts recorded on devices and AD DS domain controllers.\n\nHow should you complete the KQL query? To answer, select the appropriate options in the answer area.",
+  "question": "*You have a Microsoft 365 E5 subscription that uses Microsoft Defender 365.\n\nYour network contains an on-premises Active Directory Domain Services (AD DS) domain that syncs with Azure AD.\n\nYou need to identify the 100 most recent sign-in attempts recorded on devices and AD DS domain controllers.\n\nHow should you complete the KQL query? To answer, select the appropriate options in the answer area.",
   "choices": {
-    "A": "Use IdentityLogonEvents as the second table and combine results using union.",
-    "B": "Use IdentityInfo as the second table and join kind = inner to merge logon events.",
-    "C": "Use IdentityDirectoryEvents as the second table and join kind = fullouter to merge logon activity.",
-    "D": "Use IdentityQueryEvents as the second table and join kind = innerunique for event correlation."
+    "A": "- IdentityLogonEvents\n- union",
+    "B": "- IdentityInfo\n- join kind = inner",
+    "C": "- IdentityQueryEvents\n- join kind = fullouter",
+    "D": "- IdentityLogonEvents\n- join kind = inner"
   },
   "image_question": ["/assets/images/questions-sc200/sc200/image183.png"],
   "image_solution": ["/assets/images/questions-sc200/sc200/image184.png"],
@@ -830,7 +830,7 @@
     ]
   },
   {
-    "question": "You are configuring Microsoft Cloud App Security.\nYou have a custom threat detection policy based on the IP address ranges of your company's United States-based offices.\nYou receive many alerts related to impossible travel and sign-ins from risky IP addresses.\nYou determine that 99% of the alerts are legitimate sign-ins from your corporate offices.\nYou need to prevent alerts for legitimate sign-ins from known locations.\nWhich two actions should you perform? Each correct answer presents part of the solution.\nNOTE: Each correct selection is worth one point.",
+    "question": "*You are configuring Microsoft Cloud App Security.\nYou have a custom threat detection policy based on the IP address ranges of your company's United States-based offices.\nYou receive many alerts related to impossible travel and sign-ins from risky IP addresses.\nYou determine that 99% of the alerts are legitimate sign-ins from your corporate offices.\nYou need to prevent alerts for legitimate sign-ins from known locations.\nWhich two actions should you perform?\nEach correct answer presents part of the solution.",
     "choices": {
       "A": "Configure automatic data enrichment.",
       "B": "Add the IP addresses to the corporate address range category.",
@@ -839,7 +839,7 @@
       "E": "Create an activity policy that has an exclusion for the IP addresses."
     },
     "answer": [
-      "A","B"
+      "B","E"
     ]
   },
   {
@@ -889,7 +889,7 @@
     ]
   },
   {
-    "question": "You have a Microsoft 365 E5 subscription that uses Microsoft SharePoint Online.\nYou delete users from the subscription.\nYou need to be notified if the deleted users downloaded numerous documents from SharePoint Online sites during the month before their accounts were deleted.\nWhat should you use?",
+    "question": "*You have a Microsoft 365 E5 subscription that uses Microsoft SharePoint Online.\nYou delete users from the subscription.\nYou need to be notified if the deleted users downloaded numerous documents from SharePoint Online sites during the month before their accounts were deleted.\nWhat should you use?",
     "choices": {
       "A": "a file policy in Microsoft Defender for Cloud Apps",
       "B": "an access review policy",
@@ -1033,7 +1033,7 @@
     ]
   },
   {
-    "question": "Overview -Fabrikam, Inc. is a financial services company.\nThe company has branch offices in New York, London, and Singapore.\n Fabrikam has remote users located across the globe. The remote users access company resources, including cloud resources, by using a VPN connection to a branch office.\nExisting Environment -Identity Environment -The network contains an Active Directory Domain Services (AD DS) forest named fabrikam.com that syncs with an Azure AD tenant named fabrikam.com.\n To sync the forest, Fabrikam uses Azure AD Connect with pass-through authentication enabled and password hash synchronization disabled.\nThe fabrikam.com forest contains two global groups named Group1 and Group2.Microsoft 365 Environment -All the users at Fabrikam are assigned a Microsoft 365 E5 license and an Azure Active Directory Premium Plan 2 license.\nFabrikam implements Microsoft Defender for Identity and Microsoft Defender for Cloud Apps and enables log collectors.\nAzure Environment -Fabrikam has an Azure subscription that contains the resources shown in the following table.\n==== Amazon Web Services (AWS) Environment ====\nFabrikam has an Amazon Web Services (AWS) account named Account1. Account1 contains 100 Amazon Elastic Compute Cloud (EC2) instances that run a custom Windows Server 2022. The image includes Microsoft SQL Server 2019 and does NOT have any agents installed.\nCurrent Issues\n -When the users use the VPN connections, Microsoft 365 Defender raises a high volume of impossible travel alerts that are false positives.\nDefender for Identity raises a high volume of Suspected DCSync attack alerts that are false positives.\nRequirements\n -Planned changes\n -Fabrikam plans to implement the following services:\n - Microsoft Defender for Cloud\n - Microsoft SentinelBusiness\n Requirements\n -Fabrikam identifies the following business requirements:\n - Use the principle of least privilege, whenever possible.\n - Minimize administrative effort.\nMicrosoft Defender for Cloud Apps Requirements\nFabrikam identifies the following Microsoft Defender for Cloud Apps requirements:\n - Ensure that impossible travel alert policies are based on the previous activities of each user.\n - Reduce the amount of impossible travel alerts that are false positives.\nMicrosoft Defender for Identity Requirements\nMinimize the administrative effort required to investigate the false positive alerts.\nMicrosoft Defender for Cloud Requirements\nFabrikam identifies the following Microsoft Defender for Cloud requirements:\n - Ensure that the members of Group2 can modify security policies.\n - Ensure that the members of Group1 can assign regulatory compliance policy initiatives at the Azure subscription level.\n - Automate the deployment of the Azure Connected Machine agent for Azure Arc-enabled servers to the existing and future resources of Account1.\n - Minimize the administrative effort required to investigate the false positive alerts.\nMicrosoft Sentinel Requirements\n -Fabrikam identifies the following Microsoft Sentinel requirements:\n - Query for NXDOMAIN DNS requests from the last seven days by using built-in Advanced Security Information Model (ASIM) unifying parsers.\n - From AWS EC2 instances, collect Windows Security event log entries that include local group membership changes.\n - Identify anomalous activities of Azure AD users by using User and Entity Behavior Analytics (UEBA).\n - Evaluate the potential impact of compromised Azure AD user credentials by using UEBA.\n - Ensure that App1 is available for use in Microsoft Sentinel automation rules.\n - Identify the mean time to triage for incidents generated during the last 30 days.\n - Identify the mean time to close incidents generated during the last 30 days.\n - Ensure that the members of Group1 can create and run playbooks.\n - Ensure that the members of Group1 can manage analytics rules.\n - Run hunting queries on Pool1 by using Jupyter notebooks.\n - Ensure that the members of Group2 can manage incidents.\n - Maximize the performance of data queries.\n - Minimize the amount of collected data.\nYou need to minimize the effort required to investigate the Microsoft Defender for Identity false positive alerts.\nWhat should you review?",
+    "question": "*Overview\n- Fabrikam, Inc. is a financial services company.\nThe company has branch offices in New York, London, and Singapore.\nFabrikam has remote users located across the globe.\nThe remote users access company resources, including cloud resources, by using a VPN connection to a branch office.\n\nExisting Environment\n- Identity Environment\n- The network contains an Active Directory Domain Services (AD DS) forest named fabrikam.com that syncs with an Azure AD tenant named fabrikam.com.\nTo sync the forest, Fabrikam uses Azure AD Connect with pass-through authentication enabled and password hash synchronization disabled.\nThe fabrikam.com forest contains two global groups named Group1 and Group2.\n\nMicrosoft 365 Environment\n- All the users at Fabrikam are assigned a Microsoft 365 E5 license and an Azure Active Directory Premium Plan 2 license.\nFabrikam implements Microsoft Defender for Identity and Microsoft Defender for Cloud Apps and enables log collectors.\n\nAzure Environment\n- Fabrikam has an Azure subscription that contains the resources shown in the following table.\n\n==== Amazon Web Services (AWS) Environment ====\nFabrikam has an Amazon Web Services (AWS) account named Account1.\nAccount1 contains 100 Amazon Elastic Compute Cloud (EC2) instances that run a custom Windows Server 2022. The image includes Microsoft SQL Server 2019 and does NOT have any agents installed.\n\nCurrent Issues\n- When the users use the VPN connections, Microsoft 365 Defender raises a high volume of impossible travel alerts that are false positives.\nDefender for Identity raises a high volume of Suspected DCSync attack alerts that are false positives.\nRequirements\n -Planned changes\n -Fabrikam plans to implement the following services:\n - Microsoft Defender for Cloud\n - Microsoft SentinelBusiness\n Requirements\n -Fabrikam identifies the following business requirements:\n - Use the principle of least privilege, whenever possible.\n- Minimize administrative effort.\n\nMicrosoft Defender for Cloud Apps Requirements\nFabrikam identifies the following Microsoft Defender for Cloud Apps requirements:\n- Ensure that impossible travel alert policies are based on the previous activities of each user.\n- Reduce the amount of impossible travel alerts that are false positives.\n\nMicrosoft Defender for Identity Requirements\n- Minimize the administrative effort required to investigate the false positive alerts.\n\nMicrosoft Defender for Cloud Requirements\nFabrikam identifies the following Microsoft Defender for Cloud requirements:\n- Ensure that the members of Group2 can modify security policies.\n- Ensure that the members of Group1 can assign regulatory compliance policy initiatives at the Azure subscription level.\n- Automate the deployment of the Azure Connected Machine agent for Azure Arc-enabled servers to the existing and future resources of Account1.\n- Minimize the administrative effort required to investigate the false positive alerts.\n\nMicrosoft Sentinel Requirements\nFabrikam identifies the following Microsoft Sentinel requirements:\n- Query for NXDOMAIN DNS requests from the last seven days by using built-in Advanced Security Information Model (ASIM) unifying parsers.\n - From AWS EC2 instances, collect Windows Security event log entries that include local group membership changes.\n - Identify anomalous activities of Azure AD users by using User and Entity Behavior Analytics (UEBA).\n - Evaluate the potential impact of compromised Azure AD user credentials by using UEBA.\n - Ensure that App1 is available for use in Microsoft Sentinel automation rules.\n - Identify the mean time to triage for incidents generated during the last 30 days.\n - Identify the mean time to close incidents generated during the last 30 days.\n - Ensure that the members of Group1 can create and run playbooks.\n - Ensure that the members of Group1 can manage analytics rules.\n - Run hunting queries on Pool1 by using Jupyter notebooks.\n - Ensure that the members of Group2 can manage incidents.\n - Maximize the performance of data queries.\n - Minimize the amount of collected data.\nYou need to minimize the effort required to investigate the Microsoft Defender for Identity false positive alerts.\nWhat should you review?",
     "choices": {
       "A": "the status update time",
       "B": "the resolution method of the source computer",
@@ -1045,7 +1045,7 @@
     ]
   },
   {
-    "question": "You have a Microsoft 365 E5 subscription that uses Microsoft Defender 365.You need to ensure that you can investigate threats by using data in the unified audit log of Microsoft Defender for Cloud Apps.\nWhat should you configure first?",
+    "question": "*You have a Microsoft 365 E5 subscription that uses Microsoft Defender 365.\nYou need to ensure that you can investigate threats by using data in the unified audit log of Microsoft Defender for Cloud Apps.\nWhat should you configure first?",
     "choices": {
       "A": "the User enrichment settings",
       "B": "the Azure connector",
@@ -2066,7 +2066,7 @@
     ]
   },
   {
-    "question": "You have two Azure subscriptions that use Microsoft Defender for Cloud.\nYou need to ensure that specific Defender for Cloud security alerts are suppressed at the root management group level.\n The solution must minimize administrative effort.\nWhat should you do in the Azure portal?",
+    "question": "*You have two Azure subscriptions that use Microsoft Defender for Cloud.\nYou need to ensure that specific Defender for Cloud security alerts are suppressed at the root management group level.\n The solution must minimize administrative effort.\nWhat should you do in the Azure portal?",
     "choices": {
       "A": "Create an Azure Policy assignment.",
       "B": "Modify the Workload protections settings in Defender for Cloud.",
