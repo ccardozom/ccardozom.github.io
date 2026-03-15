@@ -1149,7 +1149,7 @@
       "answer": [
         "B",
         "D",
-        "E"
+        "C"
       ]
     },
     {
@@ -1421,7 +1421,7 @@
       ]
     },
     {
-      "question": "You have a Microsoft 365 subscription that uses Microsoft Defender for Endpoint.\nYou need to add threat indicators for all the IP addresses in a range of 171.23.34.32-171.23.34.63. The solution must minimize administrative effort.\nWhat should you do in the Microsoft 365 Defender portal?",
+      "question": "*You have a Microsoft 365 subscription that uses Microsoft Defender for Endpoint.\nYou need to add threat indicators for all the IP addresses in a range of 171.23.34.32-171.23.34.63. The solution must minimize administrative effort.\nWhat should you do in the Microsoft 365 Defender portal?",
       "choices": {
         "A": "Create an import file that contains the individual IP addresses in the range.\n Select Import and import the file.",
         "B": "Create an import file that contains the IP address of 171.23.34.32/27. Select Import and import the file.",
@@ -1429,7 +1429,7 @@
         "D": "Select Add indicator and set the IP address to 171.23.34.32/27."
       },
       "answer": [
-        "A"
+        "D"
       ]
     },
     {
@@ -1731,7 +1731,7 @@
       ]
     },
     {
-      "question": "You create an Azure subscription named sub1.In sub1, you create a Log Analytics workspace named workspace1.You enable Azure Security Center and configure Security Center to use workspace1.You need to collect security event logs from the Azure virtual machines that report to workspace1.What should you do?",
+      "question": "You create an Azure subscription named sub1. In sub1, you create a Log Analytics workspace named workspace1.\nYou enable Azure Security Center and configure Security Center to use workspace1.\nYou need to collect security event logs from the Azure virtual machines that report to workspace1.\nWhat should you do?",
       "choices": {
         "A": "From Security Center, enable data collection",
         "B": "In sub1, register a provider.",
@@ -1743,7 +1743,7 @@
       ]
     },
     {
-      "question": "Your company uses Azure Security Center and Azure Defender.\nThe security operations team at the company informs you that it does NOT receive email notifications for security alerts.\nWhat should you configure in Security Center to enable the email notifications?",
+      "question": "*Your company uses Azure Security Center and Azure Defender.\nThe security operations team at the company informs you that it does NOT receive email notifications for security alerts.\nWhat should you configure in Security Center to enable the email notifications?",
       "choices": {
         "A": "Security solutions",
         "B": "Security policy",
@@ -1752,7 +1752,7 @@
         "E": "Azure Defender"
       },
       "answer": [
-        "C"
+        "B"
       ]
     },
     {
@@ -2091,7 +2091,7 @@
       ]
     },
     {
-      "question": "You have an Azure subscription that uses Microsoft Defender for Cloud.\nYou have a GitHub account named Account1 that contains 10 repositories.\nYou need to ensure that Defender for Cloud can access the repositories in Account1.What should you do first in the Microsoft Defender for Cloud portal?",
+      "question": "You have an Azure subscription that uses Microsoft Defender for Cloud.\nYou have a GitHub account named Account1 that contains 10 repositories.\nYou need to ensure that Defender for Cloud can access the repositories in Account1.\nWhat should you do first in the Microsoft Defender for Cloud portal?",
       "choices": {
         "A": "Enable integrations.",
         "B": "Enable a plan.",
@@ -2250,8 +2250,7 @@
         "D": "Permissions to one of the data sources of the rule query were modified."
       },
       "answer": [
-        "D",
-        "A"
+        "D"
       ]
     },
     {
@@ -2606,13 +2605,20 @@
       ]
     },
     {
-      "question": "You have a Microsoft Sentinel workspace.\nYou have a query named Query1 as shown in the following exhibit.\nYou plan to create a custom parser named Parser1.You need to use Query1 in Parser1.What should you do first?",
+      "question": "You have a Microsoft Sentinel workspace.\nYou have a query named Query1 as shown in the following exhibit.\nIMG0\nYou plan to create a custom parser named Parser1.You need to use Query1 in Parser1.What should you do first?",
       "choices": {
         "A": "Remove line 5.",
         "B": "Remove line 2.",
         "C": "In line 3, replace the !contains operator with the !has operator.",
         "D": "In line 4, remove the TimeGenerated predicate."
       },
+      "image_question": [
+        "/assets/images/questions-sc200/sc200/sentinel-query1.png"
+      ],
+      "image_solution": [
+        ""
+      ],
+      "image_statement": "",
       "answer": [
         "B"
       ]
@@ -3145,6 +3151,15 @@
         "D": "User1 and User2 only",
         "E": "User1, User2 and User3"
       },
+      "image_question": [
+        "/assets/images/questions-sc200/sc200/user-roles1.png"
+      ],
+      "image_solution": [
+        ""
+      ],
+      "image_statement": [
+        ""
+      ],
       "answer": [
         "D"
       ]
@@ -3238,7 +3253,7 @@
       ]
     },
     {
-      "question": "You have a Microsoft 365 E5 subscription that contains a device named Device1. Device1 is enrolled in Microsoft Defender for Endpoint.\nDevice1 reports an incident that includes a file named File1.exe as evidence.\nYou initiate the Collect Investigation Package action and download the ZIP file.\nYou need to identify the first and last time File1.exe was executed.\nWhat should you review in the investigation package?",
+      "question": "*You have a Microsoft 365 E5 subscription that contains a device named Device1. Device1 is enrolled in Microsoft Defender for Endpoint.\nDevice1 reports an incident that includes a file named File1.exe as evidence.\nYou initiate the Collect Investigation Package action and download the ZIP file.\nYou need to identify the first and last time File1.exe was executed.\nWhat should you review in the investigation package?",
       "choices": {
         "A": "Processes",
         "B": "Autoruns",
@@ -3247,7 +3262,7 @@
         "E": "Prefetch files"
       },
       "answer": [
-        "E"
+        "C"
       ]
     },
     {
@@ -3323,7 +3338,7 @@
       ]
     },
     {
-      "question": "You have a Microsoft 365 E5 subscription that uses Microsoft Defender XDR.\nThe security team at your company detects command and control (C2) agent traffic on the network.\n Agents communicate once every 50 hours.\nYou need to create a Microsoft Defender XDR custom detection rule that will identify compromised devices and establish a pattern of communication.\n The solution must meet the following requirements:\n - Identify all the devices that have communicated during the past 14 days.\n - Minimize how long it takes to identify the devices.\nTo what should you set the detection frequency for the rule?",
+      "question": "*You have a Microsoft 365 E5 subscription that uses Microsoft Defender XDR.\nThe security team at your company detects command and control (C2) agent traffic on the network.\n Agents communicate once every 50 hours.\nYou need to create a Microsoft Defender XDR custom detection rule that will identify compromised devices and establish a pattern of communication.\n The solution must meet the following requirements:\n - Identify all the devices that have communicated during the past 14 days.\n - Minimize how long it takes to identify the devices.\nTo what should you set the detection frequency for the rule?",
       "choices": {
         "A": "Every 12 hours",
         "B": "Every 24 hours",
@@ -3331,7 +3346,7 @@
         "D": "Every hour"
       },
       "answer": [
-        "B"
+        "D"
       ]
     },
     {
@@ -3434,7 +3449,7 @@
         "/assets/images/questions-sc200/sc200/image275.png"
       ],
       "answer": [
-        "D"
+        "A"
       ]
     },
     {
@@ -3556,13 +3571,22 @@
       ]
     },
     {
-      "question": "You have a Microsoft 365 subscription that uses Microsoft Defender for Endpoint and contains the devices shown in the following table.\nYou initiate a live response session on each device.\nYou need to collect a Defender for Endpoint investigation package from each device.\nOn which devices can you collect the package by running advanced live response commands from the command-line interface (CLI)?",
+      "question": "*You have a Microsoft 365 subscription that uses Microsoft Defender for Endpoint and contains the devices shown in the following table.\nYou initiate a live response session on each device.\nYou need to collect a Defender for Endpoint investigation package from each device.\nOn which devices can you collect the package by running advanced live response commands from the command-line interface (CLI)?",
       "choices": {
         "A": "Device1 and Device2 only",
         "B": "Device1, Device2, and Device3 only",
         "C": "Device3 and Device4 only",
         "D": "Device1, Device2, Device3, and Device4"
       },
+      "image_question": [
+        "/assets/images/questions-sc200/sc200/devices1.png"
+      ],
+      "image_solution": [
+        ""
+      ],
+      "image_statement": [
+        ""
+      ],
       "answer": [
         "C"
       ]
