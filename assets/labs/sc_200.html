@@ -1154,9 +1154,50 @@
 
             document.getElementById('current-question-num').textContent = currentQuestionIndex + 1;
             document.getElementById('question-counter').textContent = `de ${currentQuestions.length}`;
-            document.getElementById('question-text').textContent = question.question;
+            // Normalizar image_statement a array (string separado por coma o array ya existente)
+            let stmtImages = [];
+            if (Array.isArray(question.image_statement)) {
+                stmtImages = question.image_statement.filter(u => u && u.trim() !== '');
+            } else if (typeof question.image_statement === 'string' && question.image_statement.trim() !== '') {
+                stmtImages = question.image_statement.split(',').map(u => u.trim()).filter(u => u !== '');
+            }
 
-            // NUEVO: Cargar imágenes si existen
+            // Renderizar el texto de la pregunta sustituyendo IMG0, IMG1, ... por imágenes inline
+            const questionTextEl = document.getElementById('question-text');
+            questionTextEl.innerHTML = '';
+            if (stmtImages.length > 0) {
+                // Dividir el texto por los marcadores IMG0, IMG1, ...
+                const parts = question.question.split(/(IMG\d+)/);
+                parts.forEach(part => {
+                    const match = part.match(/^IMG(\d+)$/);
+                    if (match) {
+                        const idx = parseInt(match[1], 10);
+                        const imageUrl = stmtImages[idx];
+                        if (imageUrl) {
+                            const wrapper = document.createElement('div');
+                            wrapper.style.cssText = 'margin: 12px 0; text-align: center;';
+                            const img = document.createElement('img');
+                            img.src = imageUrl;
+                            img.className = 'question-image';
+                            img.alt = 'Imagen del enunciado';
+                            img.style.maxWidth = '100%';
+                            img.onclick = () => openImageModal(imageUrl);
+                            wrapper.appendChild(img);
+                            questionTextEl.appendChild(wrapper);
+                        }
+                    } else {
+                        const span = document.createElement('span');
+                        span.style.whiteSpace = 'pre-wrap';
+                        span.textContent = part;
+                        questionTextEl.appendChild(span);
+                    }
+                });
+            } else {
+                // Sin image_statement: comportamiento original
+                questionTextEl.textContent = question.question;
+            }
+
+            // Cargar imágenes principales (image_question)
             const imagesContainer = document.getElementById('question-images');
             imagesContainer.innerHTML = '';
             
