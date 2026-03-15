@@ -798,6 +798,7 @@
             <div id="loading" class="loading" style="display: none;">Cargando preguntas...</div>
             <div id="error" class="error" style="display: none;"></div>
         </div>
+        
 
         <!-- Pantalla 2: Selección de dificultad -->
         <div id="screen-difficulty" class="screen">
@@ -971,8 +972,7 @@
             document.getElementById('error').style.display = 'none';
 
             // Intentar múltiples rutas posibles
-            const possiblePaths = [
-                'assets/documents/preguntas_y_respuestas_sc_200.json',
+            const possiblePaths = [                
                 '/assets/documents/preguntas_y_respuestas_sc_200.json',
                 '../assets/documents/preguntas_y_respuestas_sc_200.json',
                 'preguntas_y_respuestas_sc_200.json'
