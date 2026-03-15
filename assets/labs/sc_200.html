@@ -1154,7 +1154,8 @@
 
             document.getElementById('current-question-num').textContent = currentQuestionIndex + 1;
             document.getElementById('question-counter').textContent = `de ${currentQuestions.length}`;
-            // Normalizar image_statement a array (string separado por coma o array ya existente)
+
+            // Normalizar image_statement a array
             let stmtImages = [];
             if (Array.isArray(question.image_statement)) {
                 stmtImages = question.image_statement.filter(u => u && u.trim() !== '');
@@ -1162,25 +1163,21 @@
                 stmtImages = question.image_statement.split(',').map(u => u.trim()).filter(u => u !== '');
             }
 
-            // Renderizar el texto de la pregunta sustituyendo IMG0, IMG1, ... por imágenes inline
+            // Renderizar texto de la pregunta, sustituyendo IMG0, IMG1... por imágenes inline
             const questionTextEl = document.getElementById('question-text');
             questionTextEl.innerHTML = '';
             if (stmtImages.length > 0) {
-                // Dividir el texto por los marcadores IMG0, IMG1, ...
-                const parts = question.question.split(/(IMG\d+)/);
-                parts.forEach(part => {
+                question.question.split(/(IMG\d+)/).forEach(part => {
                     const match = part.match(/^IMG(\d+)$/);
                     if (match) {
-                        const idx = parseInt(match[1], 10);
-                        const imageUrl = stmtImages[idx];
+                        const imageUrl = stmtImages[parseInt(match[1], 10)];
                         if (imageUrl) {
                             const wrapper = document.createElement('div');
-                            wrapper.style.cssText = 'margin: 12px 0; text-align: center;';
+                            wrapper.style.cssText = 'margin:12px 0;text-align:center;';
                             const img = document.createElement('img');
                             img.src = imageUrl;
                             img.className = 'question-image';
                             img.alt = 'Imagen del enunciado';
-                            img.style.maxWidth = '100%';
                             img.onclick = () => openImageModal(imageUrl);
                             wrapper.appendChild(img);
                             questionTextEl.appendChild(wrapper);
@@ -1193,11 +1190,10 @@
                     }
                 });
             } else {
-                // Sin image_statement: comportamiento original
                 questionTextEl.textContent = question.question;
             }
 
-            // Cargar imágenes principales (image_question)
+            // Cargar image_question (entre el enunciado y las opciones de respuesta)
             const imagesContainer = document.getElementById('question-images');
             imagesContainer.innerHTML = '';
             
