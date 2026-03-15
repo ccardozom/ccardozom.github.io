@@ -547,6 +547,7 @@
             color: #333;
             flex: 1;
             line-height: 1.4;
+            white-space: pre-wrap;
         }
 
         @media (min-width: 768px) {
@@ -798,7 +799,6 @@
             <div id="loading" class="loading" style="display: none;">Cargando preguntas...</div>
             <div id="error" class="error" style="display: none;"></div>
         </div>
-        
 
         <!-- Pantalla 2: Selección de dificultad -->
         <div id="screen-difficulty" class="screen">
@@ -972,10 +972,8 @@
             document.getElementById('error').style.display = 'none';
 
             // Intentar múltiples rutas posibles
-            const possiblePaths = [                
-                '/assets/documents/preguntas_y_respuestas_sc_200.json',
-                '../assets/documents/preguntas_y_respuestas_sc_200.json',
-                'preguntas_y_respuestas_sc_200.json'
+            const possiblePaths = [
+                '../documents/preguntas_y_respuestas_sc_200.json'
             ];
 
             tryLoadFromPath(possiblePaths, 0);
@@ -1163,7 +1161,7 @@
                 stmtImages = question.image_statement.split(',').map(u => u.trim()).filter(u => u !== '');
             }
 
-            // Renderizar texto de la pregunta, sustituyendo IMG0, IMG1... por imágenes inline
+            // Renderizar texto sustituyendo IMG0, IMG1... por imágenes inline
             const questionTextEl = document.getElementById('question-text');
             questionTextEl.innerHTML = '';
             if (stmtImages.length > 0) {
@@ -1193,21 +1191,17 @@
                 questionTextEl.textContent = question.question;
             }
 
-            // Cargar image_question (entre el enunciado y las opciones de respuesta)
+            // Cargar image_question (entre enunciado y opciones de respuesta)
             const imagesContainer = document.getElementById('question-images');
             imagesContainer.innerHTML = '';
             
             if (question.image_question) {
                 let imageUrls = [];
-                
-                // Verificar si es un array o una cadena
                 if (Array.isArray(question.image_question)) {
                     imageUrls = question.image_question.filter(url => url && url.trim() !== '');
                 } else if (typeof question.image_question === 'string' && question.image_question.trim() !== '') {
                     imageUrls = question.image_question.split(',').map(url => url.trim()).filter(url => url !== '');
                 }
-                
-                // Crear elementos de imagen
                 imageUrls.forEach(imageUrl => {
                     const imgElement = document.createElement('img');
                     imgElement.src = imageUrl;
