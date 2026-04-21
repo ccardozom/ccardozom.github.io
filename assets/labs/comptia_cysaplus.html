@@ -1268,7 +1268,7 @@
 
             imageUrls.forEach(imageName => {
                 const imgElement = document.createElement('img');
-                imgElement.src = imageName;
+                imgElement.src = '/' + imageName;
                 imgElement.className = 'question-image';
                 imgElement.alt = 'Imagen de solución';
                 imgElement.onclick = () => openImageModal(imgElement.src);
