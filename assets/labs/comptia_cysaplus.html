@@ -1,246 +1,1526 @@
-<script>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen de Preparación</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-// =============================
-// VARIABLES GLOBALES
-// =============================
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px 10px;
+        }
 
-let allQuestions = [];
-let failedQuestions = [];
-let currentMode = '';
-let currentQuestions = [];
-let currentQuestionIndex = 0;
-let correctAnswersFirst = 0;
-let incorrectAnswersFirst = 0;
-let hasAnsweredCurrent = false;
-let firstAttempt = true;
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
 
-let timerInterval = null;
-let timeRemaining = 120 * 60;
-let questionsLimit = 85;
-let questionsAnswered = 0;
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+        }
 
+        @media (min-width: 768px) {
+            body {
+                padding: 40px 20px;
+            }
 
-// =============================
-// NUEVA FUNCIÓN 🔥
-// Mostrar imágenes solución
-// =============================
+            .container {
+                padding: 40px;
+            }
 
-function showSolutionImages(question) {
-    const imagesContainer = document.getElementById('question-images');
-    imagesContainer.innerHTML = '';
+            h1 {
+                font-size: 28px;
+                margin-bottom: 40px;
+                padding-bottom: 20px;
+            }
+        }
 
-    if (!question.image_solution) return;
+        .screen {
+            display: none;
+        }
 
-    let imageUrls = [];
+        .screen.active {
+            display: block;
+        }
 
-    if (Array.isArray(question.image_solution)) {
-        imageUrls = question.image_solution.filter(url => url && url.trim() !== '');
-    } else if (typeof question.image_solution === 'string' && question.image_solution.trim() !== '') {
-        imageUrls = question.image_solution
-            .split(',')
-            .map(url => url.trim())
-            .filter(url => url !== '');
-    }
+        .file-upload {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+        }
 
-    imageUrls.forEach(imageName => {
-        const imgElement = document.createElement('img');
-        imgElement.src = '/assets/images/questionscysaplus/' + imageName;
-        imgElement.className = 'question-image';
-        imgElement.alt = 'Imagen de solución';
-        imgElement.onclick = () => openImageModal(imgElement.src);
-        imagesContainer.appendChild(imgElement);
-    });
-}
+        .file-upload input[type="file"] {
+            padding: 10px;
+            border: 2px solid #667eea;
+            border-radius: 10px;
+            cursor: pointer;
+        }
 
+        .file-upload p {
+            margin-top: 15px;
+            color: #666;
+            font-size: 14px;
+        }
 
-// =============================
-// CARGAR PREGUNTA
-// =============================
+        .default-load-btn {
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
 
-function loadQuestion() {
+        .default-load-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
 
-    if (currentQuestionIndex >= currentQuestions.length) {
-        showResults();
-        return;
-    }
+        .default-load-btn:active {
+            transform: translateY(0);
+        }
 
-    hasAnsweredCurrent = false;
-    firstAttempt = true;
+        .difficulty-selector {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
 
-    document.getElementById('result-message').style.display = 'none';
+        @media (min-width: 600px) {
+            .difficulty-selector {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                margin-top: 30px;
+            }
+        }
 
-    const question = currentQuestions[currentQuestionIndex];
+        .difficulty-option {
+            background: #f8f9fa;
+            border: 3px solid #667eea;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
 
-    document.getElementById('current-question-num').textContent = currentQuestionIndex + 1;
-    document.getElementById('question-counter').textContent =
-        `de ${currentQuestions.length}`;
+        @media (min-width: 768px) {
+            .difficulty-option {
+                padding: 30px;
+            }
+        }
 
-    // Texto pregunta
-    document.getElementById('question-text').textContent =
-        question.question;
+        .difficulty-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+            background: #667eea;
+            color: white;
+        }
 
-    // 🔥 LIMPIAR imágenes (muy importante)
-    document.getElementById('question-images').innerHTML = '';
+        .difficulty-option.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background: #e0e0e0;
+            border-color: #999;
+        }
 
-    // Opciones
-    const optionsContainer = document.getElementById('options-container');
-    optionsContainer.innerHTML = '';
+        .difficulty-option.disabled:hover {
+            transform: none;
+            box-shadow: none;
+            background: #e0e0e0;
+            color: #333;
+        }
 
-    const isMultipleChoice = question.answer.length > 1;
-    const inputType = isMultipleChoice ? 'checkbox' : 'radio';
+        .difficulty-option h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
 
-    for (let [letter, text] of Object.entries(question.choices)) {
-        const optionDiv = document.createElement('div');
-        optionDiv.className = 'option';
-        optionDiv.innerHTML = `
-            <input type="${inputType}" id="opt${letter}" name="current-question" value="${letter}">
-            <label for="opt${letter}">${text}</label>
-        `;
-        optionsContainer.appendChild(optionDiv);
-    }
+        .difficulty-option p {
+            font-size: 12px;
+            color: #666;
+        }
 
-    document.querySelectorAll('.option').forEach(opt => {
-        opt.classList.remove('wrong', 'correct');
-    });
-}
+        @media (min-width: 768px) {
+            .difficulty-option h3 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
 
+            .difficulty-option p {
+                font-size: 14px;
+            }
+        }
 
-// =============================
-// SIGUIENTE PREGUNTA
-// =============================
+        .difficulty-option:hover p {
+            color: white;
+        }
 
-function nextQuestion() {
+        .random-option {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            text-align: center;
+        }
 
-    const question = currentQuestions[currentQuestionIndex];
+        @media (min-width: 768px) {
+            .random-option {
+                margin-top: 30px;
+                padding: 20px;
+            }
+        }
 
-    let selectedValues = [];
-    const selected = document.querySelectorAll('input[name="current-question"]:checked');
-    selectedValues = Array.from(selected).map(el => el.value).sort();
+        .random-checkbox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+        }
 
-    if (selectedValues.length === 0) {
-        alert('⚠️ Por favor selecciona una respuesta');
-        return;
-    }
+        .random-checkbox input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: #667eea;
+        }
 
-    const correctSorted = question.answer.slice().sort();
-    const isCorrect = JSON.stringify(selectedValues) === JSON.stringify(correctSorted);
+        @media (min-width: 768px) {
+            .random-checkbox input[type="checkbox"] {
+                width: 20px;
+                height: 20px;
+            }
+        }
 
-    // =============================
-    // MODO FÁCIL / REPASO
-    // =============================
+        .random-checkbox label {
+            font-size: 14px;
+            color: #333;
+            font-weight: 600;
+            cursor: pointer;
+        }
 
-    if (currentMode === 'facil' || currentMode === 'repaso') {
+        @media (min-width: 768px) {
+            .random-checkbox label {
+                font-size: 16px;
+            }
+        }
 
-        if (!hasAnsweredCurrent) {
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+            text-align: center;
+        }
 
-            const resultDiv = document.getElementById('result-message');
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
 
-            if (isCorrect) {
+        .footer-link {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 8px;
+        }
 
-                resultDiv.textContent = '✅ ¡Correcto!';
-                resultDiv.className = 'result correct';
-                resultDiv.style.display = 'block';
+        .footer-link:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
 
-                if (firstAttempt) correctAnswersFirst++;
+        @media (min-width: 768px) {
+            .footer {
+                margin-top: 50px;
+                padding-top: 25px;
+            }
 
-                currentQuestionIndex++;
-                loadQuestion();
+            .footer-link {
+                font-size: 18px;
+            }
+        }
 
+        .exam-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (min-width: 600px) {
+            .exam-info {
+                flex-direction: row;
+                justify-content: space-around;
+                margin-bottom: 25px;
+                padding: 20px;
+            }
+        }
+
+        .info-box {
+            text-align: center;
+            flex: 1;
+        }
+
+        .info-label {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            font-size: 20px;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        @media (min-width: 768px) {
+            .info-label {
+                font-size: 14px;
+            }
+
+            .info-value {
+                font-size: 28px;
+            }
+        }
+
+        .info-value.warning {
+            color: #ff9800;
+        }
+
+        .info-value.danger {
+            color: #dc3545;
+        }
+
+        .question-block {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid #667eea;
+        }
+
+        @media (min-width: 768px) {
+            .question-block {
+                padding: 30px;
+            }
+        }
+
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .question-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .question-counter {
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media (min-width: 768px) {
+            .question-header {
+                margin-bottom: 20px;
+            }
+
+            .question-number {
+                font-size: 24px;
+            }
+
+            .question-counter {
+                font-size: 16px;
+            }
+        }
+
+        .question-text {
+            color: #333;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+        }
+
+        @media (min-width: 768px) {
+            .question-text {
+                font-size: 18px;
+                margin-bottom: 20px;
+                line-height: 1.6;
+            }
+        }
+
+        .question-images {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .question-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .question-image:hover {
+            transform: scale(1.02);
+        }
+
+        @media (min-width: 768px) {
+            .question-images {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .question-image {
+                max-width: 48%;
+            }
+        }
+
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            cursor: pointer;
+        }
+
+        .image-modal.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-modal img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        .image-modal-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .options {
+            margin-bottom: 15px;
+        }
+
+        .option {
+            display: flex;
+            align-items: flex-start;
+            padding: 12px;
+            margin-bottom: 10px;
+            background: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid #e0e0e0;
+        }
+
+        @media (min-width: 768px) {
+            .options {
+                margin-bottom: 20px;
+            }
+
+            .option {
+                padding: 15px;
+                margin-bottom: 12px;
+            }
+        }
+
+        .option:hover {
+            background: #f0f0f0;
+            border-color: #667eea;
+        }
+
+        .option.wrong {
+            background: #f8d7da;
+            border-color: #dc3545;
+        }
+
+        .option.correct {
+            background: #d4edda;
+            border-color: #28a745;
+        }
+
+        .option input[type="radio"],
+        .option input[type="checkbox"] {
+            width: 22px;
+            height: 22px;
+            margin-right: 15px;
+            margin-top: 2px;
+            cursor: pointer;
+            flex-shrink: 0;
+            appearance: none;
+            -webkit-appearance: none;
+            border: 2px solid #667eea;
+            border-radius: 50%;
+            position: relative;
+            background: white;
+        }
+
+        .option input[type="radio"]:checked,
+        .option input[type="checkbox"]:checked {
+            background: #667eea;
+            border-color: #667eea;
+        }
+
+        .option input[type="radio"]:checked::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: white;
+        }
+
+        .option input[type="checkbox"]:checked::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .option label {
+            cursor: pointer;
+            font-size: 14px;
+            color: #333;
+            flex: 1;
+            line-height: 1.4;
+            white-space: pre-wrap;
+        }
+
+        @media (min-width: 768px) {
+            .option label {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 600px) {
+            .buttons {
+                flex-direction: row;
+                gap: 15px;
+                margin-top: 30px;
+            }
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            width: 100%;
+        }
+
+        @media (min-width: 600px) {
+            .btn {
+                padding: 12px 30px;
+                font-size: 16px;
+                width: auto;
+            }
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .result {
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            display: none;
+        }
+
+        .result.correct {
+            background: #d4edda;
+            color: #155724;
+            border: 2px solid #c3e6cb;
+        }
+
+        .result.incorrect {
+            background: #f8d7da;
+            color: #721c24;
+            border: 2px solid #f5c6cb;
+        }
+
+        .results-screen {
+            text-align: center;
+        }
+
+        .results-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .percentage-box {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border: 5px solid #667eea;
+        }
+
+        .percentage-box.passed {
+            border-color: #28a745;
+            background: #d4edda;
+        }
+
+        .percentage-box.failed {
+            border-color: #dc3545;
+            background: #f8d7da;
+        }
+
+        .percentage-value {
+            font-size: 48px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        @media (min-width: 768px) {
+            .percentage-value {
+                font-size: 72px;
+                margin-bottom: 15px;
+            }
+        }
+
+        .percentage-box.passed .percentage-value {
+            color: #28a745;
+        }
+
+        .percentage-box.failed .percentage-value {
+            color: #dc3545;
+        }
+
+        .percentage-message {
+            font-size: 18px;
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        @media (min-width: 768px) {
+            .percentage-message {
+                font-size: 24px;
+            }
+        }
+
+        .percentage-box.passed .percentage-message {
+            color: #28a745;
+        }
+
+        .percentage-box.failed .percentage-message {
+            color: #dc3545;
+        }
+
+        .stat-box {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+        }
+
+        .stat-box.correct {
+            border-left-color: #28a745;
+        }
+
+        .stat-box.incorrect {
+            border-left-color: #dc3545;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+
+        @media (min-width: 768px) {
+            .stat-number {
+                font-size: 48px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .stat-box.correct .stat-number {
+            color: #28a745;
+        }
+
+        .stat-box.incorrect .stat-number {
+            color: #dc3545;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+        }
+
+        @media (min-width: 768px) {
+            .stat-label {
+                font-size: 18px;
+            }
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            font-size: 18px;
+            color: #667eea;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid #f5c6cb;
+        }
+
+        .message {
+            background: #d1ecf1;
+            color: #0c5460;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid #bee5eb;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Examen de Preparación de Selección Múltiple para el certificado de Comptia CySA+</h1>
+
+        <!-- Pantalla 1: Carga de archivo -->
+        <div id="screen-upload" class="screen active">
+            <div class="file-upload">
+                <h3 style="margin-bottom: 15px; color: #333;">Cargar archivo de preguntas</h3>
+                <input type="file" id="jsonFile" accept=".json">
+                <p>Selecciona el archivo <strong>preguntas_y_respuestas.json</strong></p>
+                <button class="default-load-btn" onclick="loadDefaultQuestions()">📁 Cargar preguntas por defecto</button>
+            </div>
+            <div id="loading" class="loading" style="display: none;">Cargando preguntas...</div>
+            <div id="error" class="error" style="display: none;"></div>
+        </div>
+
+        <!-- Pantalla 2: Selección de dificultad -->
+        <div id="screen-difficulty" class="screen">
+            <h2 style="text-align: center; margin-bottom: 30px; color: #333;">Selecciona el modo de práctica</h2>
+            <div class="difficulty-selector">
+                <div class="difficulty-option" onclick="startMode('facil')">
+                    <h3>📝 Fácil</h3>
+                    <p>Puedes ver si acertaste antes de continuar</p>
+                </div>
+                <div class="difficulty-option" onclick="startMode('dificil')">
+                    <h3>🔥 Difícil</h3>
+                    <p>Debes acertar para poder continuar</p>
+                </div>
+                <div class="difficulty-option" onclick="startMode('examen')">
+                    <h3>📋 Examen</h3>
+                    <p>Sin feedback hasta el final</p>
+                </div>
+                <div class="difficulty-option" id="repaso-option" onclick="startMode('repaso')">
+                    <h3>🔄 Repaso</h3>
+                    <p>Practica las preguntas falladas</p>
+                </div>
+            </div>
+            
+            <!-- Opción de orden aleatorio -->
+            <div class="random-option">
+                <div class="random-checkbox">
+                    <input type="checkbox" id="randomOrder" checked>
+                    <label for="randomOrder">🔀 Orden aleatorio de preguntas</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pantalla 3: Pregunta -->
+        <div id="screen-question" class="screen">
+            <!-- Cronómetro y contador -->
+            <div class="exam-info" id="exam-info" style="display: none;">
+                <div class="info-box">
+                    <div class="info-label">⏱️ Tiempo restante</div>
+                    <div class="info-value" id="timer-display">120:00</div>
+                </div>
+                <div class="info-box">
+                    <div class="info-label">📝 Preguntas restantes</div>
+                    <div class="info-value" id="questions-remaining">85</div>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <div class="question-header">
+                    <div class="question-number" id="current-question-num"></div>
+                    <div class="question-counter" id="question-counter"></div>
+                </div>
+                <div class="question-text" id="question-text"></div>
+                <div class="question-images" id="question-images"></div>
+                <div class="options" id="options-container"></div>
+                <div id="result-message" class="result"></div>
+            </div>
+            <div class="buttons">
+                <button class="btn btn-primary" id="btn-next" onclick="nextQuestion()">Siguiente</button>
+                <button class="btn btn-secondary" onclick="exitExam()">Salir</button>
+            </div>
+        </div>
+
+        <!-- Pantalla 4: Resultados -->
+        <div id="screen-results" class="screen">
+            <div class="results-screen">
+                <h2 style="color: #333; margin-bottom: 30px;">📊 Resultados Finales</h2>
+                
+                <!-- Porcentaje de acierto -->
+                <div class="percentage-box" id="percentage-box">
+                    <div class="percentage-value" id="percentage-value">0%</div>
+                    <div class="percentage-message" id="percentage-message">Calculando...</div>
+                </div>
+
+                <div class="results-stats">
+                    <div class="stat-box correct">
+                        <div class="stat-number" id="correct-count">0</div>
+                        <div class="stat-label">Respuestas correctas (a la primera)</div>
+                    </div>
+                    <div class="stat-box incorrect">
+                        <div class="stat-number" id="incorrect-count">0</div>
+                        <div class="stat-label">Respuestas incorrectas (a la primera)</div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="btn btn-primary" onclick="restartSameMode()">Reiniciar mismo modo</button>
+                    <button class="btn btn-secondary" onclick="goToMenu()">Volver al menú</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pie de página -->
+        <div class="footer">
+            <div class="footer-links">
+                <a href="#" class="footer-link" onclick="goToHome(event)">🏠 Home</a>
+                <a href="#" class="footer-link" onclick="goToLabs(event)">🧪 Labs</a>
+            </div>
+        </div>
+
+        <!-- Modal para ampliar imágenes -->
+        <div id="imageModal" class="image-modal" onclick="closeImageModal()">
+            <span class="image-modal-close">&times;</span>
+            <img id="modalImage" src="" alt="Imagen ampliada">
+        </div>
+    </div>
+
+    <script>
+        // Variables globales
+        let allQuestions = [];
+        let failedQuestions = [];
+        let currentMode = '';
+        let currentQuestions = [];
+        let currentQuestionIndex = 0;
+        let correctAnswersFirst = 0;
+        let incorrectAnswersFirst = 0;
+        let hasAnsweredCurrent = false;
+        let firstAttempt = true;
+
+        // NUEVAS VARIABLES para cronómetro y contador
+        let timerInterval = null;
+        let timeRemaining = 120 * 60; // 120 minutos en segundos
+        let questionsLimit = 85;
+        let questionsAnswered = 0;
+
+        // Cargar archivo JSON
+        document.getElementById('jsonFile').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('error').style.display = 'none';
+
+            const reader = new FileReader();
+            
+            reader.onload = function(event) {
+                try {
+                    allQuestions = JSON.parse(event.target.result);
+                    
+                    if (!Array.isArray(allQuestions) || allQuestions.length === 0) {
+                        throw new Error('El archivo JSON debe contener un array de preguntas');
+                    }
+                    
+                    document.getElementById('loading').style.display = 'none';
+                    showScreen('screen-difficulty');
+                    
+                } catch (error) {
+                    document.getElementById('loading').style.display = 'none';
+                    document.getElementById('error').textContent = '❌ Error al cargar el archivo: ' + error.message;
+                    document.getElementById('error').style.display = 'block';
+                }
+            };
+            
+            reader.onerror = function() {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('error').textContent = '❌ Error al leer el archivo';
+                document.getElementById('error').style.display = 'block';
+            };
+            
+            reader.readAsText(file);
+        });
+
+        function showScreen(screenId) {
+            document.querySelectorAll('.screen').forEach(screen => {
+                screen.classList.remove('active');
+            });
+            document.getElementById(screenId).classList.add('active');
+        }
+
+        // NUEVA FUNCIÓN: Cargar preguntas por defecto desde ruta
+        function loadDefaultQuestions() {
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('error').style.display = 'none';
+
+            // Intentar múltiples rutas posibles
+            const possiblePaths = [
+                'assets/documents/preguntas_y_respuestas_comptia_cysaplus.json',
+                '/assets/documents/preguntas_y_respuestas_comptia_cysaplus.json',
+                '../assets/documents/preguntas_y_respuestas_comptia_cysaplus.json',
+                'preguntas_y_respuestas_comptia_cysaplus.json'
+            ];
+
+            tryLoadFromPath(possiblePaths, 0);
+        }
+
+        function tryLoadFromPath(paths, index) {
+            if (index >= paths.length) {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('error').textContent = '❌ No se encontró el archivo en ninguna de las rutas. Por favor, usa el selector de archivos manual.';
+                document.getElementById('error').style.display = 'block';
+                return;
+            }
+
+            const currentPath = paths[index];
+            console.log('Intentando cargar desde:', currentPath);
+
+            fetch(currentPath)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    allQuestions = data;
+                    
+                    if (!Array.isArray(allQuestions) || allQuestions.length === 0) {
+                        throw new Error('El archivo JSON debe contener un array de preguntas');
+                    }
+                    
+                    console.log('✅ Preguntas cargadas exitosamente:', allQuestions.length);
+                    document.getElementById('loading').style.display = 'none';
+                    showScreen('screen-difficulty');
+                })
+                .catch(error => {
+                    console.log(`❌ Error en ${currentPath}:`, error.message);
+                    // Intentar la siguiente ruta
+                    tryLoadFromPath(paths, index + 1);
+                });
+        }
+
+        function startMode(mode) {
+            if (mode === 'repaso' && failedQuestions.length === 0) {
+                alert('No hay preguntas falladas disponibles para repasar. ¡Completa primero un examen!');
+                return;
+            }
+
+            currentMode = mode;
+            currentQuestionIndex = 0;
+            correctAnswersFirst = 0;
+            incorrectAnswersFirst = 0;
+            questionsAnswered = 0;
+
+            // Configurar preguntas según el modo
+            if (mode === 'repaso') {
+                currentQuestions = [...failedQuestions];
             } else {
+                currentQuestions = [...allQuestions];
+            }
 
-                resultDiv.textContent =
-                    `❌ Incorrecto. La respuesta correcta es: ${question.answer.join(', ')}`;
+            // NUEVO: Verificar si se debe aplicar orden aleatorio
+            const randomOrderCheckbox = document.getElementById('randomOrder');
+            if (randomOrderCheckbox && randomOrderCheckbox.checked) {
+                shuffleArray(currentQuestions);
+            }
 
-                resultDiv.className = 'result incorrect';
-                resultDiv.style.display = 'block';
+            // NUEVO: Mostrar cronómetro y contador solo en facil, dificil y examen
+            const examInfo = document.getElementById('exam-info');
+            if (mode === 'facil' || mode === 'dificil' || mode === 'examen') {
+                examInfo.style.display = 'flex';
+                startTimer();
+                updateQuestionsRemaining();
+            } else {
+                examInfo.style.display = 'none';
+                stopTimer();
+            }
 
-                if (firstAttempt) {
+            // Todos los modos usan solo botón "Siguiente"
+            const btnNext = document.getElementById('btn-next');
+            if (btnNext) {
+                btnNext.style.display = 'inline-block';
+            }
+
+            loadQuestion();
+            showScreen('screen-question');
+        }
+
+        // NUEVA FUNCIÓN: Mezclar array aleatoriamente (Fisher-Yates shuffle)
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        // NUEVA FUNCIÓN: Iniciar cronómetro
+        function startTimer() {
+            timeRemaining = 120 * 60; // Reiniciar a 120 minutos
+            updateTimerDisplay();
+            
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                updateTimerDisplay();
+                
+                if (timeRemaining <= 0) {
+                    stopTimer();
+                    alert('⏰ ¡Tiempo agotado! El examen ha finalizado.');
+                    showResults();
+                }
+            }, 1000);
+        }
+
+        // NUEVA FUNCIÓN: Detener cronómetro
+        function stopTimer() {
+            if (timerInterval) {
+                clearInterval(timerInterval);
+                timerInterval = null;
+            }
+        }
+
+        // NUEVA FUNCIÓN: Actualizar display del cronómetro
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeRemaining / 60);
+            const seconds = timeRemaining % 60;
+            const display = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            
+            const timerElement = document.getElementById('timer-display');
+            timerElement.textContent = display;
+            
+            // Cambiar color según el tiempo restante
+            if (timeRemaining <= 300) { // 5 minutos
+                timerElement.className = 'info-value danger';
+            } else if (timeRemaining <= 600) { // 10 minutos
+                timerElement.className = 'info-value warning';
+            } else {
+                timerElement.className = 'info-value';
+            }
+        }
+
+        // NUEVA FUNCIÓN: Actualizar contador de preguntas
+        function updateQuestionsRemaining() {
+            const remaining = questionsLimit - questionsAnswered;
+            const element = document.getElementById('questions-remaining');
+            element.textContent = remaining;
+            
+            // Cambiar color según preguntas restantes
+            if (remaining <= 10) {
+                element.className = 'info-value danger';
+            } else if (remaining <= 20) {
+                element.className = 'info-value warning';
+            } else {
+                element.className = 'info-value';
+            }
+            
+            // Verificar si se alcanzó el límite
+            if (remaining <= 0) {
+                stopTimer();
+                alert('📝 Has alcanzado el límite de 85 preguntas. El examen ha finalizado.');
+                showResults();
+            }
+        }
+
+        function loadQuestion() {
+            if (currentQuestionIndex >= currentQuestions.length) {
+                showResults();
+                return;
+            }
+
+            hasAnsweredCurrent = false;
+            firstAttempt = true;
+            document.getElementById('result-message').style.display = 'none';
+
+            const question = currentQuestions[currentQuestionIndex];
+            const isMultipleChoice = question.answer.length > 1;
+            const inputType = isMultipleChoice ? 'checkbox' : 'radio';
+
+            document.getElementById('current-question-num').textContent = currentQuestionIndex + 1;
+            document.getElementById('question-counter').textContent = `de ${currentQuestions.length}`;
+
+            // Normalizar image_statement a array
+            let stmtImages = [];
+            if (Array.isArray(question.image_statement)) {
+                stmtImages = question.image_statement.filter(u => u && u.trim() !== '');
+            } else if (typeof question.image_statement === 'string' && question.image_statement.trim() !== '') {
+                stmtImages = question.image_statement.split(',').map(u => u.trim()).filter(u => u !== '');
+            }
+
+            // Renderizar texto sustituyendo IMG0, IMG1... por imágenes inline
+            const questionTextEl = document.getElementById('question-text');
+            questionTextEl.innerHTML = '';
+            if (stmtImages.length > 0) {
+                question.question.split(/(IMG\d+)/).forEach(part => {
+                    const match = part.match(/^IMG(\d+)$/);
+                    if (match) {
+                        const imageUrl = stmtImages[parseInt(match[1], 10)];
+                        if (imageUrl) {
+                            const wrapper = document.createElement('div');
+                            wrapper.style.cssText = 'margin:12px 0;text-align:center;';
+                            const img = document.createElement('img');
+                            img.src = imageUrl;
+                            img.className = 'question-image';
+                            img.alt = 'Imagen del enunciado';
+                            img.onclick = () => openImageModal(imageUrl);
+                            wrapper.appendChild(img);
+                            questionTextEl.appendChild(wrapper);
+                        }
+                    } else {
+                        const span = document.createElement('span');
+                        span.style.whiteSpace = 'pre-wrap';
+                        span.textContent = part;
+                        questionTextEl.appendChild(span);
+                    }
+                });
+            } else {
+                questionTextEl.textContent = question.question;
+            }
+
+            // Cargar image_question (entre enunciado y opciones de respuesta)
+            const imagesContainer = document.getElementById('question-images');
+            imagesContainer.innerHTML = '';
+            
+            if (question.image_question) {
+                let imageUrls = [];
+                if (Array.isArray(question.image_question)) {
+                    imageUrls = question.image_question.filter(url => url && url.trim() !== '');
+                } else if (typeof question.image_question === 'string' && question.image_question.trim() !== '') {
+                    imageUrls = question.image_question.split(',').map(url => url.trim()).filter(url => url !== '');
+                }
+                imageUrls.forEach(imageUrl => {
+                    const imgElement = document.createElement('img');
+                    imgElement.src = imageUrl;
+                    imgElement.className = 'question-image';
+                    imgElement.alt = 'Imagen de la pregunta';
+                    imgElement.onclick = () => openImageModal(imageUrl);
+                    imagesContainer.appendChild(imgElement);
+                });
+            }
+
+            // Limpiar opciones anteriores
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+
+            // Crear opciones
+            for (let [letter, text] of Object.entries(question.choices)) {
+                const optionDiv = document.createElement('div');
+                optionDiv.className = 'option';
+                optionDiv.innerHTML = `
+                    <input type="${inputType}" id="opt${letter}" name="current-question" value="${letter}">
+                    <label for="opt${letter}">${text}</label>
+                `;
+                optionsContainer.appendChild(optionDiv);
+            }
+
+            // Resetear estilos
+            document.querySelectorAll('.option').forEach(opt => {
+                opt.classList.remove('wrong', 'correct');
+            });
+        }
+
+        // NUEVAS FUNCIONES: Modal de imágenes
+        function openImageModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.classList.add('active');
+            modalImg.src = imageSrc;
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+        }
+
+        function showSolutionImages(question) {
+            const imagesContainer = document.getElementById('question-images');
+            imagesContainer.innerHTML = '';
+
+            if (!question.image_solution) return;
+
+            let imageUrls = [];
+
+            if (Array.isArray(question.image_solution)) {
+                imageUrls = question.image_solution.filter(url => url && url.trim() !== '');
+            } else if (typeof question.image_solution === 'string' && question.image_solution.trim() !== '') {
+                imageUrls = question.image_solution
+                    .split(',')
+                    .map(url => url.trim())
+                    .filter(url => url !== '');
+            }
+
+            imageUrls.forEach(imageName => {
+                const imgElement = document.createElement('img');
+                imgElement.src = '/assets/images/questionscysaplus/' + imageName;
+                imgElement.className = 'question-image';
+                imgElement.alt = 'Imagen de solución';
+                imgElement.onclick = () => openImageModal(imgElement.src);
+                imagesContainer.appendChild(imgElement);
+            });
+        }
+
+        function checkCurrentAnswer() {
+            // Esta función ya no se usa, todo se maneja en nextQuestion
+        }
+
+        function nextQuestion() {
+            const question = currentQuestions[currentQuestionIndex];
+            const isMultipleChoice = question.answer.length > 1;
+            let selectedValues = [];
+
+            // Obtener respuestas seleccionadas
+            if (isMultipleChoice) {
+                const selected = document.querySelectorAll('input[name="current-question"]:checked');
+                selectedValues = Array.from(selected).map(el => el.value).sort();
+            } else {
+                const selected = document.querySelector('input[name="current-question"]:checked');
+                if (selected) selectedValues = [selected.value];
+            }
+
+            // Validar que haya seleccionado algo
+            if (selectedValues.length === 0) {
+                alert('⚠️ Por favor selecciona una respuesta');
+                return;
+            }
+
+            const correctSorted = question.answer.slice().sort();
+            const isCorrect = JSON.stringify(selectedValues) === JSON.stringify(correctSorted);
+
+            // MODO FÁCIL o REPASO
+            if (currentMode === 'facil' || currentMode === 'repaso') {
+                if (!hasAnsweredCurrent) {
+                    // Primera vez que intenta responder
+                    const resultDiv = document.getElementById('result-message');
+                    
+                    if (isCorrect) {
+                        resultDiv.textContent = '✅ ¡Correcto! Excelente respuesta';
+                        resultDiv.className = 'result correct';
+                        resultDiv.style.display = 'block';
+                        
+                        if (firstAttempt) {
+                            correctAnswersFirst++;
+                            // NUEVO: Incrementar contador solo en modo fácil
+                            if (currentMode === 'facil') {
+                                questionsAnswered++;
+                                updateQuestionsRemaining();
+                                if (questionsAnswered >= questionsLimit) {
+                                    return;
+                                }
+                            }
+                        }
+                        
+                        // Permitir avanzar
+                        hasAnsweredCurrent = true;
+                        firstAttempt = false;
+                        
+                        // Avanzar automáticamente
+                        currentQuestionIndex++;
+                        loadQuestion();
+                    } else {
+                        resultDiv.textContent = `❌ Incorrecto. La respuesta correcta es: ${question.answer.join(', ')}`;
+                        resultDiv.className = 'result incorrect';
+                        resultDiv.style.display = 'block';
+                        showSolutionImages(question);
+                        
+                        if (firstAttempt) {
+                            incorrectAnswersFirst++;
+                            // NUEVO: Incrementar contador solo en modo fácil
+                            if (currentMode === 'facil') {
+                                questionsAnswered++;
+                                updateQuestionsRemaining();
+                                if (questionsAnswered >= questionsLimit) {
+                                    return;
+                                }
+                            }
+                            if (!failedQuestions.find(q => q.question === question.question)) {
+                                failedQuestions.push(question);
+                            }
+                        }
+
+                        // Marcar respuestas incorrectas en rojo
+                        selectedValues.forEach(val => {
+                            const input = document.querySelector(`input[value="${val}"]`);
+                            if (input) {
+                                input.closest('.option').classList.add('wrong');
+                            }
+                        });
+
+                        firstAttempt = false;
+                        hasAnsweredCurrent = false; // No permitir avanzar hasta acertar
+                        
+                        // NO AVANZAR - el usuario debe intentar de nuevo
+                        return;
+                    }
+                } else {
+                    // Ya ha visto el feedback, verificar si acertó esta vez
+                    if (!isCorrect) {
+                        alert('❌ Debes acertar la respuesta para continuar');
+                        return;
+                    }
+                    // Si acertó, avanzar
+                    currentQuestionIndex++;
+                    loadQuestion();
+                }
+                return;
+            }
+
+            // MODO DIFÍCIL
+            if (currentMode === 'dificil') {
+                if (!hasAnsweredCurrent) {
+                    const resultDiv = document.getElementById('result-message');
+                    
+                    if (isCorrect) {
+                        if (firstAttempt) {
+                            correctAnswersFirst++;
+                            // NUEVO: Incrementar contador
+                            questionsAnswered++;
+                            updateQuestionsRemaining();
+                            if (questionsAnswered >= questionsLimit) {
+                                return;
+                            }
+                        }
+                        hasAnsweredCurrent = true;
+                        firstAttempt = false;
+                        currentQuestionIndex++;
+                        loadQuestion();
+                    } else {
+                        resultDiv.textContent = '❌ Incorrecto. Inténtalo de nuevo.';
+                        resultDiv.className = 'result incorrect';
+                        resultDiv.style.display = 'block';
+                        showSolutionImages(question);
+
+                        if (firstAttempt) {
+                            incorrectAnswersFirst++;
+                            // NUEVO: Incrementar contador
+                            questionsAnswered++;
+                            updateQuestionsRemaining();
+                            if (questionsAnswered >= questionsLimit) {
+                                return;
+                            }
+                            if (!failedQuestions.find(q => q.question === question.question)) {
+                                failedQuestions.push(question);
+                            }
+                        }
+
+                        selectedValues.forEach(val => {
+                            const input = document.querySelector(`input[value="${val}"]`);
+                            if (input) {
+                                input.closest('.option').classList.add('wrong');
+                            }
+                        });
+
+                        firstAttempt = false;
+                        hasAnsweredCurrent = false;
+                        return;
+                    }
+                } else {
+                    if (!isCorrect) {
+                        alert('❌ Debes acertar la respuesta para continuar');
+                        return;
+                    }
+                    currentQuestionIndex++;
+                    loadQuestion();
+                }
+                return;
+            }
+
+            // MODO EXAMEN
+            if (currentMode === 'examen') {
+                if (isCorrect) {
+                    correctAnswersFirst++;
+                } else {
                     incorrectAnswersFirst++;
                     if (!failedQuestions.find(q => q.question === question.question)) {
                         failedQuestions.push(question);
                     }
                 }
 
-                // 🔥 MOSTRAR IMÁGENES SOLUCIÓN
-                showSolutionImages(question);
+                // NUEVO: Incrementar contador
+                questionsAnswered++;
+                updateQuestionsRemaining();
+                if (questionsAnswered >= questionsLimit) {
+                    return;
+                }
 
-                selectedValues.forEach(val => {
-                    const input = document.querySelector(`input[value="${val}"]`);
-                    if (input) input.closest('.option').classList.add('wrong');
-                });
-
-                firstAttempt = false;
-                return;
+                currentQuestionIndex++;
+                loadQuestion();
             }
         }
 
-        return;
-    }
-
-    // =============================
-    // MODO DIFÍCIL
-    // =============================
-
-    if (currentMode === 'dificil') {
-
-        if (isCorrect) {
-            correctAnswersFirst++;
-            currentQuestionIndex++;
-            loadQuestion();
-        } else {
-
-            const resultDiv = document.getElementById('result-message');
-            resultDiv.textContent = '❌ Incorrecto. Inténtalo de nuevo.';
-            resultDiv.className = 'result incorrect';
-            resultDiv.style.display = 'block';
-
-            incorrectAnswersFirst++;
-
-            // 🔥 MOSTRAR IMÁGENES
-            showSolutionImages(question);
-
-            selectedValues.forEach(val => {
-                const input = document.querySelector(`input[value="${val}"]`);
-                if (input) input.closest('.option').classList.add('wrong');
-            });
-        }
-
-        return;
-    }
-
-    // =============================
-    // MODO EXAMEN
-    // =============================
-
-    if (currentMode === 'examen') {
-
-        if (isCorrect) correctAnswersFirst++;
-        else {
-            incorrectAnswersFirst++;
-            if (!failedQuestions.find(q => q.question === question.question)) {
-                failedQuestions.push(question);
+        function exitExam() {
+            if (confirm('¿Estás seguro de que quieres salir? Se perderá tu progreso.')) {
+                goToMenu();
             }
         }
 
-        currentQuestionIndex++;
-        loadQuestion();
-    }
-}
+        function showResults() {
+            stopTimer(); // NUEVO: Detener cronómetro
+            
+            // Calcular porcentaje de acierto
+            const totalAnswered = correctAnswersFirst + incorrectAnswersFirst;
+            const percentage = totalAnswered > 0 ? Math.round((correctAnswersFirst / totalAnswered) * 100) : 0;
+            
+            // Mostrar estadísticas
+            document.getElementById('correct-count').textContent = correctAnswersFirst;
+            document.getElementById('incorrect-count').textContent = incorrectAnswersFirst;
+            document.getElementById('percentage-value').textContent = percentage + '%';
+            
+            // Determinar si aprobó o no
+            const percentageBox = document.getElementById('percentage-box');
+            const percentageMessage = document.getElementById('percentage-message');
+            
+            if (percentage >= 75) {
+                percentageBox.className = 'percentage-box passed';
+                percentageMessage.textContent = '🎉 ¡Enhorabuena! Has aprobado';
+            } else {
+                percentageBox.className = 'percentage-box failed';
+                percentageMessage.textContent = '❌ No has aprobado';
+            }
+            
+            showScreen('screen-results');
+        }
 
+        function restartSameMode() {
+            startMode(currentMode);
+        }
 
-// =============================
-// MODAL IMÁGENES
-// =============================
+        function goToMenu() {
+            currentQuestionIndex = 0;
+            correctAnswersFirst = 0;
+            incorrectAnswersFirst = 0;
+            stopTimer(); // NUEVO: Detener cronómetro
+            showScreen('screen-difficulty');
+        }
 
-function openImageModal(imageSrc) {
-    const modal = document.getElementById('imageModal');
-    const modalImg = document.getElementById('modalImage');
-    modal.classList.add('active');
-    modalImg.src = imageSrc;
-}
+        // NUEVAS FUNCIONES: Enlaces del pie de página
+        function goToHome(event) {
+            event.preventDefault();
+            // Aquí puedes redirigir a tu página principal
+            window.location.href = '/'; // Cambia esta URL según necesites
+        }
 
-function closeImageModal() {
-    document.getElementById('imageModal').classList.remove('active');
-}
-
-</script>
+        function goToLabs(event) {
+            event.preventDefault();
+            // Aquí puedes redirigir a tu página de Labs
+            window.location.href = '/labs'; // Cambia esta URL según necesites
+        }
+    </script>
+</body>
+</html>
