@@ -38,7 +38,7 @@
       "D": "Passive discovery"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen100.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen2.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -53,7 +53,7 @@
       "D": "Validate the root cause from the prior analyst."
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen101.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen3.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -68,7 +68,7 @@
       "D": "Disabling all staff members’ ability to run downloaded applications"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen102.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen4.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -83,7 +83,7 @@
       "D": "Network scan"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen103.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen5.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -98,22 +98,7 @@
       "D": "True positive"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen104.jpg"],
-    "image_statement": "",
-    "answer": [
-      "C"
-    ]
-  },
-  {
-    "question": "An organization enabled a SIEM rule to send an alert to a security analyst distribution list when ten failed logins occur within one minute. However, the control was unable to detect an attack with nine failed logins.\n\nWhich of the following best represents what occurred?",
-    "choices": {
-      "A": "False positive",
-      "B": "True negative",
-      "C": "False negative",
-      "D": "True positive"
-    },
-    "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen105.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen7.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -128,7 +113,7 @@
       "D": "Credentialed scan"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen106.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen8.jpg"],
     "image_statement": "",
     "answer": [
       "B"
@@ -143,7 +128,7 @@
       "D": "Organizational governance"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen107.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen9.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -158,7 +143,7 @@
       "D": "Review threat feeds after viewing the SIEM alert"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen108.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen11.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -173,7 +158,7 @@
       "D": "Implement controls to block execution of untrusted applications"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen109.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen12.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -188,7 +173,7 @@
       "D": "MITRE ATT&CK"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen11.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen13.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -203,7 +188,7 @@
       "D": "Tabletop exercise"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen110.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen14.jpg"],
     "image_statement": "",
     "answer": [
       "B"
@@ -218,7 +203,7 @@
       "D": "Data exfiltration"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen111.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen15.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -233,7 +218,7 @@
       "D": "Identify the IP/hostname for the requests and look at the related activity"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen112.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen16.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -248,7 +233,7 @@
       "D": "Scope"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen113.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen17.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -263,7 +248,7 @@
       "D": "Wireshark"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen114.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen18.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -278,7 +263,7 @@
       "D": "Back up the mailboxes on the server and provide the attorney with a copy"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen115.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen19.jpg"],
     "image_statement": "",
     "answer": [
       "B"
@@ -293,7 +278,7 @@
       "D": "AV:C:H/PR:N/UI:N/S:C/C:L/I:L/A:L - Base Score 6.5"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen116.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen20.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -308,7 +293,7 @@
       "D": "Review regulatory compliance with public relations for official notification"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen117.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen21.jpg"],
     "image_statement": "",
     "answer": [
       "B"
@@ -323,7 +308,7 @@
       "D": "Fuzzing"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen118.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen22.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -338,7 +323,7 @@
       "D": "Routing table"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen119.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen23.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -353,7 +338,7 @@
       "D": "Card issuer"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen12.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen24.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -368,7 +353,7 @@
       "D": "Quantity of intrusion attempts"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen120.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen25.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -383,7 +368,7 @@
       "D": "Vulnerability scans on cloud environments should be performed from the cloud"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen121.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen26.jpg"],
     "image_statement": "",
     "answer": [
       "B"
@@ -398,7 +383,7 @@
       "D": "Notify the SOC manager for awareness after confirmation that the activity was intentional"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen122.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen27.jpg"],
     "image_statement": "",
     "answer": [
       "B"
@@ -413,7 +398,7 @@
       "D": "Rollback"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen123.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen28.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -428,7 +413,7 @@
       "D": "Single pane of glass"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen124.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen29.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -443,7 +428,7 @@
       "D": "To define how each employee will be contacted after an event occurs"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen125.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen30.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -458,7 +443,7 @@
       "D": "To establish the department that is responsible for responding to an incident"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen126.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen31.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -473,7 +458,7 @@
       "D": "Asset value"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen127.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen32.jpg"],
     "image_statement": "",
     "answer": [
       "B"
@@ -488,7 +473,7 @@
       "D": "Interview the witnesses"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen128.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen33.jpg"],
     "image_statement": "",
     "answer": [
       "B"
@@ -503,7 +488,7 @@
       "D": "Subject matter experts on the team should communicate with others within the specified area of expertise"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen129.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen34.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -518,7 +503,7 @@
       "D": "Access control lists"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen13.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen35.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -533,7 +518,7 @@
       "D": "PHP traversal"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen130.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen36.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -548,7 +533,7 @@
       "D": "Navigate to the File menu and select FTP from the Export objects option"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen131.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen37.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -563,7 +548,7 @@
       "D": "Limitation of liability"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen14.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen38.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -578,7 +563,7 @@
       "D": "Delivery"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen15.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen39.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -593,7 +578,7 @@
       "D": "Credentialed"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen16.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen40.jpg"],
     "image_statement": "",
     "answer": [
       "B"
@@ -608,7 +593,7 @@
       "D": "SQL injection"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen17.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen41.jpg"],
     "image_statement": "",
     "answer": [
       "B"
@@ -623,7 +608,7 @@
       "D": "Preparation"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen18.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen42.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -638,7 +623,7 @@
       "D": "Dynamic scanning"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen19.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen43.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -653,7 +638,7 @@
       "D": "Deploy mobile device management"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen2.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen44.jpg"],
     "image_statement": "",
     "answer": [
       "B"
@@ -668,7 +653,7 @@
       "D": "Decide on the color scheme that will effectively communicate the metrics"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen20.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen45.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -683,7 +668,7 @@
       "D": "Query the file hashes using VirusTotal"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen21.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen46.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -698,7 +683,7 @@
       "D": "OWASP"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen22.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen47.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -713,7 +698,7 @@
       "D": "Mitigate"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen23.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen48.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -728,7 +713,7 @@
       "D": "Discuss the financial impact of the incident to determine if security controls are well spent"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen24.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen49.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -743,7 +728,7 @@
       "D": "Deduplication"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen25.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen50.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -758,7 +743,7 @@
       "D": "STIX/TAXII"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen26.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen51.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -773,7 +758,7 @@
       "D": "Running processes"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen27.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen52.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -788,7 +773,7 @@
       "D": "Perform no action until HR or legal counsel advises on next steps"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen28.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen53.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -803,7 +788,7 @@
       "D": "Enable SSO to enterprise applications"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen29.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen54.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -818,7 +803,7 @@
       "D": "Shut down the affected server immediately"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen3.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen55.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -834,7 +819,7 @@
       "E": "A rogue network device"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen30.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen56.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -849,7 +834,7 @@
       "D": "All new employees must sign a user agreement to acknowledge the company security policy"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen31.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen57.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -864,7 +849,7 @@
       "D": "Deep/dark web"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen32.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen58.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -879,7 +864,7 @@
       "D": "To highlight the notable practices of the organization's incident response team"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen33.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen59.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -894,7 +879,7 @@
       "D": "Script kiddie"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen34.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen60.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -909,7 +894,7 @@
       "D": "Research the malware strain to perform attribution"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen35.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen61.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -924,7 +909,7 @@
       "D": "Perform a memory scan dump to collect residual data"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen36.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen62.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -939,7 +924,7 @@
       "D": "Notify the local law enforcement for incident response."
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen37.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen63.jpg"],
     "image_statement": "",
     "answer": [
       "B"
@@ -954,7 +939,7 @@
       "D": "Memorandum of understanding"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen38.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen64.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -969,7 +954,7 @@
       "D": "Block the specific IP address of the scans at the network firewall."
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen39.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen65.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -984,7 +969,7 @@
       "D": "Set the directory V2 to read only for all users."
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen4.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen66.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -999,7 +984,7 @@
       "D": "Segmenting the network between the users and the web server"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen40.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen67.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -1014,7 +999,7 @@
       "D": "Mean time to contain"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen41.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen68.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -1029,7 +1014,7 @@
       "D": "Unusual traffic spikes"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen42.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen69.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -1044,7 +1029,7 @@
       "D": "Board member"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen43.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen70.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -1059,7 +1044,7 @@
       "D": "The complexity to exploit the vulnerability is high."
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen44.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen71.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -1074,7 +1059,7 @@
       "D": "Registry"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen45.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen72.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -1089,7 +1074,7 @@
       "D": "To check the effectiveness of the business continuity plan"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen46.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen73.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -1104,7 +1089,7 @@
       "D": "The digital certificate on the web server was self-signed."
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen47.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen74.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -1119,7 +1104,7 @@
       "D": "Determine the asset value of each system."
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen48.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen75.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -1134,7 +1119,7 @@
       "D": "KPI"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen49.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen76.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -1149,7 +1134,7 @@
       "D": "Beaconing"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen5.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen77.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -1164,7 +1149,7 @@
       "D": "Buffer overflow"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen50.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen78.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -1179,7 +1164,7 @@
       "D": "EDR"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen51.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen79.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -1194,7 +1179,7 @@
       "D": "Make a forensic image of the device and create a SHA-1 hash."
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen52.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen80.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -1209,7 +1194,7 @@
       "D": "Organized crime"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen53.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen81.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -1224,7 +1209,7 @@
       "D": "The root cause analysis identifies the contributing items that facilitated the event."
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen54.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen82.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -1239,7 +1224,7 @@
       "D": "Cross-site scripting"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen55.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen83.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -1254,7 +1239,7 @@
       "D": "A social engineering attack is underway."
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen56.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen84.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -1269,7 +1254,7 @@
       "D": "IP address"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen57.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen85.jpg"],
     "image_statement": "",
     "answer": [
       "B"
@@ -1284,7 +1269,7 @@
       "D": "cat /proc/self/"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen58.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen86.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -1299,7 +1284,7 @@
       "D": "Credentialed scanning"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen59.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen87.jpg"],
     "image_statement": "",
     "answer": [
       "B"
@@ -1314,7 +1299,7 @@
       "D": "Patch the proxy."
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen6.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen88.jpg"],
     "image_statement": "",
     "answer": [
       "B"
@@ -1329,7 +1314,7 @@
       "D": "Invalid playbook"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen60.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen89.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -1344,7 +1329,7 @@
       "D": "IoC"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen61.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen90.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -1359,7 +1344,7 @@
       "D": "There are no compensating controls in place for the OS."
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen62.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen91.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -1374,7 +1359,7 @@
       "D": "Deploy a scanner sensor on every segment and perform credentialed scans"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen63.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen92.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -1389,7 +1374,7 @@
       "D": "Single sign-on"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen64.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen93.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -1404,7 +1389,7 @@
       "D": "EDR"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen65.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen94.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -1419,7 +1404,7 @@
       "D": "Roll out an IDS."
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen66.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen95.jpg"],
     "image_statement": "",
     "answer": [
       "B"
@@ -1434,7 +1419,7 @@
       "D": "Replace the MD5 with digital signatures."
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen67.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen96.jpg"],
     "image_statement": "",
     "answer": [
       "B"
@@ -1449,7 +1434,7 @@
       "D": "Review logs to see whether this exploitable vulnerability has already impacted the company."
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen68.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen97.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -1464,7 +1449,7 @@
       "D": "EDR"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen69.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen98.jpg"],
     "image_statement": "",
     "answer": [
       "B"
@@ -1479,7 +1464,7 @@
       "D": "Request an exception and manually patch each system"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen7.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen99.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -1494,7 +1479,7 @@
       "D": "Password encryption"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen70.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen100.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -1510,7 +1495,7 @@
       "E": "Static IP address"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen71.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen101.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -1525,7 +1510,7 @@
       "D": "Card issuer"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen72.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen102.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -1540,7 +1525,7 @@
       "D": "Vulnerability scans on cloud environments should be performed from the cloud"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen73.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen103.jpg"],
     "image_statement": "",
     "answer": [
       "B"
@@ -1555,7 +1540,7 @@
       "D": "Notify the SOC manager for awareness after confirmation that the activity was intentional"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen74.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen104.jpg"],
     "image_statement": "",
     "answer": [
       "B"
@@ -1570,7 +1555,7 @@
       "D": "Rollback"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen75.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen105.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -1585,7 +1570,7 @@
       "D": "Single pane of glass"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen76.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen106.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -1600,7 +1585,7 @@
       "D": "Third-party application testing"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen77.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen107.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -1615,7 +1600,7 @@
       "D": "An error was caused by BGP due to new rules applied over the company’s internal routers"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen78.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen108.jpg"],
     "image_statement": "",
     "answer": [
       "B"
@@ -1630,7 +1615,7 @@
       "D": "Enable SSO to the cloud applications"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen79.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen109.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -1645,7 +1630,7 @@
       "D": "Web server"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen8.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen110.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -1660,7 +1645,7 @@
       "D": "Exploitation"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen80.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen111.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -1675,7 +1660,7 @@
       "D": "Actions on objectives"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen81.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen112.jpg"],
     "image_statement": "",
     "answer": [
       "B"
@@ -1690,7 +1675,7 @@
       "D": "Implement proper input validation for any data entry form"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen82.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen113.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -1705,25 +1690,10 @@
       "D": "Lack of maintenance windows"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen83.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen114.jpg"],
     "image_statement": "",
     "answer": [
       "A"
-    ]
-  },
-  {
-    "question": "",
-    "choices": {
-      "A": "",
-      "B": "",
-      "C": "",
-      "D": ""
-    },
-    "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen84.jpg"],
-    "image_statement": "",
-    "answer": [
-      ""
     ]
   },
   {
@@ -1735,7 +1705,7 @@
       "D": "Access control lists"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen85.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen116.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -1750,7 +1720,7 @@
       "D": "Navigate to the File menu and select FTP from the Export objects option"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen86.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen117.jpg"],
     "image_statement": "",
     "answer": [
       "D"
@@ -1765,7 +1735,7 @@
       "D": "Limitation of liability"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen87.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen118.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -1780,7 +1750,7 @@
       "D": "Asset value"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen88.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen119.jpg"],
     "image_statement": "",
     "answer": [
       "B"
@@ -1795,7 +1765,7 @@
       "D": "Dynamic scanning"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen89.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen120.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -1810,7 +1780,7 @@
       "D": "Dynamic scanning"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen9.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen121.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -1825,7 +1795,7 @@
       "D": "Deploy mobile device management"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen90.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen122.jpg"],
     "image_statement": "",
     "answer": [
       "B"
@@ -1840,7 +1810,7 @@
       "D": "Decide on the color scheme that will effectively communicate the metrics"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen91.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen123.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -1855,7 +1825,7 @@
       "D": "Decide on the color scheme that will effectively communicate the metrics"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen92.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen124.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -1870,22 +1840,7 @@
       "D": "OWASP"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen93.jpg"],
-    "image_statement": "",
-    "answer": [
-      "C"
-    ]
-  },
-  {
-    "question": "Which of the following would help to minimize human engagement and aid in process improvement in security operations?",
-    "choices": {
-      "A": "OSSTMM",
-      "B": "SIEM",
-      "C": "SOAR",
-      "D": "OWASP"
-    },
-    "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen94.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen125.jpg"],
     "image_statement": "",
     "answer": [
       "C"
@@ -1900,22 +1855,7 @@
       "D": "Mitigate"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen95.jpg"],
-    "image_statement": "",
-    "answer": [
-      "A"
-    ]
-  },
-  {
-    "question": "After conducting a cybersecurity risk assessment for a new software request, a Chief Information Security Officer (CISO) decided the risk score would be too high. The CISO refused the software request. Which of the following risk management principles did the CISO select?",
-    "choices": {
-      "A": "Avoid",
-      "B": "Transfer",
-      "C": "Accept",
-      "D": "Mitigate"
-    },
-    "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen96.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen127.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -1930,7 +1870,7 @@
       "D": "Preparation"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen97.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen129.jpg"],
     "image_statement": "",
     "answer": [
       "A"
@@ -1945,25 +1885,10 @@
       "D": "Deduplication"
     },
     "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen98.jpg"],
+    "image_solution": ["assets/images/questionscysaplus/imagen130.jpg"],
     "image_statement": "",
     "answer": [
       "D"
-    ]
-  },
-  {
-    "question": "An analyst is remediating items associated with a recent incident. The analyst has isolated the vulnerability and is actively removing it from the system.\n\nWhich of the following steps of the process does this describe?",
-    "choices": {
-      "A": "Eradication",
-      "B": "Recovery",
-      "C": "Containment",
-      "D": "Preparation"
-    },
-    "image_question": "",
-    "image_solution": ["assets/images/questionscysaplus/imagen99.jpg"],
-    "image_statement": "",
-    "answer": [
-      "A"
     ]
   }
 ]
