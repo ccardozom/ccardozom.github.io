@@ -1268,7 +1268,7 @@
 
             imageUrls.forEach(imageName => {
                 const imgElement = document.createElement('img');
-                imgElement.src = '/assets/images/questionscysaplus/' + imageName;
+                imgElement.src = 'assets/images/questionscysaplus/' + imageName;
                 imgElement.className = 'question-image';
                 imgElement.alt = 'Imagen de solución';
                 imgElement.onclick = () => openImageModal(imgElement.src);
@@ -1338,7 +1338,7 @@
                         resultDiv.className = 'result incorrect';
                         resultDiv.style.display = 'block';
                         showSolutionImages(question);
-                        
+
                         if (firstAttempt) {
                             incorrectAnswersFirst++;
                             // NUEVO: Incrementar contador solo en modo fácil
