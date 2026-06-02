@@ -231,7 +231,7 @@
     "image_question": ["/assets/images/questions/image2.png"],
     "image_solution": "",
     "image_statement": "",
-    "answer": ["C"]
+    "answer": ["B"]
   },
   {
     "question": "What is the role of \"in\" in the query line below? action_local_port in (1122, 2234)",
@@ -478,7 +478,7 @@
     "image_question": "",
     "image_solution": "",
     "image_statement": "",
-    "answer": ["A", "D"]
+    "answer": ["B", "C"]
   },
   {
     "question": "A sub-playbook is configured to loop with a For Each Input. The following inputs are given to the sub-playbook: Input x: W,X,Y,Z - Input y: a,b,c,d - Input z: 9. Which inputs will be used for the second iteration of the loop?",
