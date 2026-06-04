@@ -361,7 +361,7 @@
     "image_question": "",
     "image_solution": "",
     "image_statement": "",
-    "answer": ["D"]
+    "answer": ["B"]
   },
   {
     "question": "What is the primary benefit of setting the \"--memory-swap\" option to \"-1\" during Cortex XSIAM engine deployment?",
